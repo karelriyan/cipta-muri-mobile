@@ -1,5 +1,6 @@
 package com.main.cipta_muri_mobile.ui.login
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
@@ -31,6 +32,8 @@ class LoginActivity : AppCompatActivity() {
         }
 
         binding.tvLupaPin.setOnClickListener {
+            val intent = Intent(this, LupaPinActivity::class.java)
+            startActivity(intent)
             // binding.etPin.error = "NIK atau PIN salah"
         }
     }

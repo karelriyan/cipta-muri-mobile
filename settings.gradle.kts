@@ -19,6 +19,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "aplikasimobile-banksampahdigital"
+rootProject.name = "cipta_muri_mobile"
 include(":app")
  
