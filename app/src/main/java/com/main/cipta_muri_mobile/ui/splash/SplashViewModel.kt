@@ -1,4 +1,4 @@
-package com.example.aplikasimobile_banksampahdigital.ui.splash
+package com.main.cipta_muri_mobile.ui.splash
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

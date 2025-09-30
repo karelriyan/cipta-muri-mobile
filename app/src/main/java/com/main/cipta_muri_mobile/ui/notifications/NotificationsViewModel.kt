@@ -1,4 +1,4 @@
-package com.example.aplikasimobile_banksampahdigital.ui.notifications
+package com.main.cipta_muri_mobile.ui.notifications
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

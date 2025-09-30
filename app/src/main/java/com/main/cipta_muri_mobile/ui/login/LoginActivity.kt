@@ -1,9 +1,9 @@
-package com.example.aplikasimobile_banksampahdigital.ui.login
+package com.main.cipta_muri_mobile.ui.login
 
 import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
-import com.example.aplikasimobile_banksampahdigital.databinding.ActivityLoginBinding
+import com.main.cipta_muri_mobile.databinding.ActivityLoginBinding
 
 class LoginActivity : AppCompatActivity() {
 

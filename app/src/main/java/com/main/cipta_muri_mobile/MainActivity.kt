@@ -1,4 +1,4 @@
-package com.example.aplikasimobile_banksampahdigital
+package com.main.cipta_muri_mobile
 
 import android.os.Bundle
 import com.google.android.material.bottomnavigation.BottomNavigationView
@@ -7,7 +7,7 @@ import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
-import com.example.aplikasimobile_banksampahdigital.databinding.ActivityMainBinding
+import com.main.cipta_muri_mobile.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 

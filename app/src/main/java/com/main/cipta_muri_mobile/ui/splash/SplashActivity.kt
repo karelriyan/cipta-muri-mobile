@@ -1,12 +1,12 @@
-package com.example.aplikasimobile_banksampahdigital.ui.splash
+package com.main.cipta_muri_mobile.ui.splash
 
 import android.content.Intent
 import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
-import com.example.aplikasimobile_banksampahdigital.R
-import com.example.aplikasimobile_banksampahdigital.ui.login.LoginActivity
+import com.main.cipta_muri_mobile.R
+import com.main.cipta_muri_mobile.ui.login.LoginActivity
 
 class SplashActivity : AppCompatActivity() {
 

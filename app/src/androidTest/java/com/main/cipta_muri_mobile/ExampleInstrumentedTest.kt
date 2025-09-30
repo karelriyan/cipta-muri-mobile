@@ -1,4 +1,4 @@
-package com.example.aplikasimobile_banksampahdigital
+package com.main.cipta_muri_mobile
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

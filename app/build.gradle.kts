@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.aplikasimobile_banksampahdigital"
+    namespace = "com.main.cipta_muri_mobile"
     compileSdk = 36
 
     defaultConfig {
-        applicationId = "com.example.aplikasimobile_banksampahdigital"
+        applicationId = "com.main.cipta_muri_mobile"
         minSdk = 24
         targetSdk = 36
         versionCode = 1
