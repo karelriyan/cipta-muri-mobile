@@ -3,4 +3,10 @@
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
+    <string name="petunjuk_login">
+    1. Siapkan berkas KK (Kartu Keluarga)\n
+    2. Datangi Petugas Bank Sampah dengan membawa KK (Kartu Keluarga)\n
+    3. Petugas akan memberitahukan PIN anda\n
+    4. Anda juga dapat merubah PIN sesuka anda dengan meminta perubahan PIN pada petugas
+    </string>
 </resources>

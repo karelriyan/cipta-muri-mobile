@@ -29,5 +29,9 @@ class LoginActivity : AppCompatActivity() {
                 binding.etPin.error = "NIK atau PIN salah"
             }
         }
+
+        binding.tvLupaPin.setOnClickListener {
+            // binding.etPin.error = "NIK atau PIN salah"
+        }
     }
 }
