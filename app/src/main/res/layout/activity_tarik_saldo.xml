@@ -178,7 +178,6 @@
                             android:textSize="28sp"
                             android:textStyle="bold"
                             android:textColor="@android:color/black"
-                            android:textColorHint="#CCCCCC"
                             android:background="@null"
                             android:inputType="number"
                             android:maxLines="1" />
@@ -201,162 +200,133 @@
                         android:layout_marginBottom="16dp" />
 
                     <!-- Amount Buttons Grid -->
+                    <!-- Row 1 -->
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical">
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="12dp">
 
-                        <!-- Row 1 -->
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="horizontal"
-                            android:layout_marginBottom="12dp">
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btn_amount_10k"
+                            android:layout_width="0dp"
+                            app:backgroundTint="@null"
+                            android:layout_height="56dp"
+                            android:layout_weight="1"
+                            android:text="Rp 10.000,00"
+                            android:textColor="#666666"
+                            android:textSize="14sp"
+                            android:background="@drawable/bg_amount_button"
+                            android:layout_marginEnd="8dp"/>
 
-                            <com.google.android.material.button.MaterialButton
-                                android:id="@+id/btn_amount_10k"
-                                android:layout_width="0dp"
-                                android:layout_height="56dp"
-                                android:layout_weight="1"
-                                android:text="Rp 10.000,00"
-                                android:textColor="#666666"
-                                android:textSize="14sp"
-                                android:backgroundTint="@android:color/transparent"
-                                app:strokeColor="#E0E0E0"
-                                app:strokeWidth="1dp"
-                                app:cornerRadius="8dp"
-                                android:layout_marginEnd="8dp"
-                                style="@style/Widget.MaterialComponents.Button.OutlinedButton" />
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btn_amount_20k"
+                            android:layout_width="0dp"
+                            android:layout_height="56dp"
+                            app:backgroundTint="@null"
 
-                            <com.google.android.material.button.MaterialButton
-                                android:id="@+id/btn_amount_20k"
-                                android:layout_width="0dp"
-                                android:layout_height="56dp"
-                                android:layout_weight="1"
-                                android:text="Rp 20.000,00"
-                                android:textColor="#666666"
-                                android:textSize="14sp"
-                                android:backgroundTint="@android:color/transparent"
-                                app:strokeColor="#E0E0E0"
-                                app:strokeWidth="1dp"
-                                app:cornerRadius="8dp"
-                                android:layout_marginStart="8dp"
-                                style="@style/Widget.MaterialComponents.Button.OutlinedButton" />
-                        </LinearLayout>
+                            android:layout_weight="1"
+                            android:text="Rp 20.000,00"
+                            android:textColor="#666666"
+                            android:textSize="14sp"
+                            android:background="@drawable/bg_amount_button"
+                            android:layout_marginStart="8dp"/>
+                    </LinearLayout>
 
-                        <!-- Row 2 -->
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="horizontal"
-                            android:layout_marginBottom="12dp">
+                    <!-- Row 2 -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="12dp">
 
-                            <com.google.android.material.button.MaterialButton
-                                android:id="@+id/btn_amount_30k"
-                                android:layout_width="0dp"
-                                android:layout_height="56dp"
-                                android:layout_weight="1"
-                                android:text="Rp 30.000,00"
-                                android:textColor="#666666"
-                                android:textSize="14sp"
-                                android:backgroundTint="@android:color/transparent"
-                                app:strokeColor="#E0E0E0"
-                                app:strokeWidth="1dp"
-                                app:cornerRadius="8dp"
-                                android:layout_marginEnd="8dp"
-                                style="@style/Widget.MaterialComponents.Button.OutlinedButton" />
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btn_amount_30k"
+                            android:layout_width="0dp"
+                            android:layout_height="56dp"
+                            android:layout_weight="1"
+                            app:backgroundTint="@null"
+                            android:text="Rp 30.000,00"
+                            android:textColor="#666666"
+                            android:textSize="14sp"
+                            android:background="@drawable/bg_amount_button"
+                            android:layout_marginEnd="8dp"/>
 
-                            <com.google.android.material.button.MaterialButton
-                                android:id="@+id/btn_amount_40k"
-                                android:layout_width="0dp"
-                                android:layout_height="56dp"
-                                android:layout_weight="1"
-                                android:text="Rp 40.000,00"
-                                android:textColor="#666666"
-                                android:textSize="14sp"
-                                android:backgroundTint="@android:color/transparent"
-                                app:strokeColor="#E0E0E0"
-                                app:strokeWidth="1dp"
-                                app:cornerRadius="8dp"
-                                android:layout_marginStart="8dp"
-                                style="@style/Widget.MaterialComponents.Button.OutlinedButton" />
-                        </LinearLayout>
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btn_amount_40k"
+                            android:layout_width="0dp"
+                            android:layout_height="56dp"
+                            android:layout_weight="1"
+                            android:text="Rp 40.000,00"
+                            android:textColor="#666666"
+                            app:backgroundTint="@null"
+                            android:textSize="14sp"
+                            android:background="@drawable/bg_amount_button"
+                            android:layout_marginStart="8dp"/>
+                    </LinearLayout>
 
-                        <!-- Row 3 -->
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="horizontal"
-                            android:layout_marginBottom="12dp">
+                    <!-- Row 3 -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="12dp">
 
-                            <com.google.android.material.button.MaterialButton
-                                android:id="@+id/btn_amount_50k"
-                                android:layout_width="0dp"
-                                android:layout_height="56dp"
-                                android:layout_weight="1"
-                                android:text="Rp 50.000,00"
-                                android:textColor="#666666"
-                                android:textSize="14sp"
-                                android:backgroundTint="@android:color/transparent"
-                                app:strokeColor="#E0E0E0"
-                                app:strokeWidth="1dp"
-                                app:cornerRadius="8dp"
-                                android:layout_marginEnd="8dp"
-                                style="@style/Widget.MaterialComponents.Button.OutlinedButton" />
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btn_amount_50k"
+                            android:layout_width="0dp"
+                            app:backgroundTint="@null"
+                            android:layout_height="56dp"
+                            android:layout_weight="1"
+                            android:text="Rp 50.000,00"
+                            android:textColor="#666666"
+                            android:textSize="14sp"
+                            android:background="@drawable/bg_amount_button"
+                            android:layout_marginEnd="8dp"/>
 
-                            <com.google.android.material.button.MaterialButton
-                                android:id="@+id/btn_amount_100k"
-                                android:layout_width="0dp"
-                                android:layout_height="56dp"
-                                android:layout_weight="1"
-                                android:text="Rp 100.000,00"
-                                android:textColor="#666666"
-                                android:textSize="14sp"
-                                android:backgroundTint="@android:color/transparent"
-                                app:strokeColor="#E0E0E0"
-                                app:strokeWidth="1dp"
-                                app:cornerRadius="8dp"
-                                android:layout_marginStart="8dp"
-                                style="@style/Widget.MaterialComponents.Button.OutlinedButton" />
-                        </LinearLayout>
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btn_amount_100k"
+                            android:layout_width="0dp"
+                            android:layout_height="56dp"
+                            app:backgroundTint="@null"
+                            android:layout_weight="1"
+                            android:text="Rp 100.000,00"
+                            android:textColor="#666666"
+                            android:textSize="14sp"
+                            android:background="@drawable/bg_amount_button"
+                            android:layout_marginStart="8dp"/>
+                    </LinearLayout>
 
-                        <!-- Row 4 -->
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="horizontal"
-                            android:layout_marginBottom="20dp">
+                    <!-- Row 4 -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="20dp">
 
-                            <com.google.android.material.button.MaterialButton
-                                android:id="@+id/btn_amount_150k"
-                                android:layout_width="0dp"
-                                android:layout_height="56dp"
-                                android:layout_weight="1"
-                                android:text="Rp 150.000,00"
-                                android:textColor="#666666"
-                                android:textSize="14sp"
-                                android:backgroundTint="@android:color/transparent"
-                                app:strokeColor="#E0E0E0"
-                                app:strokeWidth="1dp"
-                                app:cornerRadius="8dp"
-                                android:layout_marginEnd="8dp"
-                                style="@style/Widget.MaterialComponents.Button.OutlinedButton" />
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btn_amount_150k"
+                            android:layout_width="0dp"
+                            android:layout_height="56dp"
+                            android:layout_weight="1"
+                            android:text="Rp 150.000,00"
+                            app:backgroundTint="@null"
+                            android:textColor="#666666"
+                            android:textSize="14sp"
+                            android:background="@drawable/bg_amount_button"
+                            android:layout_marginEnd="8dp"/>
 
-                            <com.google.android.material.button.MaterialButton
-                                android:id="@+id/btn_amount_200k"
-                                android:layout_width="0dp"
-                                android:layout_height="56dp"
-                                android:layout_weight="1"
-                                android:text="Rp 200.000,00"
-                                android:textColor="#666666"
-                                android:textSize="14sp"
-                                android:backgroundTint="@android:color/transparent"
-                                app:strokeColor="#E0E0E0"
-                                app:strokeWidth="1dp"
-                                app:cornerRadius="8dp"
-                                android:layout_marginStart="8dp"
-                                style="@style/Widget.MaterialComponents.Button.OutlinedButton" />
-                        </LinearLayout>
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btn_amount_200k"
+                            android:layout_width="0dp"
+                            android:layout_height="56dp"
+                            app:backgroundTint="@null"
+                            android:layout_weight="1"
+                            android:text="Rp 200.000,00"
+                            android:textColor="#666666"
+                            android:textSize="14sp"
+                            android:background="@drawable/bg_amount_button"
+                            android:layout_marginStart="8dp"/>
                     </LinearLayout>
 
                     <!-- Lihat Petunjuk -->
