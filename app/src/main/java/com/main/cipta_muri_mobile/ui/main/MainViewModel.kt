@@ -25,6 +25,9 @@ class MainViewModel : ViewModel() {
     private fun loadUserData() {
         // Simulasi memuat data dari internet atau database
         val dummyUser = User(
+            id = "12345",
+            nik = "1234567890123456",
+            userId = "user123",
             name = "Sudrajat",
             accountNumber = "3210123456******",
             balance = 110000.0,
