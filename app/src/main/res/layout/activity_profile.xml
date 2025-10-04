@@ -8,7 +8,6 @@
     android:background="#F0F0F0"
     tools:context=".ui.profile.ProfileActivity">
 
-    <!-- Konten utama yang bisa di-scroll -->
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -22,7 +21,6 @@
             android:orientation="vertical"
             android:padding="24dp">
 
-            <!-- Bagian Profil -->
             <FrameLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
@@ -65,7 +63,6 @@
                 android:textStyle="bold"
                 android:textColor="@android:color/black"/>
 
-            <!-- Daftar Tombol Menu -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -137,7 +134,6 @@
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
 
-    <!-- BottomAppBar dan FAB yang sama dengan halaman utama -->
     <com.google.android.material.bottomappbar.BottomAppBar
         android:id="@+id/bottom_app_bar"
         android:layout_width="match_parent"
@@ -156,9 +152,7 @@
             android:layout_marginEnd="16dp"
             android:background="@android:color/transparent"
             app:elevation="0dp"
-            app:menu="@menu/bottom_navigation_menu"
-            app:selectedItemId="@+id/navigation_profile" /> <!-- [PERBAIKAN] Nama file menu diganti ke 'bottom_app_bar_menu' -->
-
+            app:menu="@menu/bottom_navigation_menu" />
     </com.google.android.material.bottomappbar.BottomAppBar>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -170,4 +164,3 @@
         android:contentDescription="Scan QR" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
-
