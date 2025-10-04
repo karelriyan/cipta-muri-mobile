@@ -3,12 +3,14 @@
     <item
         android:id="@+id/navigation_home"
         android:icon="@drawable/ic_home_nav_selector"
-    android:title="Home" />
+        android:title="Home"
+        android:checkable="true"/>
 
     <item
         android:id="@+id/navigation_history"
         android:icon="@drawable/ic_history_nav_selector"
-    android:title="Riwayat" />
+        android:title="Riwayat"
+        android:checkable="true"/>
 
     <!-- Item kosong ini penting untuk memberi ruang bagi Tombol QR di tengah -->
     <item
@@ -19,11 +21,13 @@
     <item
         android:id="@+id/navigation_catalog"
         android:icon="@drawable/ic_catalog_nav_selector"
-    android:title="Katalog" />
+        android:title="Katalog"
+        android:checkable="true"/>
 
     <item
         android:id="@+id/navigation_profile"
         android:icon="@drawable/ic_profile_nav_selector"
-    android:title="Profil" />
+        android:title="Profil"
+        android:checkable="true"/>
 </menu>
 
