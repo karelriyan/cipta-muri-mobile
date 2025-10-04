@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.setor.bank.BankSampahActivity">
 
+    <!-- Background Layers -->
     <View
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -16,10 +17,12 @@
         android:layout_height="match_parent"
         android:background="@drawable/bg_white_blur_gradient" />
 
+    <!-- Konten utama -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:paddingBottom="80dp"> <!-- beri ruang agar tidak tertutup BottomAppBar -->
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -69,7 +72,6 @@
                     android:scaleType="centerCrop"
                     android:src="@drawable/sample_map" />
 
-                <!-- This view maintains square aspect ratio -->
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
@@ -147,7 +149,41 @@
                 android:clickable="true"
                 android:focusable="true" />
         </androidx.cardview.widget.CardView>
-
     </LinearLayout>
 
-</FrameLayout>
+    <!-- BottomAppBar -->
+    <com.google.android.material.bottomappbar.BottomAppBar
+        android:id="@+id/bottom_app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        app:fabCradleMargin="10dp"
+        app:fabCradleRoundedCornerRadius="30dp"
+        app:fabCradleVerticalOffset="10dp"
+        android:backgroundTint="@android:color/white"
+        app:elevation="8dp">
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottom_navigation_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            app:elevation="0dp"
+            app:menu="@menu/bottom_navigation_menu"
+            app:itemIconTint="@null"
+            app:itemTextColor="@null"
+            app:itemRippleColor="@android:color/transparent"/>
+    </com.google.android.material.bottomappbar.BottomAppBar>
+
+    <!-- FloatingActionButton di tengah -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_qr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_qr_nav"
+        app:layout_anchor="@id/bottom_app_bar"
+        app:layout_anchorGravity="center"
+        android:contentDescription="Scan QR"
+        app:tint="@null"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
