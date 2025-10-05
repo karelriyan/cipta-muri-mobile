@@ -44,6 +44,9 @@
         <activity android:name=".ui.donasi.DonasiSampahActivity" />
         <activity android:name=".ui.aktivitas.RiwayatAktivitasActivity" />
         <activity android:name=".ui.profile.ProfileActivity" />
+        <activity android:name=".ui.setor.harga.HargaSampahActivity" />
+
+
 
     </application>
 
