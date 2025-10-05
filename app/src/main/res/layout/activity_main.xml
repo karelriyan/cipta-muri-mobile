@@ -179,6 +179,7 @@
 
                         <!-- Item 1 -->
                         <LinearLayout
+                            android:id="@+id/mnSetor"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_columnWeight="1"
@@ -191,6 +192,7 @@
 
                         <!-- Item 2 -->
                         <LinearLayout
+                            android:id="@+id/mnRiwayatSetor"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_columnWeight="1"
@@ -203,6 +205,7 @@
 
                         <!-- Item 3 -->
                         <LinearLayout
+                            android:id="@+id/mnRiwayatTarik"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_columnWeight="1"
@@ -215,6 +218,7 @@
 
                         <!-- Item 4 -->
                         <LinearLayout
+                            android:id="@+id/mnRiwayatPenarikan"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_columnWeight="1"
@@ -227,6 +231,19 @@
 
                         <!-- Item 5 -->
                         <LinearLayout
+                            android:id="@+id/mnPlaceholder"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_columnWeight="1"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="4dp"
+                            android:layout_marginTop="8dp">
+                        </LinearLayout>
+
+                        <!-- Item 5 -->
+                        <LinearLayout
+                            android:id="@+id/mnDonasi"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_columnWeight="1"
@@ -240,6 +257,7 @@
 
                         <!-- Item 6 -->
                         <LinearLayout
+                            android:id="@+id/mnLeaderboard"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_columnWeight="1"
@@ -252,30 +270,30 @@
                         </LinearLayout>
 
                         <!-- Item 7 -->
-                        <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_columnWeight="1"
-                            android:gravity="center"
-                            android:orientation="vertical"
-                            android:padding="4dp"
-                            android:layout_marginTop="8dp">
-                            <ImageView android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/ic_katalog" />
-                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="Katalog Kerajinan" android:textAlignment="center" android:textSize="12sp"/>
-                        </LinearLayout>
+<!--                        <LinearLayout-->
+<!--                            android:layout_width="0dp"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_columnWeight="1"-->
+<!--                            android:gravity="center"-->
+<!--                            android:orientation="vertical"-->
+<!--                            android:padding="4dp"-->
+<!--                            android:layout_marginTop="8dp">-->
+<!--                            <ImageView android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/ic_katalog" />-->
+<!--                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="Katalog Kerajinan" android:textAlignment="center" android:textSize="12sp"/>-->
+<!--                        </LinearLayout>-->
 
                         <!-- Item 8 -->
-                        <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_columnWeight="1"
-                            android:gravity="center"
-                            android:orientation="vertical"
-                            android:padding="4dp"
-                            android:layout_marginTop="8dp">
-                            <ImageView android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/ic_lainnya" />
-                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="Lainnya" android:textAlignment="center" android:textSize="12sp"/>
-                        </LinearLayout>
+<!--                        <LinearLayout-->
+<!--                            android:layout_width="0dp"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_columnWeight="1"-->
+<!--                            android:gravity="center"-->
+<!--                            android:orientation="vertical"-->
+<!--                            android:padding="4dp"-->
+<!--                            android:layout_marginTop="8dp">-->
+<!--                            <ImageView android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/ic_lainnya" />-->
+<!--                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="Lainnya" android:textAlignment="center" android:textSize="12sp"/>-->
+<!--                        </LinearLayout>-->
                     </GridLayout>
                 </LinearLayout>
 
