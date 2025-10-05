@@ -6,292 +6,360 @@
     android:layout_height="match_parent"
     tools:context=".ui.saldo.riwayat.RiwayatPenarikanActivity">
 
+    <!-- Background -->
     <View
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/bg_gradient2" />
 
-    <LinearLayout
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="match_parent">
 
-        <!-- Header -->
-        <LinearLayout
+        <!-- Scrollable Content -->
+        <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center_vertical"
-            android:paddingHorizontal="16dp"
-            android:paddingTop="16dp"
-            android:paddingBottom="20dp">
-
-            <ImageView
-                android:id="@+id/btnBack"
-                android:layout_width="35dp"
-                android:layout_height="35dp"
-                android:src="@drawable/ic_back"
-                android:contentDescription="Back"
-                app:tint="@android:color/white" />
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Riwayat Penarikan"
-                android:textColor="@android:color/white"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                android:gravity="center"
-                android:layout_marginEnd="24dp" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:orientation="vertical"
-            android:background="@drawable/bg_rounded_top_white">
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:paddingBottom="80dp"
+            android:fillViewport="true">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="end"
-                android:padding="16dp">
+                android:orientation="vertical">
 
-                <ImageView
-                    android:id="@+id/btnSearch"
-                    android:layout_width="35dp"
-                    android:layout_height="35dp"
-                    android:src="@drawable/ic_search"
-                    android:layout_marginEnd="16dp"
-                    android:contentDescription="Search" />
-
-                <ImageView
-                    android:id="@+id/btnFilter"
-                    android:layout_width="35dp"
-                    android:layout_height="35dp"
-                    android:src="@drawable/ic_filter"
-                    android:contentDescription="Filter" />
-            </LinearLayout>
-
-            <HorizontalScrollView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:scrollbars="none"
-                android:paddingHorizontal="16dp"
-                android:paddingBottom="16dp">
-
+                <!-- Header Section -->
                 <LinearLayout
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingHorizontal="16dp"
+                    android:paddingTop="60dp"
+                    android:paddingBottom="20dp">
 
-                    <com.google.android.material.button.MaterialButton
-                        android:id="@+id/btnJanuari"
-                        android:layout_width="wrap_content"
-                        android:layout_height="40dp"
-                        android:text="Januari"
-                        android:textSize="14sp"
-                        android:textColor="#666666"
-                        android:textAllCaps="false"
-                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-                        app:strokeColor="#DDDDDD"
-                        app:strokeWidth="1dp"
-                        app:cornerRadius="20dp"
-                        android:layout_marginEnd="8dp"
-                        android:minWidth="0dp"
-                        android:paddingHorizontal="20dp"/>
+                    <ImageView
+                        android:id="@+id/btnBack"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:src="@drawable/ic_back"
+                        android:contentDescription="Back"
+                        app:tint="@android:color/white" />
 
-                    <com.google.android.material.button.MaterialButton
-                        android:id="@+id/btnFebruari"
-                        android:layout_width="wrap_content"
-                        android:layout_height="40dp"
-                        android:text="Februari"
-                        android:textSize="14sp"
-                        android:textColor="#666666"
-                        android:textAllCaps="false"
-                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-                        app:strokeColor="#DDDDDD"
-                        app:strokeWidth="1dp"
-                        app:cornerRadius="20dp"
-                        android:layout_marginEnd="8dp"
-                        android:minWidth="0dp"
-                        android:paddingHorizontal="20dp"/>
-
-                    <com.google.android.material.button.MaterialButton
-                        android:id="@+id/btnMaret"
-                        android:layout_width="wrap_content"
-                        android:layout_height="40dp"
-                        android:text="Maret"
-                        android:textSize="14sp"
-                        android:textColor="#666666"
-                        android:textAllCaps="false"
-                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-                        app:strokeColor="#DDDDDD"
-                        app:strokeWidth="1dp"
-                        app:cornerRadius="20dp"
-                        android:layout_marginEnd="8dp"
-                        android:minWidth="0dp"
-                        android:paddingHorizontal="20dp"/>
-
-                    <com.google.android.material.button.MaterialButton
-                        android:id="@+id/btnApril"
-                        android:layout_width="wrap_content"
-                        android:layout_height="40dp"
-                        android:text="April"
-                        android:textSize="14sp"
-                        android:textColor="#666666"
-                        android:textAllCaps="false"
-                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-                        app:strokeColor="#DDDDDD"
-                        app:strokeWidth="1dp"
-                        app:cornerRadius="20dp"
-                        android:layout_marginEnd="8dp"
-                        android:minWidth="0dp"
-                        android:paddingHorizontal="20dp"/>
-
-                    <com.google.android.material.button.MaterialButton
-                        android:id="@+id/btnMei"
-                        android:layout_width="wrap_content"
-                        android:layout_height="40dp"
-                        android:text="Mei"
-                        android:textSize="14sp"
-                        android:textColor="#666666"
-                        android:textAllCaps="false"
-                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-                        app:strokeColor="#DDDDDD"
-                        app:strokeWidth="1dp"
-                        app:cornerRadius="20dp"
-                        android:layout_marginEnd="8dp"
-                        android:minWidth="0dp"
-                        android:paddingHorizontal="20dp"/>
-
-                    <com.google.android.material.button.MaterialButton
-                        android:id="@+id/btnJuni"
-                        android:layout_width="wrap_content"
-                        android:layout_height="40dp"
-                        android:text="Juni"
-                        android:textSize="14sp"
-                        android:textColor="#666666"
-                        android:textAllCaps="false"
-                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-                        app:strokeColor="#DDDDDD"
-                        app:strokeWidth="1dp"
-                        app:cornerRadius="20dp"
-                        android:layout_marginEnd="8dp"
-                        android:minWidth="0dp"
-                        android:paddingHorizontal="20dp"/>
-
-                    <com.google.android.material.button.MaterialButton
-                        android:id="@+id/btnJuli"
-                        android:layout_width="wrap_content"
-                        android:layout_height="40dp"
-                        android:text="Juli"
-                        android:textSize="14sp"
-                        android:textColor="#666666"
-                        android:textAllCaps="false"
-                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-                        app:strokeColor="#DDDDDD"
-                        app:strokeWidth="1dp"
-                        app:cornerRadius="20dp"
-                        android:layout_marginEnd="8dp"
-                        android:minWidth="0dp"
-                        android:paddingHorizontal="20dp"/>
-
-                    <com.google.android.material.button.MaterialButton
-                        android:id="@+id/btnAgustus"
-                        android:layout_width="wrap_content"
-                        android:layout_height="40dp"
-                        android:text="Agustus"
-                        android:textSize="14sp"
-                        android:textColor="#666666"
-                        android:textAllCaps="false"
-                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-                        app:strokeColor="#DDDDDD"
-                        app:strokeWidth="1dp"
-                        app:cornerRadius="20dp"
-                        android:layout_marginEnd="8dp"
-                        android:minWidth="0dp"
-                        android:paddingHorizontal="20dp"/>
-
-                    <com.google.android.material.button.MaterialButton
-                        android:id="@+id/btnSeptember"
-                        android:layout_width="wrap_content"
-                        android:layout_height="40dp"
-                        android:text="September"
-                        android:textSize="14sp"
-                        android:textColor="#666666"
-                        android:textAllCaps="false"
-                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-                        app:strokeColor="#DDDDDD"
-                        app:strokeWidth="1dp"
-                        app:cornerRadius="20dp"
-                        android:layout_marginEnd="8dp"
-                        android:minWidth="0dp"
-                        android:paddingHorizontal="20dp"/>
-
-                    <com.google.android.material.button.MaterialButton
-                        android:id="@+id/btnOktober"
-                        android:layout_width="wrap_content"
-                        android:layout_height="40dp"
-                        android:text="Oktober"
-                        android:textSize="14sp"
-                        android:textColor="#666666"
-                        android:textAllCaps="false"
-                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-                        app:strokeColor="#DDDDDD"
-                        app:strokeWidth="1dp"
-                        app:cornerRadius="20dp"
-                        android:layout_marginEnd="8dp"
-                        android:minWidth="0dp"
-                        android:paddingHorizontal="20dp"/>
-
-                    <com.google.android.material.button.MaterialButton
-                        android:id="@+id/btnNovember"
-                        android:layout_width="wrap_content"
-                        android:layout_height="40dp"
-                        android:text="November"
-                        android:textSize="14sp"
-                        android:textColor="#666666"
-                        android:textAllCaps="false"
-                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-                        app:strokeColor="#DDDDDD"
-                        app:strokeWidth="1dp"
-                        app:cornerRadius="20dp"
-                        android:layout_marginEnd="8dp"
-                        android:minWidth="0dp"
-                        android:paddingHorizontal="20dp"/>
-
-                    <com.google.android.material.button.MaterialButton
-                        android:id="@+id/btnDesember"
-                        android:layout_width="wrap_content"
-                        android:layout_height="40dp"
-                        android:text="Desember"
-                        android:textSize="14sp"
-                        android:textColor="#666666"
-                        android:textAllCaps="false"
-                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-                        app:strokeColor="#DDDDDD"
-                        app:strokeWidth="1dp"
-                        app:cornerRadius="20dp"
-                        android:minWidth="0dp"
-                        android:paddingHorizontal="20dp"/>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Riwayat Penarikan"
+                        android:textColor="@android:color/white"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:layout_marginEnd="35dp" />
                 </LinearLayout>
-            </HorizontalScrollView>
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rvTukarPoin"
+                <!-- Content Area with White Background -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@drawable/rounded_top_white_bg">
+
+                    <!-- Search and Filter Section -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="end"
+                        android:padding="16dp">
+
+                        <ImageView
+                            android:id="@+id/btnSearch"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:src="@drawable/ic_search"
+                            android:layout_marginEnd="16dp"
+                            android:contentDescription="Search" />
+
+                        <ImageView
+                            android:id="@+id/btnFilter"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:src="@drawable/ic_filter"
+                            android:contentDescription="Filter" />
+                    </LinearLayout>
+
+                    <!-- Month Filter Horizontal Scroll -->
+                    <HorizontalScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:scrollbars="none"
+                        android:paddingHorizontal="16dp"
+                        android:paddingBottom="16dp">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/btnJanuari"
+                                android:layout_width="wrap_content"
+                                android:layout_height="40dp"
+                                android:text="Januari"
+                                android:textSize="14sp"
+                                android:textColor="#666666"
+                                android:textAllCaps="false"
+                                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                                app:strokeColor="#DDDDDD"
+                                app:strokeWidth="1dp"
+                                app:cornerRadius="20dp"
+                                android:layout_marginEnd="8dp"
+                                android:minWidth="0dp"
+                                android:paddingHorizontal="20dp"/>
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/btnFebruari"
+                                android:layout_width="wrap_content"
+                                android:layout_height="40dp"
+                                android:text="Februari"
+                                android:textSize="14sp"
+                                android:textColor="#666666"
+                                android:textAllCaps="false"
+                                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                                app:strokeColor="#DDDDDD"
+                                app:strokeWidth="1dp"
+                                app:cornerRadius="20dp"
+                                android:layout_marginEnd="8dp"
+                                android:minWidth="0dp"
+                                android:paddingHorizontal="20dp"/>
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/btnMaret"
+                                android:layout_width="wrap_content"
+                                android:layout_height="40dp"
+                                android:text="Maret"
+                                android:textSize="14sp"
+                                android:textColor="#666666"
+                                android:textAllCaps="false"
+                                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                                app:strokeColor="#DDDDDD"
+                                app:strokeWidth="1dp"
+                                app:cornerRadius="20dp"
+                                android:layout_marginEnd="8dp"
+                                android:minWidth="0dp"
+                                android:paddingHorizontal="20dp"/>
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/btnApril"
+                                android:layout_width="wrap_content"
+                                android:layout_height="40dp"
+                                android:text="April"
+                                android:textSize="14sp"
+                                android:textColor="#666666"
+                                android:textAllCaps="false"
+                                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                                app:strokeColor="#DDDDDD"
+                                app:strokeWidth="1dp"
+                                app:cornerRadius="20dp"
+                                android:layout_marginEnd="8dp"
+                                android:minWidth="0dp"
+                                android:paddingHorizontal="20dp"/>
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/btnMei"
+                                android:layout_width="wrap_content"
+                                android:layout_height="40dp"
+                                android:text="Mei"
+                                android:textSize="14sp"
+                                android:textColor="#666666"
+                                android:textAllCaps="false"
+                                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                                app:strokeColor="#DDDDDD"
+                                app:strokeWidth="1dp"
+                                app:cornerRadius="20dp"
+                                android:layout_marginEnd="8dp"
+                                android:minWidth="0dp"
+                                android:paddingHorizontal="20dp"/>
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/btnJuni"
+                                android:layout_width="wrap_content"
+                                android:layout_height="40dp"
+                                android:text="Juni"
+                                android:textSize="14sp"
+                                android:textColor="#666666"
+                                android:textAllCaps="false"
+                                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                                app:strokeColor="#DDDDDD"
+                                app:strokeWidth="1dp"
+                                app:cornerRadius="20dp"
+                                android:layout_marginEnd="8dp"
+                                android:minWidth="0dp"
+                                android:paddingHorizontal="20dp"/>
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/btnJuli"
+                                android:layout_width="wrap_content"
+                                android:layout_height="40dp"
+                                android:text="Juli"
+                                android:textSize="14sp"
+                                android:textColor="#666666"
+                                android:textAllCaps="false"
+                                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                                app:strokeColor="#DDDDDD"
+                                app:strokeWidth="1dp"
+                                app:cornerRadius="20dp"
+                                android:layout_marginEnd="8dp"
+                                android:minWidth="0dp"
+                                android:paddingHorizontal="20dp"/>
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/btnAgustus"
+                                android:layout_width="wrap_content"
+                                android:layout_height="40dp"
+                                android:text="Agustus"
+                                android:textSize="14sp"
+                                android:textColor="#666666"
+                                android:textAllCaps="false"
+                                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                                app:strokeColor="#DDDDDD"
+                                app:strokeWidth="1dp"
+                                app:cornerRadius="20dp"
+                                android:layout_marginEnd="8dp"
+                                android:minWidth="0dp"
+                                android:paddingHorizontal="20dp"/>
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/btnSeptember"
+                                android:layout_width="wrap_content"
+                                android:layout_height="40dp"
+                                android:text="September"
+                                android:textSize="14sp"
+                                android:textColor="#666666"
+                                android:textAllCaps="false"
+                                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                                app:strokeColor="#DDDDDD"
+                                app:strokeWidth="1dp"
+                                app:cornerRadius="20dp"
+                                android:layout_marginEnd="8dp"
+                                android:minWidth="0dp"
+                                android:paddingHorizontal="20dp"/>
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/btnOktober"
+                                android:layout_width="wrap_content"
+                                android:layout_height="40dp"
+                                android:text="Oktober"
+                                android:textSize="14sp"
+                                android:textColor="#666666"
+                                android:textAllCaps="false"
+                                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                                app:strokeColor="#DDDDDD"
+                                app:strokeWidth="1dp"
+                                app:cornerRadius="20dp"
+                                android:layout_marginEnd="8dp"
+                                android:minWidth="0dp"
+                                android:paddingHorizontal="20dp"/>
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/btnNovember"
+                                android:layout_width="wrap_content"
+                                android:layout_height="40dp"
+                                android:text="November"
+                                android:textSize="14sp"
+                                android:textColor="#666666"
+                                android:textAllCaps="false"
+                                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                                app:strokeColor="#DDDDDD"
+                                app:strokeWidth="1dp"
+                                app:cornerRadius="20dp"
+                                android:layout_marginEnd="8dp"
+                                android:minWidth="0dp"
+                                android:paddingHorizontal="20dp"/>
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/btnDesember"
+                                android:layout_width="wrap_content"
+                                android:layout_height="40dp"
+                                android:text="Desember"
+                                android:textSize="14sp"
+                                android:textColor="#666666"
+                                android:textAllCaps="false"
+                                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                                app:strokeColor="#DDDDDD"
+                                app:strokeWidth="1dp"
+                                app:cornerRadius="20dp"
+                                android:minWidth="0dp"
+                                android:paddingHorizontal="20dp"/>
+                        </LinearLayout>
+                    </HorizontalScrollView>
+
+                    <!-- RecyclerView for History -->
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvTukarPoin"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:minHeight="400dp"
+                        android:paddingHorizontal="16dp"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="16dp"
+                        android:clipToPadding="false"
+                        tools:listitem="@layout/item_tukar_poin" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <!-- Bottom Navigation Bar -->
+        <com.google.android.material.bottomappbar.BottomAppBar
+            android:id="@+id/bottom_app_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            app:fabCradleMargin="10dp"
+            app:fabCradleRoundedCornerRadius="20dp"
+            app:fabCradleVerticalOffset="10dp"
+            android:backgroundTint="@android:color/white"
+            app:elevation="8dp">
+
+            <com.google.android.material.bottomnavigation.BottomNavigationView
+                android:id="@+id/bottom_navigation_view"
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:paddingHorizontal="16dp"
-                android:paddingTop="8dp"
-                android:paddingBottom="16dp"
-                android:clipToPadding="false"
-                tools:listitem="@layout/item_tukar_poin" />
+                android:layout_height="match_parent"
+                android:layout_marginEnd="16dp"
+                android:background="@android:color/transparent"
+                app:elevation="0dp"
+                app:itemIconTint="@null"
+                app:menu="@menu/bottom_navigation_menu" />
+        </com.google.android.material.bottomappbar.BottomAppBar>
 
-        </LinearLayout>
-    </LinearLayout>
+        <!-- FAB QR -->
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab_qr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_qr_nav"
+            app:tint="@null"
+            app:maxImageSize="70dp"
+            app:layout_anchor="@id/bottom_app_bar"
+            android:contentDescription="Scan QR" />
+
+        <!-- FAB Leaderboard -->
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab_leaderboard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="80dp"
+            android:src="@drawable/ic_leaderboard"
+            app:tint="@null"
+            app:maxImageSize="70dp"
+            android:contentDescription="Leaderboard" />
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
 </FrameLayout>
