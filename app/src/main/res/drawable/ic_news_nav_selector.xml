@@ -3,10 +3,10 @@
 
     <!-- State ketika item menu ini terpilih/aktif (checked) -->
     <!-- Android akan menampilkan versi ikon yang aktif (kuning) -->
-    <item android:drawable="@drawable/ic_bottom_nav_education_active" android:state_checked="true" />
+    <item android:drawable="@drawable/ic_bottom_nav_news_active" android:state_checked="true" />
 
     <!-- State default (ketika tidak terpilih) -->
     <!-- Android akan menampilkan versi ikon yang tidak aktif (abu-abu) -->
-    <item android:drawable="@drawable/ic_bottom_nav_education_inactive" />
+    <item android:drawable="@drawable/ic_bottom_nav_news_inactive" />
 
 </selector>
