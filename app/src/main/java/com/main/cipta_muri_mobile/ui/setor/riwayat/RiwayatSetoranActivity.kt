@@ -8,5 +8,8 @@ import com.main.cipta_muri_mobile.R
 import com.main.cipta_muri_mobile.data.RiwayatSetoran
 
 class RiwayatSetoranActivity : AppCompatActivity() {
-
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_riwayat_setoran)
+    }
 }

@@ -205,7 +205,7 @@
 
                         <!-- Item 3 -->
                         <LinearLayout
-                            android:id="@+id/mnRiwayatTarik"
+                            android:id="@+id/mnTarik"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_columnWeight="1"
