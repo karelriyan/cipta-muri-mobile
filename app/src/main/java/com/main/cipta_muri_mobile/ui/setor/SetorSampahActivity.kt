@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.main.cipta_muri_mobile.R
 import com.main.cipta_muri_mobile.databinding.ActivitySetorSampahBinding
 import com.main.cipta_muri_mobile.ui.main.MainActivity
+import com.main.cipta_muri_mobile.ui.setor.bank.BankSampahActivity
 import com.main.cipta_muri_mobile.ui.setor.harga.HargaSampahActivity
 import com.main.cipta_muri_mobile.ui.setor.riwayat.RiwayatSetoranActivity
 
@@ -39,7 +40,7 @@ class SetorSampahActivity : AppCompatActivity() {
             // TODO: Tambahkan logika untuk navigasi ke jadwal penarikan
         }
         binding.btnLokasiBankSampah.setOnClickListener {
-            // TODO: Tambahkan logika untuk navigasi ke lokasi bank sampah
+            startActivity(Intent(this, BankSampahActivity::class.java))
         }
 
 
