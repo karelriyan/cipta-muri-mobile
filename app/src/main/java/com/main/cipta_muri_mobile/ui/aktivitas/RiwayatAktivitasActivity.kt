@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.main.cipta_muri_mobile.R
 import com.main.cipta_muri_mobile.databinding.ActivityRiwayatAktivitasBinding
 import com.main.cipta_muri_mobile.ui.main.MainActivity
+import com.main.cipta_muri_mobile.ui.news.NewsActivity
 import com.main.cipta_muri_mobile.ui.profile.ProfileActivity
 
 class RiwayatAktivitasActivity : AppCompatActivity() {
@@ -37,6 +38,11 @@ class RiwayatAktivitasActivity : AppCompatActivity() {
                 R.id.navigation_history -> true // halaman ini
                 R.id.navigation_profile -> {
                     startActivity(Intent(this, ProfileActivity::class.java))
+                    overridePendingTransition(0, 0)
+                    true
+                }
+                R.id.navigation_news -> {
+                    startActivity(Intent(this, NewsActivity::class.java))
                     overridePendingTransition(0, 0)
                     true
                 }

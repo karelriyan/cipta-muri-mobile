@@ -7,6 +7,8 @@ import androidx.appcompat.app.AppCompatActivity
 // Import Activity tujuan Anda
 import com.main.cipta_muri_mobile.ui.profile.ProfileActivity
 import com.main.cipta_muri_mobile.databinding.ActivityMainBinding
+import com.main.cipta_muri_mobile.ui.aktivitas.RiwayatAktivitasActivity
+import com.main.cipta_muri_mobile.ui.news.NewsActivity
 
 class MainActivity : AppCompatActivity() {
 
@@ -44,6 +46,20 @@ class MainActivity : AppCompatActivity() {
                 R.id.navigation_profile -> {
                     // Pindah ke ProfileActivity
                     val intent = Intent(this, ProfileActivity::class.java)
+                    startActivity(intent)
+                    true
+                }
+
+                R.id.navigation_news -> {
+                    // Pindah ke ProfileActivity
+                    val intent = Intent(this, NewsActivity::class.java)
+                    startActivity(intent)
+                    true
+                }
+
+                R.id.navigation_history -> {
+                    // Pindah ke ProfileActivity
+                    val intent = Intent(this, RiwayatAktivitasActivity::class.java)
                     startActivity(intent)
                     true
                 }

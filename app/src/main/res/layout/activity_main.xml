@@ -7,7 +7,6 @@
     android:layout_height="match_parent"
     tools:context=".ui.main.MainActivity">
 
-    <!-- Bagian yang bisa di-scroll -->
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -19,7 +18,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <!-- Background -->
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -28,12 +26,10 @@
                 android:adjustViewBounds="true"
                 android:contentDescription="Main Background" />
 
-            <!-- Konten utama -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
-                <!-- Header Section -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -41,7 +37,7 @@
                     android:gravity="center_vertical"
                     android:paddingStart="16dp"
                     android:paddingEnd="16dp"
-                    android:paddingTop="60dp">
+                    android:paddingTop="70dp">
 
                     <TextView
                         android:id="@+id/tv_profile_initial"
@@ -62,7 +58,6 @@
                         android:orientation="vertical"
                         android:layout_marginStart="16dp">
 
-                        <!-- Greeting -->
                         <TextView
                             android:id="@+id/tv_greeting"
                             android:layout_width="wrap_content"
@@ -70,7 +65,6 @@
                             android:textColor="@android:color/white"
                             android:text="Halo" />
 
-                        <!-- User Name -->
                         <TextView
                             android:id="@+id/tv_user_name"
                             android:layout_width="wrap_content"
@@ -88,7 +82,6 @@
                     </LinearLayout>
                 </LinearLayout>
 
-                <!-- Saldo Card -->
                 <FrameLayout
                     android:id="@+id/cardSaldo"
                     android:layout_width="match_parent"
@@ -143,7 +136,6 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="3dp">
 
-                                <!-- Total berat -->
                                 <TextView
                                     android:id="@+id/tv_total_weight"
                                     android:layout_width="wrap_content"
@@ -154,7 +146,6 @@
                                     android:layout_alignParentStart="true"
                                     tools:text="Total Berat Sampah Terjual: 0Kg" />
 
-                                <!-- Cek mutasi -->
                                 <TextView
                                     android:id="@+id/tvMutation"
                                     android:layout_width="wrap_content"
@@ -169,7 +160,6 @@
                     </FrameLayout>
                 </FrameLayout>
 
-                <!-- Menu Grid -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -183,7 +173,6 @@
                         android:columnCount="4"
                         android:rowCount="2">
 
-                        <!-- Item 1 -->
                         <LinearLayout
                             android:id="@+id/mnSetor"
                             android:layout_width="0dp"
@@ -196,7 +185,6 @@
                             <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="Setor Sampah" android:textAlignment="center" android:textSize="12sp"/>
                         </LinearLayout>
 
-                        <!-- Item 2 -->
                         <LinearLayout
                             android:id="@+id/mnRiwayatSetor"
                             android:layout_width="0dp"
@@ -209,7 +197,6 @@
                             <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="Riwayat Setoran" android:textAlignment="center" android:textSize="12sp"/>
                         </LinearLayout>
 
-                        <!-- Item 3 -->
                         <LinearLayout
                             android:id="@+id/mnTarik"
                             android:layout_width="0dp"
@@ -222,7 +209,6 @@
                             <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="Tarik Saldo" android:textAlignment="center" android:textSize="12sp"/>
                         </LinearLayout>
 
-                        <!-- Item 4 -->
                         <LinearLayout
                             android:id="@+id/mnRiwayatPenarikan"
                             android:layout_width="0dp"
@@ -235,7 +221,6 @@
                             <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="Riwayat Penarikan" android:textAlignment="center" android:textSize="12sp"/>
                         </LinearLayout>
 
-                        <!-- Item 5 -->
                         <LinearLayout
                             android:id="@+id/mnPlaceholder"
                             android:layout_width="0dp"
@@ -247,7 +232,6 @@
                             android:layout_marginTop="8dp">
                         </LinearLayout>
 
-                        <!-- Item 5 -->
                         <LinearLayout
                             android:id="@+id/mnDonasi"
                             android:layout_width="0dp"
@@ -261,7 +245,6 @@
                             <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="Donasi Sampah" android:textAlignment="center" android:textSize="12sp"/>
                         </LinearLayout>
 
-                        <!-- Item 6 -->
                         <LinearLayout
                             android:id="@+id/mnLeaderboard"
                             android:layout_width="0dp"
@@ -275,35 +258,9 @@
                             <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="Leaderboard" android:textAlignment="center" android:textSize="12sp"/>
                         </LinearLayout>
 
-                        <!-- Item 7 -->
-<!--                        <LinearLayout-->
-<!--                            android:layout_width="0dp"-->
-<!--                            android:layout_height="wrap_content"-->
-<!--                            android:layout_columnWeight="1"-->
-<!--                            android:gravity="center"-->
-<!--                            android:orientation="vertical"-->
-<!--                            android:padding="4dp"-->
-<!--                            android:layout_marginTop="8dp">-->
-<!--                            <ImageView android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/ic_katalog" />-->
-<!--                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="Katalog Kerajinan" android:textAlignment="center" android:textSize="12sp"/>-->
-<!--                        </LinearLayout>-->
-
-                        <!-- Item 8 -->
-<!--                        <LinearLayout-->
-<!--                            android:layout_width="0dp"-->
-<!--                            android:layout_height="wrap_content"-->
-<!--                            android:layout_columnWeight="1"-->
-<!--                            android:gravity="center"-->
-<!--                            android:orientation="vertical"-->
-<!--                            android:padding="4dp"-->
-<!--                            android:layout_marginTop="8dp">-->
-<!--                            <ImageView android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/ic_lainnya" />-->
-<!--                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="Lainnya" android:textAlignment="center" android:textSize="12sp"/>-->
-<!--                        </LinearLayout>-->
                     </GridLayout>
                 </LinearLayout>
 
-                <!-- White container for Menu Grid and News -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -312,7 +269,6 @@
                     android:background="@drawable/rounded_top_white_bg"
                     android:padding="16dp">
 
-                    <!-- News Section -->
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -322,53 +278,13 @@
                         android:textColor="@color/black"
                         android:textStyle="bold" />
 
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
-                        app:cardCornerRadius="12dp">
+                    <include layout="@layout/section_news"/>
 
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="vertical">
-
-                            <ImageView
-                                android:id="@+id/iv_news_image"
-                                android:layout_width="match_parent"
-                                android:layout_height="140dp"
-                                android:scaleType="centerCrop"
-                                android:contentDescription="Gambar Berita"
-                                android:src="@drawable/ic_plastik" />
-
-                            <TextView
-                                android:id="@+id/tv_news_title"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:paddingStart="12dp"
-                                android:paddingEnd="12dp"
-                                android:paddingTop="8dp"
-                                android:textStyle="bold"
-                                android:textColor="@color/black"
-                                android:text="Belajar Mengelola Sampah melalui Limbah Pustaka" />
-
-                            <TextView
-                                android:id="@+id/tv_news_subtitle"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:paddingStart="12dp"
-                                android:paddingEnd="12dp"
-                                android:paddingBottom="12dp"
-                                android:textColor="@color/black"
-                                android:text="15 Jam Lalu" />
-                        </LinearLayout>
-                    </androidx.cardview.widget.CardView>
                 </LinearLayout>
             </LinearLayout>
         </FrameLayout>
     </androidx.core.widget.NestedScrollView>
 
-    <!-- BottomAppBar -->
     <com.google.android.material.bottomappbar.BottomAppBar
         android:id="@+id/bottom_app_bar"
         android:layout_width="match_parent"
@@ -391,7 +307,6 @@
             app:menu="@menu/bottom_navigation_menu" />
     </com.google.android.material.bottomappbar.BottomAppBar>
 
-    <!-- FAB QR -->
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab_qr"
         android:layout_width="wrap_content"
@@ -402,7 +317,6 @@
         app:layout_anchor="@id/bottom_app_bar"
         android:contentDescription="Scan QR" />
 
-    <!-- FAB Leaderboard -->
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab_leaderboard"
         android:layout_width="wrap_content"
