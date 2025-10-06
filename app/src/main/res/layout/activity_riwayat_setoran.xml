@@ -296,6 +296,25 @@
                         </LinearLayout>
                     </HorizontalScrollView>
 
+                    <ProgressBar
+                        android:id="@+id/progressBar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="16dp"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/tvKosong"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Belum ada data penyetoran."
+                        android:textSize="14sp"
+                        android:textColor="#888888"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="16dp"
+                        android:visibility="gone" />
+
                     <!-- RecyclerView for History -->
                     <androidx.recyclerview.widget.RecyclerView
                         android:id="@+id/rvRiwayatSetoran"

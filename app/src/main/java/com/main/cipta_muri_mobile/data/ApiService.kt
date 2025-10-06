@@ -26,13 +26,16 @@ interface ApiService {
     ): Response<List<MutasiSaldo>>
 
     @GET("ciptamuri_api/setor_sampah.php")
-    suspend fun getAllRiwayatSetoran(): Response<List<RiwayatSetoran>>
+    suspend fun getAllRiwayatSetoran(): Response<ApiResponse<List<RiwayatSetoran>>>
 
-    // GET data by user_id
     @GET("ciptamuri_api/setor_sampah.php")
-    suspend fun getRiwayatSetoranByUserId(@Query("user_id") userId: Int): Response<List<RiwayatSetoran>>
+    suspend fun getRiwayatSetoranByUserId(
+        @Query("user_id") userId: String
+    ): Response<ApiResponse<List<RiwayatSetoran>>>
 
-    // GET data by ID
     @GET("ciptamuri_api/setor_sampah.php")
-    suspend fun getRiwayatSetoranById(@Query("id") id: Int): Response<List<RiwayatSetoran>>
+    suspend fun getRiwayatSetoranById(
+        @Query("id") id: String
+    ): Response<ApiResponse<List<RiwayatSetoran>>>
+
 }

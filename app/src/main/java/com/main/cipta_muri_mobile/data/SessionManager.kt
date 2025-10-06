@@ -39,6 +39,7 @@ class SessionManager(context: Context) {
     fun isLoggedIn(): Boolean = prefs.getBoolean(KEY_IS_LOGGED_IN, false)
 
     fun getUserId(): String? = prefs.getString(KEY_ID, null)
+
     fun getUserName(): String? = prefs.getString(KEY_NAMA, null)
     fun getUserNik(): String? = prefs.getString(KEY_NIK, null)
     fun getUsername(): String? = prefs.getString(KEY_USER_ID, null)
