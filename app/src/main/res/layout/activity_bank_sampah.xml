@@ -18,139 +18,135 @@
         android:background="@drawable/bg_white_blur_gradient" />
 
     <!-- Konten utama -->
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:layout_marginTop="20dp"
-        android:paddingBottom="80dp"> <!-- beri ruang agar tidak tertutup BottomAppBar -->
+        android:paddingBottom="90dp"> <!-- supaya tidak ketimpa bottom bar -->
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center_vertical"
-            android:paddingHorizontal="16dp"
-            android:paddingVertical="20dp">
+            android:orientation="vertical"
+            android:paddingTop="20dp">
 
-            <ImageView
-                android:id="@+id/btnBack"
-                android:layout_width="35dp"
-                android:layout_height="35dp"
-                android:src="@drawable/ic_back"
-                android:contentDescription="Back" />
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Bank Sampah"
-                android:textColor="@android:color/white"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                android:gravity="center"
-                android:layout_marginEnd="35dp" />
-        </LinearLayout>
-
-        <!-- Square Map Card -->
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:cardCornerRadius="30dp"
-            app:cardElevation="4dp"
-            android:layout_marginHorizontal="24dp"
-            android:layout_marginTop="8dp">
-
-            <FrameLayout
+            <!-- Header -->
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="20dp">
 
                 <ImageView
-                    android:id="@+id/imgMap"
+                    android:id="@+id/btnBack"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:src="@drawable/ic_back"
+                    android:contentDescription="Back" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Bank Sampah"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:layout_marginEnd="35dp" />
+            </LinearLayout>
+
+            <!-- Peta -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                app:cardCornerRadius="30dp"
+                app:cardElevation="4dp"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginTop="8dp">
+
+                <WebView
+                    android:id="@+id/webViewMap"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:adjustViewBounds="true"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/sample_map" />
+                    android:layout_height="match_parent" />
+            </androidx.cardview.widget.CardView>
 
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_gravity="top" />
-            </FrameLayout>
-        </androidx.cardview.widget.CardView>
-
-        <!-- Bank Info -->
-        <TextView
-            android:id="@+id/tvNamaBank"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:gravity="center"
-            android:text="Bank Sampah Sahabatku"
-            android:textColor="@android:color/black"
-            android:textSize="18sp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/tvJarak"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            android:gravity="center"
-            android:text="(150 m)"
-            android:textColor="@android:color/black"
-            android:textSize="16sp"
-            android:layout_marginBottom="32dp" />
-
-        <!-- Lihat Jadwal Button -->
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:cardCornerRadius="25dp"
-            app:cardElevation="2dp"
-            android:layout_marginHorizontal="40dp"
-            android:layout_marginBottom="16dp">
-
+            <!-- Info Bank Sampah -->
             <TextView
-                android:id="@+id/btnLihatJadwal"
+                android:id="@+id/tvNamaBank"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="#6ABF4B"
-                android:text="Lihat Jadwal"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                android:textColor="@android:color/white"
+                android:layout_marginTop="20dp"
                 android:gravity="center"
-                android:paddingVertical="14dp"
-                android:clickable="true"
-                android:focusable="true" />
-        </androidx.cardview.widget.CardView>
+                android:text="Bank Sampah Sahabatku"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
 
-        <!-- Bagikan Button -->
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:cardCornerRadius="25dp"
-            app:cardElevation="0dp"
-            app:cardBackgroundColor="@android:color/transparent"
-            android:layout_marginHorizontal="40dp">
-
+            <!-- Jarak dari pengguna -->
             <TextView
-                android:id="@+id/btnBagikan"
+                android:id="@+id/tvJarak"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/btn_outline_blue"
-                android:text="Bagikan"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                android:textColor="#0077B6"
+                android:layout_marginTop="4dp"
                 android:gravity="center"
-                android:paddingVertical="14dp"
-                android:clickable="true"
-                android:focusable="true" />
-        </androidx.cardview.widget.CardView>
-    </LinearLayout>
+                android:text="Menghitung jarak..."
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                android:layout_marginBottom="32dp" />
+
+            <!-- Tombol Lihat Jadwal -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="25dp"
+                app:cardElevation="2dp"
+                android:layout_marginHorizontal="40dp"
+                android:layout_marginBottom="16dp">
+
+<!--                <TextView-->
+<!--                    android:id="@+id/btnLihatJadwal"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:background="#6ABF4B"-->
+<!--                    android:text="Lihat Jadwal"-->
+<!--                    android:textSize="18sp"-->
+<!--                    android:textStyle="bold"-->
+<!--                    android:textColor="@android:color/white"-->
+<!--                    android:gravity="center"-->
+<!--                    android:paddingVertical="14dp"-->
+<!--                    android:clickable="true"-->
+<!--                    android:focusable="true" />-->
+            </androidx.cardview.widget.CardView>
+
+            <!-- Tombol Bagikan -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="25dp"
+                app:cardElevation="0dp"
+                app:cardBackgroundColor="@android:color/transparent"
+                android:layout_marginHorizontal="40dp"
+                android:layout_marginBottom="20dp">
+
+                <TextView
+                    android:id="@+id/btnBagikan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/btn_outline_blue"
+                    android:text="Bagikan"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="#0077B6"
+                    android:gravity="center"
+                    android:paddingVertical="14dp"
+                    android:clickable="true"
+                    android:focusable="true" />
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+    </ScrollView>
 
     <!-- BottomAppBar -->
     <com.google.android.material.bottomappbar.BottomAppBar
@@ -175,7 +171,7 @@
             app:menu="@menu/bottom_navigation_menu" />
     </com.google.android.material.bottomappbar.BottomAppBar>
 
-    <!-- FAB QR -->
+    <!-- Floating Action Button (Scan QR) -->
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab_qr"
         android:layout_width="wrap_content"

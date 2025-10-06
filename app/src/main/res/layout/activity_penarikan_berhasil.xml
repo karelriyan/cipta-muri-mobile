@@ -133,7 +133,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Naufal Arif Rajabi"
+                        android:text="Karel Tsalasatir Riyan"
                         android:textColor="#666666"
                         android:textSize="14sp"
                         android:gravity="end" />
@@ -217,7 +217,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Rp11.000,00"
+                        android:text="Rp50.000,00"
                         android:textColor="#666666"
                         android:textSize="14sp"
                         android:gravity="end" />
@@ -267,7 +267,7 @@
                     android:id="@+id/tvTotalTransaksi"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Rp11.000,00"
+                    android:text="Rp50.000,00"
                     android:textColor="#000000"
                     android:textSize="28sp"
                     android:textStyle="bold"
