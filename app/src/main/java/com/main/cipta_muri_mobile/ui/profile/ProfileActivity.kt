@@ -9,6 +9,7 @@ import com.main.cipta_muri_mobile.data.SessionManager
 import com.main.cipta_muri_mobile.databinding.ActivityProfileBinding
 import com.main.cipta_muri_mobile.ui.aktivitas.RiwayatAktivitasActivity
 import com.main.cipta_muri_mobile.ui.main.MainActivity
+import com.main.cipta_muri_mobile.ui.news.NewsActivity
 
 class ProfileActivity : AppCompatActivity() {
 
@@ -51,7 +52,11 @@ class ProfileActivity : AppCompatActivity() {
                     true
                 }
                 R.id.navigation_placeholder -> true // kalau nanti mau pakai FAB
-                R.id.navigation_news -> true // kalau nanti mau pakai berita
+                R.id.navigation_news -> {
+                    startActivityWithFade(Intent(this, NewsActivity::class.java))
+                    finish()
+                    true
+                }
                 else -> false
             }
         }
