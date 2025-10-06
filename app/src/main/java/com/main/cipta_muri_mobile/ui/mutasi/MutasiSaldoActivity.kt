@@ -6,7 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.main.cipta_muri_mobile.data.SessionManager
 import com.main.cipta_muri_mobile.databinding.ActivityMutasiSaldoBinding
-import com.main.cipta_muri_mobile.ui.donasi.MutasiSaldoViewModel
+import com.main.cipta_muri_mobile.ui.mutasi.MutasiSaldoViewModel
 class MutasiSaldoActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMutasiSaldoBinding
@@ -30,9 +30,10 @@ class MutasiSaldoActivity : AppCompatActivity() {
         // Ambil userId dari SessionManager
         val session = SessionManager(this)
         val userId = session.getUserId() // ini yang disimpan saat login
+        val userIdInt = userId?.toIntOrNull()
 
-        if (userId != null) {
-            viewModel.loadMutasiSaldo(userId.toInt())
+        if (userIdInt != null) {
+            viewModel.loadMutasiSaldo(userIdInt)
         } else {
             binding.tvTampilkanLebihBanyak.text = "User ID tidak ditemukan"
         }
