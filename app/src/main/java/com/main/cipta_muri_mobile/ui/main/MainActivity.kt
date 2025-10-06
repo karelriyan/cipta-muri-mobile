@@ -91,18 +91,19 @@ class MainActivity : AppCompatActivity() {
             when (item.itemId) {
                 R.id.navigation_home -> true
                 R.id.navigation_profile -> {
-                    startActivity(Intent(this, ProfileActivity::class.java))
+                    startActivityWithFade(Intent(this, ProfileActivity::class.java))
                     true
                 }
                 R.id.navigation_placeholder -> {
                     // TODO: Tambahkan navigasi ke SetorSammpah Tapi di FAB
                     true
-                }R.id.navigation_news -> {
+                }
+                R.id.navigation_news -> {
                     // TODO: NEWS
                     true
                 }
                 R.id.navigation_history -> {
-                    startActivity(Intent(this, RiwayatAktivitasActivity::class.java))
+                    startActivityWithFade(Intent(this, RiwayatAktivitasActivity::class.java))
                     true
                 }
                 else -> false
@@ -113,55 +114,64 @@ class MainActivity : AppCompatActivity() {
     private fun setupMenuNavigation() {
         // Setor Sampah
         binding.mnSetor.setOnClickListener {
-            startActivity(Intent(this, SetorSampahActivity::class.java))
+            startActivityWithFade(Intent(this, SetorSampahActivity::class.java))
         }
 
         // Riwayat Setoran
         binding.mnRiwayatSetor.setOnClickListener {
-            startActivity(Intent(this, RiwayatSetoranActivity::class.java))
+            startActivityWithFade(Intent(this, RiwayatSetoranActivity::class.java))
         }
 
         // Tarik Saldo
         binding.mnTarik.setOnClickListener {
-            startActivity(Intent(this, TarikSaldoActivity::class.java))
+            startActivityWithFade(Intent(this, TarikSaldoActivity::class.java))
         }
 
         // Riwayat Penarikan
         binding.mnRiwayatPenarikan.setOnClickListener {
-            startActivity(Intent(this, RiwayatPenarikanActivity::class.java))
+            startActivityWithFade(Intent(this, RiwayatPenarikanActivity::class.java))
         }
 
         // Donasi Sampah
         binding.mnDonasi.setOnClickListener {
-            startActivity(Intent(this, DonasiSampahActivity::class.java))
+            startActivityWithFade(Intent(this, DonasiSampahActivity::class.java))
         }
 
         // Leaderboard
         binding.mnLeaderboard.setOnClickListener {
-            startActivity(Intent(this, LeaderboardActivity::class.java))
+            startActivityWithFade(Intent(this, LeaderboardActivity::class.java))
         }
 
         // Mutasi Saldo
         binding.cardSaldo.setOnClickListener {
-            startActivity(Intent(this, MutasiSaldoActivity::class.java))
+            startActivityWithFade(Intent(this, MutasiSaldoActivity::class.java))
         }
 
         // Profil Nasabah
         binding.tvProfileInitial.setOnClickListener {
-            startActivity(Intent(this, ProfileActivity::class.java))
+            startActivityWithFade(Intent(this, ProfileActivity::class.java))
         }
 
         // FAB QR
         binding.fabQr.setOnClickListener {
-            startActivity(Intent(this, SetorSampahActivity::class.java))
+            startActivityWithFade(Intent(this, SetorSampahActivity::class.java))
         }
 
         // FAB Leaderboard
         binding.fabLeaderboard.setOnClickListener {
-            startActivity(Intent(this, LeaderboardActivity::class.java))
+            startActivityWithFade(Intent(this, LeaderboardActivity::class.java))
         }
-
-
     }
 
+    // ✅ Fungsi untuk navigasi dengan efek fade
+    private fun startActivityWithFade(intent: Intent) {
+        startActivity(intent)
+        overridePendingTransition(R.anim.fade_in, R.anim.fade_out)
+    }
+
+    // ✅ Opsional: Tambahkan juga untuk back button jika ingin konsisten
+    override fun onBackPressed() {
+        super.onBackPressed()
+        overridePendingTransition(R.anim.fade_in, R.anim.fade_out)
+    }
 }

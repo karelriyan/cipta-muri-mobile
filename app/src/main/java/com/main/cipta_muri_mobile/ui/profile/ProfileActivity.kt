@@ -40,13 +40,13 @@ class ProfileActivity : AppCompatActivity() {
         navView.setOnItemSelectedListener { item ->
             when (item.itemId) {
                 R.id.navigation_home -> {
-                    startActivity(Intent(this, MainActivity::class.java))
+                    startActivityWithFade(Intent(this, MainActivity::class.java))
                     finish()
                     true
                 }
                 R.id.navigation_profile -> true // sudah di halaman ini
                 R.id.navigation_history -> {
-                    startActivity(Intent(this, RiwayatAktivitasActivity::class.java))
+                    startActivityWithFade(Intent(this, RiwayatAktivitasActivity::class.java))
                     finish()
                     true
                 }
@@ -55,5 +55,31 @@ class ProfileActivity : AppCompatActivity() {
                 else -> false
             }
         }
+    }
+
+    // ✅ Fungsi untuk start activity dengan animasi fade
+    private fun startActivityWithFade(intent: Intent) {
+        startActivity(intent)
+        overridePendingTransition(R.anim.fade_in, R.anim.fade_out)
+    }
+
+    // ✅ Override animasi saat activity dimulai
+    override fun onStart() {
+        super.onStart()
+        // Animasi fade in saat activity dimulai
+        overridePendingTransition(R.anim.fade_in, R.anim.fade_out)
+    }
+
+    // ✅ Override animasi saat back ditekan
+    override fun onBackPressed() {
+        super.onBackPressed()
+        // Animasi fade out saat kembali
+        overridePendingTransition(R.anim.fade_in, R.anim.fade_out)
+    }
+
+    // ✅ Opsional: Override finish untuk konsistensi
+    override fun finish() {
+        super.finish()
+        overridePendingTransition(R.anim.fade_in, R.anim.fade_out)
     }
 }

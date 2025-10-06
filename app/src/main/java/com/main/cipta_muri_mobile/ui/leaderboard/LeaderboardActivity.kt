@@ -10,11 +10,9 @@ import android.widget.TextView
 import androidx.activity.viewModels
 import com.main.cipta_muri_mobile.databinding.ActivityLeaderboardBinding
 
-
 class LeaderboardActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityLeaderboardBinding
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -38,6 +36,20 @@ class LeaderboardActivity : AppCompatActivity() {
         }
     }
 
+    // ✅ Override animasi saat activity dimulai
+    override fun onStart() {
+        super.onStart()
+        // Animasi fade in saat activity dimulai
+        overridePendingTransition(R.anim.fade_in, R.anim.fade_out)
+    }
+
+    // ✅ Override animasi saat back ditekan
+    override fun onBackPressed() {
+        super.onBackPressed()
+        // Animasi fade out saat kembali
+        overridePendingTransition(R.anim.fade_in, R.anim.fade_out)
+    }
+
     // (Contoh fungsi untuk RecyclerView, Anda akan memerlukannya nanti)
     /*
     private fun setupRecyclerView() {
@@ -46,5 +58,4 @@ class LeaderboardActivity : AppCompatActivity() {
         // binding.rvLeaderboard.adapter = adapter
     }
     */
-
 }
