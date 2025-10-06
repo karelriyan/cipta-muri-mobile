@@ -24,4 +24,15 @@ interface ApiService {
     suspend fun getMutasiSaldo(
         @Query("user_id") userId: Int
     ): Response<List<MutasiSaldo>>
+
+    @GET("ciptamuri_api/setor_sampah.php")
+    suspend fun getAllRiwayatSetoran(): Response<List<RiwayatSetoran>>
+
+    // GET data by user_id
+    @GET("ciptamuri_api/setor_sampah.php")
+    suspend fun getRiwayatSetoranByUserId(@Query("user_id") userId: Int): Response<List<RiwayatSetoran>>
+
+    // GET data by ID
+    @GET("ciptamuri_api/setor_sampah.php")
+    suspend fun getRiwayatSetoranById(@Query("id") id: Int): Response<List<RiwayatSetoran>>
 }

@@ -37,15 +37,48 @@
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.Ciptamuri.NoPurple"/>
-        <activity android:name=".ui.setor.riwayat.RiwayatSetoranActivity" />
-        <activity android:name=".ui.setor.SetorSampahActivity" />
-        <activity android:name=".ui.saldo.tarik.TarikSaldoActivity" />
-        <activity android:name=".ui.saldo.riwayat.RiwayatPenarikanActivity" />
-        <activity android:name=".ui.donasi.DonasiSampahActivity" />
-        <activity android:name=".ui.aktivitas.RiwayatAktivitasActivity" />
-        <activity android:name=".ui.profile.ProfileActivity" />
-        <activity android:name=".ui.setor.harga.HargaSampahActivity" />
-        <activity android:name=".ui.mutasi.MutasiSaldoActivity" />"
+        <activity
+            android:name=".ui.setor.riwayat.RiwayatSetoranActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.Ciptamuri.NoPurple"/>
+        <activity android:name=".ui.setor.SetorSampahActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.Ciptamuri.NoPurple"/>
+        <activity android:name=".ui.saldo.tarik.TarikSaldoActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.Ciptamuri.NoPurple"/>
+        <activity android:name=".ui.saldo.riwayat.RiwayatPenarikanActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.Ciptamuri.NoPurple"/>
+        <activity android:name=".ui.donasi.DonasiSampahActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.Ciptamuri.NoPurple"/>
+        <activity android:name=".ui.aktivitas.RiwayatAktivitasActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.Ciptamuri.NoPurple"/>
+        <activity android:name=".ui.profile.ProfileActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.Ciptamuri.NoPurple"/>
+        <activity android:name=".ui.setor.harga.HargaSampahActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.Ciptamuri.NoPurple"/>
+        <activity android:name=".ui.mutasi.MutasiSaldoActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.Ciptamuri.NoPurple"/>
+        <activity
+            android:name=".ui.setor.bank.BankSampahActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.Ciptamuri.NoPurple"/>
 
 
 
