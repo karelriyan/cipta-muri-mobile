@@ -12,6 +12,7 @@ import com.main.cipta_muri_mobile.data.User
 import com.main.cipta_muri_mobile.databinding.ActivityMainBinding
 import com.main.cipta_muri_mobile.ui.aktivitas.RiwayatAktivitasActivity
 import com.main.cipta_muri_mobile.ui.donasi.DonasiSampahActivity
+import com.main.cipta_muri_mobile.ui.leaderboard.LeaderboardActivity
 import com.main.cipta_muri_mobile.ui.mutasi.MutasiSaldoActivity
 import com.main.cipta_muri_mobile.ui.profile.ProfileActivity
 import com.main.cipta_muri_mobile.ui.saldo.riwayat.RiwayatPenarikanActivity
@@ -137,7 +138,7 @@ class MainActivity : AppCompatActivity() {
 
         // Leaderboard
         binding.mnLeaderboard.setOnClickListener {
-            // TODO: Tambahkan navigasi ke Leaderboard
+            startActivity(Intent(this, LeaderboardActivity::class.java))
         }
 
         // Mutasi Saldo
@@ -149,6 +150,17 @@ class MainActivity : AppCompatActivity() {
         binding.tvProfileInitial.setOnClickListener {
             startActivity(Intent(this, ProfileActivity::class.java))
         }
+
+        // FAB QR
+        binding.fabQr.setOnClickListener {
+            startActivity(Intent(this, SetorSampahActivity::class.java))
+        }
+
+        // FAB Leaderboard
+        binding.fabLeaderboard.setOnClickListener {
+            startActivity(Intent(this, LeaderboardActivity::class.java))
+        }
+
 
     }
 

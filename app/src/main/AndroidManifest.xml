@@ -79,9 +79,8 @@
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.Ciptamuri.NoPurple"/>
-
-
-
+        <activity android:name=".ui.leaderboard.LeaderboardActivity"
+            />
 
     </application>
 
