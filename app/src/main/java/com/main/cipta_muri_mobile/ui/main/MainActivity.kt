@@ -77,6 +77,9 @@ class MainActivity : AppCompatActivity() {
                 binding.tvAccountNumber.text = "No. Rekening: ${it.accountNumber}"
             }
         }
+        viewModel.userInitial.observe(this) { initial ->
+            binding.tvProfileInitial.text = initial
+        }
     }
 
     private fun setupBottomNavListener(navView: BottomNavigationView) {
@@ -143,7 +146,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         // Profil Nasabah
-        binding.ivProfileAvatar.setOnClickListener {
+        binding.tvProfileInitial.setOnClickListener {
             startActivity(Intent(this, ProfileActivity::class.java))
         }
 

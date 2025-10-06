@@ -25,22 +25,21 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
 
-                <com.google.android.material.card.MaterialCardView
+                <!-- 🔤 Avatar otomatis dari huruf pertama nama -->
+                <TextView
+                    android:id="@+id/tv_profile_avatar"
                     android:layout_width="120dp"
                     android:layout_height="120dp"
                     android:layout_marginTop="100dp"
-                    app:cardCornerRadius="60dp"
-                    app:strokeWidth="0dp">
+                    android:gravity="center"
+                    android:text="R"
+                    android:textSize="48sp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/white"
+                    android:background="@drawable/bg_circle_avatar"
+                    android:contentDescription="Avatar huruf awal nama" />
 
-                    <ImageView
-                        android:id="@+id/iv_profile_picture"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:scaleType="centerCrop"
-                        tools:src="@drawable/avatar"
-                        android:contentDescription="Foto Profil" />
-                </com.google.android.material.card.MaterialCardView>
-
+                <!-- 📷 Tombol ubah foto -->
                 <ImageView
                     android:id="@+id/iv_edit_photo"
                     android:layout_width="32dp"
@@ -53,6 +52,7 @@
 
             </FrameLayout>
 
+            <!-- 🧑 Nama lengkap -->
             <TextView
                 android:id="@+id/tv_profile_name"
                 android:layout_width="wrap_content"
@@ -167,6 +167,5 @@
         app:maxImageSize="70dp"
         app:layout_anchor="@id/bottom_app_bar"
         android:contentDescription="Scan QR" />
-
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
