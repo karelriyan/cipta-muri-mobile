@@ -4,14 +4,9 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.main.cipta_muri_mobile.data.ApiService
-import com.main.cipta_muri_mobile.data.RetrofitClient
-import com.main.cipta_muri_mobile.data.RiwayatSetoran
 import kotlinx.coroutines.launch
 
 class RiwayatSetoranViewModel : ViewModel() {
-
-    private val apiService: ApiService = RetrofitClient.instance
 
     private val _riwayatList = MutableLiveData<List<RiwayatSetoran>>()
     val riwayatList: LiveData<List<RiwayatSetoran>> = _riwayatList
@@ -22,28 +17,44 @@ class RiwayatSetoranViewModel : ViewModel() {
     private val _errorMessage = MutableLiveData<String>()
     val errorMessage: LiveData<String> = _errorMessage
 
-    // ✅ Gunakan String untuk userId
+    // 🚀 Versi dummy: tidak perlu panggil API sama sekali
     fun loadRiwayatSetoran(userId: String) {
         _isLoading.value = true
+        _errorMessage.value = ""
+
         viewModelScope.launch {
             try {
-                val response = apiService.getRiwayatSetoranByUserId(userId)
-                if (response.isSuccessful) {
-                    val body = response.body()
-                    if (body?.status == "success" && !body.data.isNullOrEmpty()) {
-                        _riwayatList.value = body.data
-                    } else {
-                        _riwayatList.value = emptyList()
-                        _errorMessage.value = "Belum ada data setoran."
-                    }
-                } else {
-                    _errorMessage.value = "Gagal memuat data (Code: ${response.code()})"
-                }
+                // 📦 langsung isi dengan dummy data
+                _riwayatList.value = getDummyData()
             } catch (e: Exception) {
-                _errorMessage.value = "Kesalahan koneksi: ${e.localizedMessage}"
+                _errorMessage.value = "Kesalahan: ${e.localizedMessage}"
             } finally {
                 _isLoading.value = false
             }
         }
+    }
+
+    // ✅ Dummy data
+    private fun getDummyData(): List<RiwayatSetoran> {
+        return listOf(
+            RiwayatSetoran(
+                tanggal = "05 Februari 2025",
+                jenisSetoran = "Setor Plastik",
+                beratFormatted = "15 kg",
+                totalSaldoFormatted = "Rp 12.000"
+            ),
+            RiwayatSetoran(
+                tanggal = "15 Maret 2025",
+                jenisSetoran = "Setor Kardus",
+                beratFormatted = "8 kg",
+                totalSaldoFormatted = "Rp 8.000"
+            ),
+            RiwayatSetoran(
+                tanggal = "30 April 2025",
+                jenisSetoran = "Setor Logam",
+                beratFormatted = "5 kg",
+                totalSaldoFormatted = "Rp 20.000"
+            )
+        )
     }
 }

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardRoot"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginBottom="12dp"
@@ -14,7 +15,6 @@
         android:orientation="vertical"
         android:padding="16dp">
 
-        <!-- Tanggal -->
         <TextView
             android:id="@+id/tvTanggal"
             android:layout_width="wrap_content"
@@ -24,14 +24,12 @@
             android:textSize="12sp"
             android:layout_marginBottom="8dp" />
 
-        <!-- Container untuk Judul dan Nominal -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:gravity="center_vertical">
 
-            <!-- Judul dan Subtitle -->
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -55,10 +53,8 @@
                     android:text="Lihat Rincian"
                     android:textColor="#999999"
                     android:textSize="14sp" />
-
             </LinearLayout>
 
-            <!-- Nominal -->
             <TextView
                 android:id="@+id/tvNominal"
                 android:layout_width="wrap_content"
@@ -67,9 +63,6 @@
                 android:textColor="#FF0000"
                 android:textSize="16sp"
                 android:textStyle="bold" />
-
         </LinearLayout>
-
     </LinearLayout>
-
 </com.google.android.material.card.MaterialCardView>

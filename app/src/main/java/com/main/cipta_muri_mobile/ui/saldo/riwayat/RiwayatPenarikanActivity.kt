@@ -2,12 +2,9 @@ package com.main.cipta_muri_mobile.ui.saldo.riwayat
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.main.cipta_muri_mobile.R
-import android.content.Intent
-import android.widget.TextView
-import androidx.activity.viewModels
 import com.main.cipta_muri_mobile.databinding.ActivityRiwayatPenarikanBinding
-import com.main.cipta_muri_mobile.ui.main.MainActivity
 
 class RiwayatPenarikanActivity : AppCompatActivity() {
 
@@ -19,13 +16,23 @@ class RiwayatPenarikanActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         setupNavigation()
+        setupRecyclerView()
     }
 
     private fun setupNavigation() {
-        // Back
         binding.btnBack.setOnClickListener {
             onBackPressedDispatcher.onBackPressed()
         }
     }
 
+    private fun setupRecyclerView() {
+        val dataDummy = listOf(
+            RiwayatPenarikanItem("05 FEBRUARI 2025", "Saldo Keluar", "Lihat Rincian", "-Rp 150.000,00", getColor(R.color.red)),
+            RiwayatPenarikanItem("03 FEBRUARI 2025", "Saldo Masuk", "Lihat Rincian", "+Rp 300.000,00", getColor(R.color.green)),
+            RiwayatPenarikanItem("28 JANUARI 2025", "Saldo Keluar", "Lihat Rincian", "-Rp 90.000,00", getColor(R.color.red))
+        )
+
+        binding.rvTukarPoin.layoutManager = LinearLayoutManager(this)
+        binding.rvTukarPoin.adapter = RiwayatPenarikanAdapter(dataDummy)
+    }
 }

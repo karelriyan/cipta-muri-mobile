@@ -6,10 +6,9 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.main.cipta_muri_mobile.R
-import com.main.cipta_muri_mobile.data.RiwayatSetoran
 
 class RiwayatSetoranAdapter(
-    private val items: List<RiwayatSetoran>,
+    private var items: List<RiwayatSetoran>, // ✅ ubah jadi var supaya bisa diupdate
     private val onItemClick: ((RiwayatSetoran) -> Unit)? = null
 ) : RecyclerView.Adapter<RiwayatSetoranAdapter.ViewHolder>() {
 
@@ -29,16 +28,22 @@ class RiwayatSetoranAdapter(
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val item = items[position]
 
-        // Isi data sesuai model
+        // 🗓️ Isi data sesuai model
         holder.tvTanggal.text = item.tanggal
         holder.tvJudul.text = "${item.jenisSetoran} (${item.beratFormatted})"
         holder.tvSaldo.text = item.totalSaldoFormatted
 
-//        // Klik tombol "Lihat Rincian"
-//        holder.tvRincian.setOnClickListener {
-//            onItemClick?.invoke(item)
-//        }
+        // 📌 Jika ingin pakai klik item
+        holder.itemView.setOnClickListener {
+            onItemClick?.invoke(item)
+        }
     }
 
     override fun getItemCount(): Int = items.size
+
+    // ✅ Fungsi untuk memperbarui data tanpa bikin adapter baru
+    fun updateData(newItems: List<RiwayatSetoran>) {
+        this.items = newItems
+        notifyDataSetChanged()
+    }
 }

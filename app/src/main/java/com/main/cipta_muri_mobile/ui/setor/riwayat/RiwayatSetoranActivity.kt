@@ -7,7 +7,6 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.observe
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.main.cipta_muri_mobile.R
-import com.main.cipta_muri_mobile.data.RiwayatSetoran
 import com.main.cipta_muri_mobile.databinding.ActivityRiwayatSetoranBinding
 import com.main.cipta_muri_mobile.data.SessionManager
 
@@ -36,7 +35,6 @@ class RiwayatSetoranActivity : AppCompatActivity() {
         else {
             binding.tvKosong.apply {
                 visibility = View.VISIBLE
-                text = "User tidak ditemukan. Silakan login ulang."
             }
         }
     }
@@ -57,12 +55,10 @@ class RiwayatSetoranActivity : AppCompatActivity() {
         viewModel.isLoading.observe(this) { isLoading ->
             binding.progressBar.visibility = if (isLoading) View.VISIBLE else View.GONE
         }
-
         viewModel.riwayatList.observe(this) { list ->
             if (list.isNotEmpty()) {
                 binding.tvKosong.visibility = View.GONE
-                adapter = RiwayatSetoranAdapter(list)
-                binding.rvRiwayatSetoran.adapter = adapter
+                adapter.updateData(list) // ✅ ini kuncinya
             } else {
                 binding.tvKosong.apply {
                     visibility = View.VISIBLE
@@ -70,6 +66,7 @@ class RiwayatSetoranActivity : AppCompatActivity() {
                 }
             }
         }
+
 
         viewModel.errorMessage.observe(this) { error ->
             if (error.isNotEmpty()) {

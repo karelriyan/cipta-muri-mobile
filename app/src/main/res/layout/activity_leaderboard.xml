@@ -314,8 +314,11 @@
                         android:id="@+id/rv_leaderboard"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:overScrollMode="never"
+                        android:nestedScrollingEnabled="false"
                         tools:listitem="@layout/item_leaderboard_rank"
                         tools:itemCount="6" />
+
 
                 </LinearLayout>
             </LinearLayout>
