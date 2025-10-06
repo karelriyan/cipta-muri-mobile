@@ -1,52 +1,58 @@
 package com.main.cipta_muri_mobile.ui.mutasi
 
 import android.os.Bundle
-import android.view.View
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
-import com.main.cipta_muri_mobile.data.ApiService
+import androidx.recyclerview.widget.LinearLayoutManager
+import com.main.cipta_muri_mobile.data.SessionManager
 import com.main.cipta_muri_mobile.databinding.ActivityMutasiSaldoBinding
 import com.main.cipta_muri_mobile.ui.donasi.MutasiSaldoViewModel
 class MutasiSaldoActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMutasiSaldoBinding
-    private val viewModel: MutasiSaldoViewModel by viewModels {
-        MutasiSaldoViewModelFactory(ApiService.getApiService())
-    }
+    private val viewModel: MutasiSaldoViewModel by viewModels()
+    private lateinit var adapter: MutasiSaldoAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMutasiSaldoBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        // Tombol kembali
         binding.btnBack.setOnClickListener { finish() }
 
-        // Observe data
+        // Setup RecyclerView
+        setupRecyclerView()
+
+        // Observe data dari ViewModel
         observeViewModel()
 
-        // Ambil user_id dari session/local
-        val userId = 1 // contoh
-        viewModel.loadMutasiSaldo(userId)
+        // Ambil userId dari SessionManager
+        val session = SessionManager(this)
+        val userId = session.getUserId() // ini yang disimpan saat login
+
+        if (userId != null) {
+            viewModel.loadMutasiSaldo(userId.toInt())
+        } else {
+            binding.tvTampilkanLebihBanyak.text = "User ID tidak ditemukan"
+        }
+    }
+
+    private fun setupRecyclerView() {
+        adapter = MutasiSaldoAdapter(emptyList())
+        binding.rvMutasiSaldo.layoutManager = LinearLayoutManager(this)
+        binding.rvMutasiSaldo.adapter = adapter
     }
 
     private fun observeViewModel() {
-        viewModel.isLoading.observe(this) {
-            binding.progressBar.visibility = if (it) View.VISIBLE else View.GONE
-        }
-
         viewModel.mutasiList.observe(this) { list ->
-            if (list.isNotEmpty()) {
-                val last = list.last()
-                binding.tvTanggal.text = last.tanggal
-                binding.tvKeterangan.text = last.keterangan
-                binding.tvNominal.text = "Rp ${String.format("%,.0f", last.nominal)}"
-            } else {
-                binding.tvKeterangan.text = "Belum ada mutasi saldo"
-            }
+            adapter.updateData(list)
         }
 
-        viewModel.errorMessage.observe(this) {
-            it?.let { msg -> binding.tvKeterangan.text = msg }
+        viewModel.errorMessage.observe(this) { error ->
+            if (!error.isNullOrEmpty()) {
+                binding.tvTampilkanLebihBanyak.text = error
+            }
         }
     }
 }

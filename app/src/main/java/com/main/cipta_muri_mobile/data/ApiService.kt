@@ -23,5 +23,5 @@ interface ApiService {
     @GET("mutasi_saldo.php")
     suspend fun getMutasiSaldo(
         @Query("user_id") userId: Int
-    ): Response<List<MutasiSaldoData>>
+    ): Response<List<MutasiSaldo>>
 }
