@@ -10,7 +10,14 @@ import com.main.cipta_muri_mobile.R
 import com.main.cipta_muri_mobile.data.SessionManager
 import com.main.cipta_muri_mobile.data.User
 import com.main.cipta_muri_mobile.databinding.ActivityMainBinding
+import com.main.cipta_muri_mobile.ui.aktivitas.RiwayatAktivitasActivity
+import com.main.cipta_muri_mobile.ui.donasi.DonasiSampahActivity
+import com.main.cipta_muri_mobile.ui.mutasi.MutasiSaldoActivity
 import com.main.cipta_muri_mobile.ui.profile.ProfileActivity
+import com.main.cipta_muri_mobile.ui.saldo.riwayat.RiwayatPenarikanActivity
+import com.main.cipta_muri_mobile.ui.saldo.tarik.TarikSaldoActivity
+import com.main.cipta_muri_mobile.ui.setor.SetorSampahActivity
+import com.main.cipta_muri_mobile.ui.setor.riwayat.RiwayatSetoranActivity
 
 class MainActivity : AppCompatActivity() {
 
@@ -40,6 +47,9 @@ class MainActivity : AppCompatActivity() {
 
         // ✅ 4. Bottom navigation
         setupBottomNavListener(binding.bottomNavigationView)
+
+        // ✅ 5. Setup navigasi menu utama (GridLayout)
+        setupMenuNavigation()
     }
 
     private fun setUserDataFromSession() {
@@ -81,11 +91,62 @@ class MainActivity : AppCompatActivity() {
                     true
                 }
                 R.id.navigation_placeholder -> {
-                    // TODO: Tambahkan navigasi ke Notifikasi
+                    // TODO: Tambahkan navigasi ke SetorSammpah Tapi di FAB
+                    true
+                }R.id.navigation_news -> {
+                    // TODO: NEWS
+                    true
+                }
+                R.id.navigation_history -> {
+                    startActivity(Intent(this, RiwayatAktivitasActivity::class.java))
                     true
                 }
                 else -> false
             }
         }
     }
+
+    private fun setupMenuNavigation() {
+        // Setor Sampah
+        binding.mnSetor.setOnClickListener {
+            startActivity(Intent(this, SetorSampahActivity::class.java))
+        }
+
+        // Riwayat Setoran
+        binding.mnRiwayatSetor.setOnClickListener {
+            startActivity(Intent(this, RiwayatSetoranActivity::class.java))
+        }
+
+        // Tarik Saldo
+        binding.mnTarik.setOnClickListener {
+            startActivity(Intent(this, TarikSaldoActivity::class.java))
+        }
+
+        // Riwayat Penarikan
+        binding.mnRiwayatPenarikan.setOnClickListener {
+            startActivity(Intent(this, RiwayatPenarikanActivity::class.java))
+        }
+
+        // Donasi Sampah
+        binding.mnDonasi.setOnClickListener {
+            startActivity(Intent(this, DonasiSampahActivity::class.java))
+        }
+
+        // Leaderboard
+        binding.mnLeaderboard.setOnClickListener {
+            // TODO: Tambahkan navigasi ke Leaderboard
+        }
+
+        // Mutasi Saldo
+        binding.cardSaldo.setOnClickListener {
+            startActivity(Intent(this, MutasiSaldoActivity::class.java))
+        }
+
+        // Profil Nasabah
+        binding.ivProfileAvatar.setOnClickListener {
+            startActivity(Intent(this, ProfileActivity::class.java))
+        }
+
+    }
+
 }

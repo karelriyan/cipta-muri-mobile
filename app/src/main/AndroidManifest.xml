@@ -37,6 +37,17 @@
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.Ciptamuri.NoPurple"/>
+        <activity android:name=".ui.setor.riwayat.RiwayatSetoranActivity" />
+        <activity android:name=".ui.setor.SetorSampahActivity" />
+        <activity android:name=".ui.saldo.tarik.TarikSaldoActivity" />
+        <activity android:name=".ui.saldo.riwayat.RiwayatPenarikanActivity" />
+        <activity android:name=".ui.donasi.DonasiSampahActivity" />
+        <activity android:name=".ui.aktivitas.RiwayatAktivitasActivity" />
+        <activity android:name=".ui.profile.ProfileActivity" />
+        <activity android:name=".ui.setor.harga.HargaSampahActivity" />
+
+
+
 
     </application>
 
