@@ -50,4 +50,11 @@ class SessionManager(context: Context) {
     fun logoutUser() {
         prefs.edit().clear().apply()
     }
+
+    fun clearSession() {
+        val editor = prefs.edit()
+        editor.clear()
+        editor.apply()
+    }
+
 }
