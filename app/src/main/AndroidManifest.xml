@@ -45,6 +45,7 @@
         <activity android:name=".ui.aktivitas.RiwayatAktivitasActivity" />
         <activity android:name=".ui.profile.ProfileActivity" />
         <activity android:name=".ui.setor.harga.HargaSampahActivity" />
+        <activity android:name=".ui.mutasi.MutasiSaldoActivity" />"
 
 
 
