@@ -77,6 +77,8 @@
                         android:gravity="left"
                         android:textStyle="bold"
                         android:textColor="@color/black" />
+
+                    <include layout="@layout/section_news"/>
                 </LinearLayout>
 
             </LinearLayout>

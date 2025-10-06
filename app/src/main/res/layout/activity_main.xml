@@ -269,6 +269,15 @@
                     android:background="@drawable/rounded_top_white_bg"
                     android:padding="16dp">
 
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="24dp"
+                        android:text="Berita"
+                        android:textSize="20sp"
+                        android:textColor="@color/black"
+                        android:textStyle="bold" />
+
                     <include layout="@layout/section_news"/>
 
                 </LinearLayout>
