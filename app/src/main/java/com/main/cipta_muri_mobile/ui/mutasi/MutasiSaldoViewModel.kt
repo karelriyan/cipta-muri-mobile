@@ -1,11 +1,12 @@
-package com.main.cipta_muri_mobile.ui.donasi
+package com.main.cipta_muri_mobile.ui.mutasi
 
 import androidx.lifecycle.*
 import com.main.cipta_muri_mobile.data.ApiService
+import com.main.cipta_muri_mobile.data.RetrofitClient
 import com.main.cipta_muri_mobile.data.MutasiSaldo
 import kotlinx.coroutines.launch
 
-class MutasiSaldoViewModel(private val apiService: ApiService) : ViewModel() {
+class MutasiSaldoViewModel(private val apiService: ApiService = RetrofitClient.instance) : ViewModel() {
 
     private val _mutasiList = MutableLiveData<List<MutasiSaldo>>()
     val mutasiList: LiveData<List<MutasiSaldo>> = _mutasiList
