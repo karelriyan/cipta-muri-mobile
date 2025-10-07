@@ -9,6 +9,9 @@ import com.main.cipta_muri_mobile.ui.main.MainActivity
 import com.main.cipta_muri_mobile.ui.news.NewsActivity
 import com.main.cipta_muri_mobile.ui.profile.ProfileActivity
 
+import androidx.recyclerview.widget.LinearLayoutManager
+import com.main.cipta_muri_mobile.data.Aktivitas
+
 class RiwayatAktivitasActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityRiwayatAktivitasBinding
@@ -18,16 +21,10 @@ class RiwayatAktivitasActivity : AppCompatActivity() {
         binding = ActivityRiwayatAktivitasBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        // ✅ Samakan ID dengan yang di XML
         val navView = binding.bottomNavigationView
-
-        // ✅ Pakai warna asli ikon dari drawable
         navView.itemIconTintList = null
-
-        // ✅ Tandai item aktivitas sebagai yang aktif
         navView.selectedItemId = R.id.navigation_history
 
-        // ✅ Navigasi antar halaman
         navView.setOnItemSelectedListener { item ->
             when (item.itemId) {
                 R.id.navigation_home -> {
@@ -35,7 +32,7 @@ class RiwayatAktivitasActivity : AppCompatActivity() {
                     overridePendingTransition(0, 0)
                     true
                 }
-                R.id.navigation_history -> true // halaman ini
+                R.id.navigation_history -> true
                 R.id.navigation_profile -> {
                     startActivity(Intent(this, ProfileActivity::class.java))
                     overridePendingTransition(0, 0)
@@ -49,5 +46,18 @@ class RiwayatAktivitasActivity : AppCompatActivity() {
                 else -> false
             }
         }
+
+        // ✅ Tambahkan dummy data
+        val dummyList = listOf(
+            Aktivitas("09 Maret 2025", "Saldo Masuk", "Hasil Penjualan Sampah", "+Rp 10.000,00", true),
+            Aktivitas("09 Maret 2025", "Saldo Keluar", "Tarik Tunai ke Rekening", "-Rp 5.000,00", false),
+            Aktivitas("08 Maret 2025", "Saldo Masuk", "Bonus Poin Penukaran", "+Rp 2.500,00", true),
+            Aktivitas("07 Maret 2025", "Saldo Keluar", "Pembayaran Tagihan", "-Rp 15.000,00", false)
+        )
+
+        // ✅ Set adapter RecyclerView
+        binding.rvAktivitas.layoutManager = LinearLayoutManager(this)
+        binding.rvAktivitas.adapter = AktivitasAdapter(dummyList)
     }
 }
+
