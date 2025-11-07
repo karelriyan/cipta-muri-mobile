@@ -20,7 +20,8 @@ class SplashActivity : AppCompatActivity() {
 
         viewModel.navigateToMain.observe(this, Observer { shouldNavigate ->
             if (shouldNavigate) {
-                startActivity(Intent(this, LoginActivity::class.java))
+                // Selalu arahkan ke Login setelah Splash
+                startActivity(Intent(this@SplashActivity, LoginActivity::class.java))
                 finish()
             }
         })

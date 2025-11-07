@@ -10,6 +10,7 @@ import com.main.cipta_muri_mobile.ui.main.MainActivity
 import com.main.cipta_muri_mobile.data.User
 // Import SessionManager for the initial check (recommended)
 import com.main.cipta_muri_mobile.data.SessionManager
+import kotlinx.coroutines.launch
 
 class LoginActivity : AppCompatActivity() {
 
@@ -20,15 +21,7 @@ class LoginActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        // Setup Session Manager for initial check
-        val sessionManager = SessionManager(this)
-
-        // OPTIONAL: Pre-check if the user is already logged in (Recommended for smooth flow)
-        if (sessionManager.isLoggedIn()) {
-            startActivity(Intent(this, MainActivity::class.java))
-            finish()
-            return
-        }
+        // Jangan auto-forward ke Main; selalu tampilkan form login.
 
         // 2. INITIALIZE the binding object and set content view
         binding = ActivityLoginBinding.inflate(layoutInflater)
@@ -49,16 +42,14 @@ class LoginActivity : AppCompatActivity() {
 
             binding.etPin.error = null
 
-            // The login function requires 3 arguments in the callback: isSuccess, message, and user
-            viewModel.login(nik, pinTanggalLahir) { isSuccess, message, user ->
-                if (isSuccess) {
-                    // We assume session is saved in ViewModel, now navigate
-                    if (user != null) {
-                        val intent = Intent(this, MainActivity::class.java)
-                        startActivity(intent)
-                        finish()
-                    }
+            // Prefer API v2 (Bearer token) using tanggal_lahir as YYYY-MM-DD
+            val normalizedTtl = normalizeDate(pinTanggalLahir)
+            viewModel.loginV2(nik, normalizedTtl) { ok, msg ->
+                if (ok) {
+                    startActivity(Intent(this, MainActivity::class.java))
+                    finish()
                 } else {
+                    val message = msg ?: "Login gagal"
                     binding.etPin.error = message
                     Toast.makeText(this, message, Toast.LENGTH_LONG).show()
                 }
@@ -69,5 +60,29 @@ class LoginActivity : AppCompatActivity() {
             val intent = Intent(this, LupaPinActivity::class.java)
             startActivity(intent)
         }
+    }
+
+    private fun normalizeDate(input: String): String {
+        // Accept already-correct format
+        val trimmed = input.trim()
+        // Remove unexpected trailing chars (e.g., accidental 'S')
+        val sanitized = trimmed.filter { it.isDigit() || it == '-' || it == '/' || it == '.' }
+        val regex = Regex("^\\d{4}-\\d{2}-\\d{2}$")
+        if (regex.matches(sanitized)) return sanitized
+
+        // Try dd-MM-yyyy or dd/MM/yyyy or ddMMyyyy
+        val digits = sanitized.replace("/", "-").replace(".", "-")
+        val parts = digits.split("-")
+        if (parts.size == 3 && parts[0].length == 2 && parts[1].length == 2 && parts[2].length == 4) {
+            return "${parts[2]}-${parts[1].padStart(2, '0')}-${parts[0].padStart(2, '0')}"
+        }
+        if (sanitized.length == 8 && sanitized.all { it.isDigit() }) {
+            val dd = sanitized.substring(0, 2)
+            val mm = sanitized.substring(2, 4)
+            val yyyy = sanitized.substring(4, 8)
+            return "$yyyy-$mm-$dd"
+        }
+        // Fallback: return as-is; backend will validate
+        return sanitized
     }
 }

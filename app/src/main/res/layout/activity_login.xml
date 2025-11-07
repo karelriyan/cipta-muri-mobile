@@ -97,24 +97,23 @@
                 android:id="@+id/etPin"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="PIN"
-                android:inputType="numberPassword"
+                android:hint="Tanggal Lahir (YYYY-MM-DD)"
+                android:inputType="date|text"
                 android:padding="16dp"
                 android:textColor="@android:color/white"
                 android:textColorHint="#CCFFFFFF"
                 android:background="@drawable/rounded_edittext_white" />
-
-            <ImageView
-                android:id="@+id/ivTogglePassword"
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:layout_alignParentEnd="true"
-                android:layout_centerVertical="true"
-                android:layout_marginEnd="16dp"
-                android:src="@drawable/ic_visibility_off"
-                android:contentDescription="Toggle Password Visibility"
-                app:tint="@android:color/white" />
         </RelativeLayout>
+
+        <!-- Format helper for date input -->
+        <TextView
+            android:id="@+id/tvFormatTanggal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Format: YYYY-MM-DD"
+            android:textSize="12sp"
+            android:textColor="@android:color/white"
+            android:layout_marginBottom="8dp" />
 
         <TextView
             android:id="@+id/tvLupaPin"

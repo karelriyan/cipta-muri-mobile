@@ -8,6 +8,9 @@ import com.google.android.material.dialog.MaterialAlertDialogBuilder // <-- BARU
 import com.main.cipta_muri_mobile.R
 import com.main.cipta_muri_mobile.data.SessionManager
 import com.main.cipta_muri_mobile.databinding.ActivityProfileBinding
+import com.main.cipta_muri_mobile.data.TokenStore
+import androidx.lifecycle.lifecycleScope
+import kotlinx.coroutines.launch
 import com.main.cipta_muri_mobile.ui.aktivitas.RiwayatAktivitasActivity
 import com.main.cipta_muri_mobile.ui.login.LoginActivity
 import com.main.cipta_muri_mobile.ui.main.MainActivity
@@ -109,7 +112,8 @@ class ProfileActivity : AppCompatActivity() {
      * Menjalankan proses logout dengan membersihkan session dan navigasi.
      */
     private fun performLogout() {
-        // Hapus data sesi menggunakan SessionManager yang sudah ada
+        // Bersihkan token API v2 dan sesi lama
+        lifecycleScope.launch { TokenStore.clear(this@ProfileActivity) }
         session.clearSession()
 
         // Pindah ke LoginActivity dan hapus back stack

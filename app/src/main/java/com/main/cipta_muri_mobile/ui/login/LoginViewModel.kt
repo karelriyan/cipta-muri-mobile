@@ -3,10 +3,13 @@ package com.main.cipta_muri_mobile.ui.login
 import android.app.Application
 import android.util.Log
 import androidx.lifecycle.AndroidViewModel
+import androidx.lifecycle.viewModelScope
 import com.main.cipta_muri_mobile.data.RetrofitClient
 import com.main.cipta_muri_mobile.data.LoginResponse
 import com.main.cipta_muri_mobile.data.SessionManager
 import com.main.cipta_muri_mobile.data.User
+import com.main.cipta_muri_mobile.data.ApiRepository
+import kotlinx.coroutines.launch
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -48,5 +51,20 @@ class LoginViewModel(application: Application) : AndroidViewModel(application) {
                     callback(false, "Tidak dapat terhubung ke server. Cek WiFi/IP.", null)
                 }
             })
+    }
+
+    // API v2 (Bearer token) based on guide
+    fun loginV2(nik: String, tanggal: String, callback: (Boolean, String?) -> Unit) {
+        val repo = ApiRepository(getApplication())
+        viewModelScope.launch {
+            repo.login(nik, tanggal)
+                .onSuccess {
+                    // After token saved, pull profile/rekening and store to SessionManager
+                    repo.refreshSessionFromServer()
+                        .onSuccess { callback(true, null) }
+                        .onFailure { callback(false, it.message) }
+                }
+                .onFailure { callback(false, it.message) }
+        }
     }
 }
