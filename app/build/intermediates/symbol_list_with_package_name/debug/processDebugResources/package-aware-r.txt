@@ -3662,6 +3662,7 @@ drawable bg_circle_bronze
 drawable bg_circle_gold
 drawable bg_gradient
 drawable bg_gradient2
+drawable bg_leaderboard
 drawable bg_podium_center
 drawable bg_podium_side_left
 drawable bg_podium_side_right
@@ -3867,6 +3868,8 @@ drawable rounded_white_box
 drawable saldo_card
 drawable sample_map
 drawable sample_qr
+drawable tab_kanan
+drawable tab_kiri
 drawable test_level_drawable
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
@@ -4156,12 +4159,15 @@ id ignore
 id ignoreRequest
 id image
 id imgQRCode
+id imgTabLeftBg
+id imgTabRightBg
 id immediateStop
 id included
 id indeterminate
 id info
 id invisible
 id inward
+id is_pooling_container_tag
 id italic
 id item_touch_helper_previous_elevation
 id ivIcon
@@ -4322,6 +4328,7 @@ id pin
 id podium_1
 id podium_2
 id podium_3
+id pooling_container_listener_holder_tag
 id position
 id postLayout
 id pressed
@@ -4342,6 +4349,7 @@ id rounded
 id row_index_key
 id rtl
 id rvAktivitas
+id rvLeaderboard
 id rvMutasiSaldo
 id rvRiwayatSetoran
 id rvTukarPoin
@@ -4353,6 +4361,7 @@ id sawtooth
 id scale
 id screen
 id scroll
+id scrollContent
 id scrollIndicatorDown
 id scrollIndicatorUp
 id scrollView
@@ -4411,7 +4420,10 @@ id stretch
 id submenuarrow
 id submit_area
 id supportScrollUp
+id tabContainer
+id tabLeft
 id tabMode
+id tabRight
 id tag_accessibility_actions
 id tag_accessibility_clickable_spans
 id tag_accessibility_heading
@@ -4473,6 +4485,8 @@ id tvBesiTanggal
 id tvDariTanggal
 id tvDateTime
 id tvDiskon
+id tvFirstName
+id tvFirstPoints
 id tvFormatTanggal
 id tvHarga
 id tvIdPenarikan
@@ -4510,9 +4524,13 @@ id tvPlastikTanggal
 id tvSaldo
 id tvSaldoTotal
 id tvSampaiTanggal
+id tvSecondName
+id tvSecondPoints
 id tvSubtitle
 id tvTampilkanLebihBanyak
 id tvTanggal
+id tvThirdName
+id tvThirdPoints
 id tvTotalKgHariIni
 id tvTotalKgKeseluruhan
 id tvTotalKgTanggal
@@ -4529,9 +4547,10 @@ id tv_profile_initial
 id tv_profile_name
 id tv_see_instructions
 id tv_total_weight
-id tv_user_details
 id tv_user_name
 id tv_user_points
+id txtTabLeft
+id txtTabRight
 id unchecked
 id uniform
 id unlabeled
@@ -4718,6 +4737,8 @@ layout design_text_input_end_icon
 layout design_text_input_start_icon
 layout fragment_dashboard
 layout fragment_home
+layout fragment_leaderboard_frequency
+layout fragment_leaderboard_weight
 layout fragment_notifications
 layout ime_base_split_test_activity
 layout ime_secondary_split_test_activity
@@ -4726,6 +4747,7 @@ layout item_leaderboard_rank
 layout item_mutasi_saldo
 layout item_riwayat_setoran
 layout item_tukar_poin
+layout leaderboard_lama
 layout m3_alert_dialog
 layout m3_alert_dialog_actions
 layout m3_alert_dialog_title

@@ -47,7 +47,9 @@ dependencies {
     implementation(libs.androidx.constraintlayout)
     implementation(libs.androidx.lifecycle.livedata.ktx)
     implementation(libs.androidx.lifecycle.viewmodel.ktx)
+    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.8.6")
     implementation(libs.androidx.navigation.fragment.ktx)
+    implementation("androidx.fragment:fragment-ktx:1.8.2")
     implementation(libs.androidx.navigation.ui.ktx)
     implementation(libs.androidx.activity)
     testImplementation(libs.junit)
@@ -66,4 +68,5 @@ dependencies {
     implementation("de.hdodenhof:circleimageview:3.1.0")
     implementation("com.google.android.gms:play-services-maps:18.2.0")
     implementation("com.google.android.gms:play-services-location:21.3.0")
+    implementation("androidx.viewpager2:viewpager2:1.1.0")
 }

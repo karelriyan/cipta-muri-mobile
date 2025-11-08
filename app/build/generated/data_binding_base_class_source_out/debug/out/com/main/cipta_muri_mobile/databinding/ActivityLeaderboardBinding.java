@@ -4,17 +4,17 @@ package com.main.cipta_muri_mobile.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.coordinatorlayout.widget.CoordinatorLayout;
+import androidx.core.widget.NestedScrollView;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
-import com.google.android.material.bottomappbar.BottomAppBar;
-import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.main.cipta_muri_mobile.R;
 import java.lang.NullPointerException;
 import java.lang.Override;
@@ -25,19 +25,13 @@ public final class ActivityLeaderboardBinding implements ViewBinding {
   private final CoordinatorLayout rootView;
 
   @NonNull
-  public final BottomAppBar bottomAppBar;
-
-  @NonNull
-  public final BottomNavigationView bottomNavigationView;
-
-  @NonNull
   public final ImageView btnBack;
 
   @NonNull
-  public final FloatingActionButton fabLeaderboard;
+  public final ImageView imgTabLeftBg;
 
   @NonNull
-  public final FloatingActionButton fabQr;
+  public final ImageView imgTabRightBg;
 
   @NonNull
   public final LinearLayout podium1;
@@ -51,22 +45,71 @@ public final class ActivityLeaderboardBinding implements ViewBinding {
   @NonNull
   public final RecyclerView rvLeaderboard;
 
+  @NonNull
+  public final NestedScrollView scrollContent;
+
+  @NonNull
+  public final LinearLayout tabContainer;
+
+  @NonNull
+  public final FrameLayout tabLeft;
+
+  @NonNull
+  public final FrameLayout tabRight;
+
+  @NonNull
+  public final TextView tvFirstName;
+
+  @NonNull
+  public final TextView tvFirstPoints;
+
+  @NonNull
+  public final TextView tvSecondName;
+
+  @NonNull
+  public final TextView tvSecondPoints;
+
+  @NonNull
+  public final TextView tvThirdName;
+
+  @NonNull
+  public final TextView tvThirdPoints;
+
+  @NonNull
+  public final TextView txtTabLeft;
+
+  @NonNull
+  public final TextView txtTabRight;
+
   private ActivityLeaderboardBinding(@NonNull CoordinatorLayout rootView,
-      @NonNull BottomAppBar bottomAppBar, @NonNull BottomNavigationView bottomNavigationView,
-      @NonNull ImageView btnBack, @NonNull FloatingActionButton fabLeaderboard,
-      @NonNull FloatingActionButton fabQr, @NonNull LinearLayout podium1,
-      @NonNull LinearLayout podium2, @NonNull LinearLayout podium3,
-      @NonNull RecyclerView rvLeaderboard) {
+      @NonNull ImageView btnBack, @NonNull ImageView imgTabLeftBg, @NonNull ImageView imgTabRightBg,
+      @NonNull LinearLayout podium1, @NonNull LinearLayout podium2, @NonNull LinearLayout podium3,
+      @NonNull RecyclerView rvLeaderboard, @NonNull NestedScrollView scrollContent,
+      @NonNull LinearLayout tabContainer, @NonNull FrameLayout tabLeft,
+      @NonNull FrameLayout tabRight, @NonNull TextView tvFirstName, @NonNull TextView tvFirstPoints,
+      @NonNull TextView tvSecondName, @NonNull TextView tvSecondPoints,
+      @NonNull TextView tvThirdName, @NonNull TextView tvThirdPoints, @NonNull TextView txtTabLeft,
+      @NonNull TextView txtTabRight) {
     this.rootView = rootView;
-    this.bottomAppBar = bottomAppBar;
-    this.bottomNavigationView = bottomNavigationView;
     this.btnBack = btnBack;
-    this.fabLeaderboard = fabLeaderboard;
-    this.fabQr = fabQr;
+    this.imgTabLeftBg = imgTabLeftBg;
+    this.imgTabRightBg = imgTabRightBg;
     this.podium1 = podium1;
     this.podium2 = podium2;
     this.podium3 = podium3;
     this.rvLeaderboard = rvLeaderboard;
+    this.scrollContent = scrollContent;
+    this.tabContainer = tabContainer;
+    this.tabLeft = tabLeft;
+    this.tabRight = tabRight;
+    this.tvFirstName = tvFirstName;
+    this.tvFirstPoints = tvFirstPoints;
+    this.tvSecondName = tvSecondName;
+    this.tvSecondPoints = tvSecondPoints;
+    this.tvThirdName = tvThirdName;
+    this.tvThirdPoints = tvThirdPoints;
+    this.txtTabLeft = txtTabLeft;
+    this.txtTabRight = txtTabRight;
   }
 
   @Override
@@ -96,33 +139,21 @@ public final class ActivityLeaderboardBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.bottom_app_bar;
-      BottomAppBar bottomAppBar = ViewBindings.findChildViewById(rootView, id);
-      if (bottomAppBar == null) {
-        break missingId;
-      }
-
-      id = R.id.bottom_navigation_view;
-      BottomNavigationView bottomNavigationView = ViewBindings.findChildViewById(rootView, id);
-      if (bottomNavigationView == null) {
-        break missingId;
-      }
-
       id = R.id.btnBack;
       ImageView btnBack = ViewBindings.findChildViewById(rootView, id);
       if (btnBack == null) {
         break missingId;
       }
 
-      id = R.id.fab_leaderboard;
-      FloatingActionButton fabLeaderboard = ViewBindings.findChildViewById(rootView, id);
-      if (fabLeaderboard == null) {
+      id = R.id.imgTabLeftBg;
+      ImageView imgTabLeftBg = ViewBindings.findChildViewById(rootView, id);
+      if (imgTabLeftBg == null) {
         break missingId;
       }
 
-      id = R.id.fab_qr;
-      FloatingActionButton fabQr = ViewBindings.findChildViewById(rootView, id);
-      if (fabQr == null) {
+      id = R.id.imgTabRightBg;
+      ImageView imgTabRightBg = ViewBindings.findChildViewById(rootView, id);
+      if (imgTabRightBg == null) {
         break missingId;
       }
 
@@ -150,9 +181,82 @@ public final class ActivityLeaderboardBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityLeaderboardBinding((CoordinatorLayout) rootView, bottomAppBar,
-          bottomNavigationView, btnBack, fabLeaderboard, fabQr, podium1, podium2, podium3,
-          rvLeaderboard);
+      id = R.id.scrollContent;
+      NestedScrollView scrollContent = ViewBindings.findChildViewById(rootView, id);
+      if (scrollContent == null) {
+        break missingId;
+      }
+
+      id = R.id.tabContainer;
+      LinearLayout tabContainer = ViewBindings.findChildViewById(rootView, id);
+      if (tabContainer == null) {
+        break missingId;
+      }
+
+      id = R.id.tabLeft;
+      FrameLayout tabLeft = ViewBindings.findChildViewById(rootView, id);
+      if (tabLeft == null) {
+        break missingId;
+      }
+
+      id = R.id.tabRight;
+      FrameLayout tabRight = ViewBindings.findChildViewById(rootView, id);
+      if (tabRight == null) {
+        break missingId;
+      }
+
+      id = R.id.tvFirstName;
+      TextView tvFirstName = ViewBindings.findChildViewById(rootView, id);
+      if (tvFirstName == null) {
+        break missingId;
+      }
+
+      id = R.id.tvFirstPoints;
+      TextView tvFirstPoints = ViewBindings.findChildViewById(rootView, id);
+      if (tvFirstPoints == null) {
+        break missingId;
+      }
+
+      id = R.id.tvSecondName;
+      TextView tvSecondName = ViewBindings.findChildViewById(rootView, id);
+      if (tvSecondName == null) {
+        break missingId;
+      }
+
+      id = R.id.tvSecondPoints;
+      TextView tvSecondPoints = ViewBindings.findChildViewById(rootView, id);
+      if (tvSecondPoints == null) {
+        break missingId;
+      }
+
+      id = R.id.tvThirdName;
+      TextView tvThirdName = ViewBindings.findChildViewById(rootView, id);
+      if (tvThirdName == null) {
+        break missingId;
+      }
+
+      id = R.id.tvThirdPoints;
+      TextView tvThirdPoints = ViewBindings.findChildViewById(rootView, id);
+      if (tvThirdPoints == null) {
+        break missingId;
+      }
+
+      id = R.id.txtTabLeft;
+      TextView txtTabLeft = ViewBindings.findChildViewById(rootView, id);
+      if (txtTabLeft == null) {
+        break missingId;
+      }
+
+      id = R.id.txtTabRight;
+      TextView txtTabRight = ViewBindings.findChildViewById(rootView, id);
+      if (txtTabRight == null) {
+        break missingId;
+      }
+
+      return new ActivityLeaderboardBinding((CoordinatorLayout) rootView, btnBack, imgTabLeftBg,
+          imgTabRightBg, podium1, podium2, podium3, rvLeaderboard, scrollContent, tabContainer,
+          tabLeft, tabRight, tvFirstName, tvFirstPoints, tvSecondName, tvSecondPoints, tvThirdName,
+          tvThirdPoints, txtTabLeft, txtTabRight);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

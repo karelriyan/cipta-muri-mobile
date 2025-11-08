@@ -6,10 +6,20 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:gravity="center_vertical"
-    android:paddingStart="16dp"
+    android:paddingStart="5dp"
     android:paddingEnd="16dp"
     android:paddingTop="8dp"
     android:paddingBottom="8dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="15dp"
+        android:textSize="20dp"
+        tools:text="4"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"/>
 
     <!-- [ANDA DISINI] Ganti dengan avatar pengguna -->
     <de.hdodenhof.circleimageview.CircleImageView
@@ -33,27 +43,16 @@
             android:textStyle="bold"
             android:textColor="@android:color/black"/>
 
-        <TextView
-            android:id="@+id/tv_user_details"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            tools:text="RT.02/RW.04"/>
-
     </LinearLayout>
 
     <!-- [ANDA DISINI] Ganti dengan ikon poin Anda -->
-    <ImageView
-        android:layout_width="16dp"
-        android:layout_height="16dp"
-        android:src="@drawable/ic_point_leaderboard"
-        android:layout_marginEnd="4dp"
-        android:contentDescription="Poin"/>
 
     <TextView
         android:id="@+id/tv_user_points"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:text="1124"
+        android:textSize="20dp"
+        tools:text="10 Kg"
         android:textStyle="bold"
         android:textColor="@android:color/black"/>
 

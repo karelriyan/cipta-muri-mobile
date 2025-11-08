@@ -15,7 +15,6 @@ class LeaderboardAdapter(private val items: List<LeaderboardItem>) :
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val ivAvatar: CircleImageView = view.findViewById(R.id.iv_user_avatar)
         val tvName: TextView = view.findViewById(R.id.tv_user_name)
-        val tvAddress: TextView = view.findViewById(R.id.tv_user_details)
         val tvPoints: TextView = view.findViewById(R.id.tv_user_points) // optional
     }
 
@@ -30,7 +29,6 @@ class LeaderboardAdapter(private val items: List<LeaderboardItem>) :
 
         // Isi data ke tampilan
         holder.tvName.text = item.name
-        holder.tvAddress.text = item.address
         holder.tvPoints.text = item.points.toString()
 
         // Avatar default (gunakan drawable/avatar)
