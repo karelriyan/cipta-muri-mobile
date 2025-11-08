@@ -1,0 +1,19 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.main.cipta_muri_mobile.app-mergeDebugResources-57:/values-h320dp-port-v13/values-h320dp-port-v13.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\HP\\.gradle\\caches\\8.13\\transforms\\093a0065225ded3e8b16dd27ba614f74\\transformed\\material-1.13.0\\res\\values-h320dp-port-v13\\values-h320dp-port-v13.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "63",
+                        "endOffsets": "114"
+                    }
+                }
+            ]
+        }
+    ]
+}
