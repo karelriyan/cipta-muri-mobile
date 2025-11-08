@@ -17,7 +17,9 @@ data class RankingUiState(
     val berat: List<TopBeratItem> = emptyList(),
     val setor: List<TopSetorItem> = emptyList(),
     val error: String? = null,
-    val loadedOnce: Boolean = false
+    val filterAllTime: Boolean = false,
+    val startDate: String? = null,
+    val endDate: String? = null
 )
 
 class RankingViewModel(
@@ -27,11 +29,9 @@ class RankingViewModel(
     val state: StateFlow<RankingUiState> = _state.asStateFlow()
 
     fun load(limit: Int = 10, start: String? = null, end: String? = null, donasi: Boolean = false) {
-        // avoid reloading unnecessarily
-        if (_state.value.loadedOnce) return
         viewModelScope.launch {
             _state.update { it.copy(loading = true, error = null) }
-            val (s, e) = ensureDateRange(start, end)
+            val (s, e) = ensureDateRange(start, end, _state.value.filterAllTime)
             repo.getRanking(limit, s, e, donasi)
                 .onSuccess { payload: RankingPayload ->
                     _state.update {
@@ -39,7 +39,8 @@ class RankingViewModel(
                             loading = false,
                             berat = payload.top_berat,
                             setor = payload.top_setor,
-                            loadedOnce = true
+                            startDate = s,
+                            endDate = e
                         )
                     }
                 }
@@ -49,7 +50,18 @@ class RankingViewModel(
         }
     }
 
-    private fun ensureDateRange(start: String?, end: String?): Pair<String?, String?> {
+    fun applyFilterLast3Months(limit: Int = 10, donasi: Boolean = false) {
+        _state.update { it.copy(filterAllTime = false) }
+        load(limit = limit, start = null, end = null, donasi = donasi)
+    }
+
+    fun applyFilterAllTime(limit: Int = 10, donasi: Boolean = false) {
+        _state.update { it.copy(filterAllTime = true) }
+        load(limit = limit, start = null, end = null, donasi = donasi)
+    }
+
+    private fun ensureDateRange(start: String?, end: String?, allTime: Boolean): Pair<String?, String?> {
+        if (allTime) return null to null
         if (start != null || end != null) return start to end
         // default: last 3 months from today
         return try {

@@ -3704,6 +3704,7 @@ drawable design_ic_visibility
 drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
+drawable filter_leaderboard
 drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
 drawable ic_1
@@ -3863,6 +3864,7 @@ drawable rounded_edittext
 drawable rounded_edittext_white
 drawable rounded_textview_white
 drawable rounded_top_white_bg
+drawable rounded_top_white_bg_shape
 drawable rounded_white
 drawable rounded_white_box
 drawable saldo_card
@@ -4121,6 +4123,9 @@ id fill
 id fill_horizontal
 id fill_vertical
 id filled
+id filter3Bulan
+id filterContainer
+id filterSepanjangmasa
 id fitCenter
 id fitEnd
 id fitStart
@@ -4158,6 +4163,8 @@ id ifRoom
 id ignore
 id ignoreRequest
 id image
+id imgFilter3bulan
+id imgFiltersepanjangmasa
 id imgQRCode
 id imgTabLeftBg
 id imgTabRightBg
@@ -4545,10 +4552,13 @@ id tv_news_title
 id tv_profile_avatar
 id tv_profile_initial
 id tv_profile_name
+id tv_rank_number
 id tv_see_instructions
 id tv_total_weight
 id tv_user_name
 id tv_user_points
+id txtFilter3bulan
+id txtFiltersepanjangmasa
 id txtTabLeft
 id txtTabRight
 id unchecked
@@ -4747,7 +4757,6 @@ layout item_leaderboard_rank
 layout item_mutasi_saldo
 layout item_riwayat_setoran
 layout item_tukar_poin
-layout leaderboard_lama
 layout m3_alert_dialog
 layout m3_alert_dialog_actions
 layout m3_alert_dialog_title

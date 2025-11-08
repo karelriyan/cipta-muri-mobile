@@ -12,11 +12,12 @@
     android:paddingBottom="8dp">
 
     <TextView
+        android:id="@+id/tv_rank_number"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
         android:layout_marginEnd="15dp"
-        android:textSize="20dp"
+        android:textSize="20sp"
         tools:text="4"
         android:textStyle="bold"
         android:textColor="@android:color/black"/>
@@ -26,7 +27,9 @@
         android:id="@+id/iv_user_avatar"
         android:layout_width="48dp"
         android:layout_height="48dp"
-        tools:src="@tools:sample/avatars"/>
+        android:src="@drawable/avatar"
+        app:civ_border_width="2dp"
+        app:civ_border_color="@android:color/white" />
 
     <LinearLayout
         android:layout_width="0dp"

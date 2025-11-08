@@ -124,15 +124,89 @@
             </FrameLayout>
         </LinearLayout>
 
+        <!-- Filter 3 Bulan Terakhir atau Sepanjang Waktu -->
+        <LinearLayout
+            android:id="@+id/filterContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp">
+
+            <FrameLayout
+                android:id="@+id/filter3Bulan"
+                android:layout_width="0dp"
+                android:layout_height="25dp"
+                android:layout_weight="1"
+                android:foregroundGravity="center"
+                android:clickable="true"
+                android:focusable="true">
+
+                <ImageView
+                    android:id="@+id/imgFilter3bulan"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/filter_leaderboard"
+                    android:scaleType="fitXY"
+                    android:alpha="1.0" />
+
+                <TextView
+                    android:id="@+id/txtFilter3bulan"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="3 Bulan Terakhir"
+                    android:textStyle="bold"
+                    android:textColor="@color/black" />
+
+            </FrameLayout>
+
+            <Space
+                android:layout_width="8dp"
+                android:layout_height="1dp" />
+
+            <FrameLayout
+                android:id="@+id/filterSepanjangmasa"
+                android:layout_width="0dp"
+                android:layout_height="25dp"
+                android:layout_weight="1"
+                android:foregroundGravity="center"
+                android:clickable="true"
+                android:focusable="true">
+
+                <ImageView
+                    android:id="@+id/imgFiltersepanjangmasa"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/filter_leaderboard"
+                    android:scaleType="fitXY"
+                    android:alpha="0.4" />
+
+                <TextView
+                    android:id="@+id/txtFiltersepanjangmasa"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="Sepanjang Masa"
+                    android:textStyle="bold"
+                    android:textColor="@color/black" />
+
+            </FrameLayout>
+        </LinearLayout>
+
         <!-- Konten di bawah tab: Podium + Daftar -->
         <androidx.core.widget.NestedScrollView
             android:id="@+id/scrollContent"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
-            android:fillViewport="true"
+            android:fillViewport="false"
             android:clipToPadding="false"
-            android:paddingBottom="16dp">
+            android:paddingBottom="0dp"
+            android:overScrollMode="never">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -368,7 +442,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:background="@drawable/rounded_top_white_bg"
+                    android:background="@drawable/rounded_top_white_bg_shape"
                     android:padding="16dp">
 
                     <!-- Judul Daftar Peringkat -->

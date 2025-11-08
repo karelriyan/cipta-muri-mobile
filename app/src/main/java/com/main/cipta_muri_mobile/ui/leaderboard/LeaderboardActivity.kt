@@ -9,6 +9,7 @@ import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.main.cipta_muri_mobile.R
 import com.main.cipta_muri_mobile.databinding.ActivityLeaderboardBinding
+import de.hdodenhof.circleimageview.CircleImageView
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
 
@@ -42,8 +43,9 @@ class LeaderboardActivity : AppCompatActivity() {
         // default: Paling Banyak
         updateTabsAlpha(0)
 
-        // Collect API state
-        vm.load(limit = 10)
+        // Default filter: 3 bulan terakhir
+        updateFilterAlpha(allTime = false)
+        vm.applyFilterLast3Months(limit = 10)
         lifecycleScope.launch {
             vm.state.collectLatest { state -> renderState(state) }
         }
@@ -51,6 +53,16 @@ class LeaderboardActivity : AppCompatActivity() {
         // Tab click listeners
         binding.tabLeft.setOnClickListener { switchTo(0) }
         binding.tabRight.setOnClickListener { switchTo(1) }
+
+        // Filter click listeners (no swipe)
+        binding.filter3Bulan.setOnClickListener {
+            updateFilterAlpha(allTime = false)
+            vm.applyFilterLast3Months(limit = 10)
+        }
+        binding.filterSepanjangmasa.setOnClickListener {
+            updateFilterAlpha(allTime = true)
+            vm.applyFilterAllTime(limit = 10)
+        }
 
         // Swipe between tabs
         val detector = GestureDetector(this, object : GestureDetector.SimpleOnGestureListener() {
@@ -81,13 +93,17 @@ class LeaderboardActivity : AppCompatActivity() {
 
     private fun renderState(state: RankingUiState) {
         val mapped = if (currentTab == 0) {
+            // Paling Banyak (berat): tampilkan 2 angka desimal + suffix Kg
             state.berat.mapIndexed { idx, item ->
-                val pts = item.total_berat.toDoubleOrNull()?.toInt() ?: 0
-                LeaderboardItem((idx + 1).toString(), item.nama ?: "-", item.no_rekening ?: "-", pts)
+                val bd = try { item.total_berat.toBigDecimal() } catch (_: Exception) { java.math.BigDecimal.ZERO }
+                val text = "${bd.setScale(2, java.math.RoundingMode.HALF_UP)} Kg"
+                LeaderboardItem((idx + 1).toString(), item.nama ?: "-", item.no_rekening ?: "-", bd.setScale(0, java.math.RoundingMode.HALF_UP).toInt(), pointsText = text)
             }
         } else {
+            // Paling Rajin Setor: suffix "x"
             state.setor.mapIndexed { idx, item ->
-                LeaderboardItem((idx + 1).toString(), item.nama ?: "-", item.no_rekening ?: "-", item.total_setor)
+                val text = "${item.total_setor}x"
+                LeaderboardItem((idx + 1).toString(), item.nama ?: "-", item.no_rekening ?: "-", item.total_setor, pointsText = text)
             }
         }
 
@@ -97,11 +113,12 @@ class LeaderboardActivity : AppCompatActivity() {
             val second = podium[1]
             val third = podium[2]
             binding.tvFirstName.text = first.name
-            binding.tvFirstPoints.text = first.points.toString()
+            binding.tvFirstPoints.text = first.pointsText ?: first.points.toString()
             binding.tvSecondName.text = second.name
-            binding.tvSecondPoints.text = second.points.toString()
+            binding.tvSecondPoints.text = second.pointsText ?: second.points.toString()
             binding.tvThirdName.text = third.name
-            binding.tvThirdPoints.text = third.points.toString()
+            binding.tvThirdPoints.text = third.pointsText ?: third.points.toString()
+
         }
 
         val rest = if (mapped.size > 3) mapped.drop(3) else emptyList()
@@ -115,6 +132,19 @@ class LeaderboardActivity : AppCompatActivity() {
         binding.imgTabRightBg.alpha = if (position == 1) active else inactive
         binding.txtTabLeft.alpha = if (position == 0) 1.0f else 0.6f
         binding.txtTabRight.alpha = if (position == 1) 1.0f else 0.6f
+    }
+
+    private fun updateFilterAlpha(allTime: Boolean) {
+        val active = 1.0f
+        val inactive = 0.4f
+        binding.imgFilter3bulan.alpha = if (!allTime) active else inactive
+        binding.imgFiltersepanjangmasa.alpha = if (allTime) active else inactive
+        binding.txtFilter3bulan.alpha = if (!allTime) 1.0f else 0.6f
+        binding.txtFiltersepanjangmasa.alpha = if (allTime) 1.0f else 0.6f
+    }
+
+    private fun setAvatar(view: CircleImageView?) {
+        view?.setImageResource(R.drawable.avatar)
     }
 
     override fun onStart() {

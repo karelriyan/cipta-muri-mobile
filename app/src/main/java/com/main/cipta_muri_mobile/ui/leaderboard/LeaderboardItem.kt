@@ -4,5 +4,6 @@ data class LeaderboardItem(
     val rank: String,
     val name: String,
     val address: String,
-    val points: Int
+    val points: Int,
+    val pointsText: String? = null
 )

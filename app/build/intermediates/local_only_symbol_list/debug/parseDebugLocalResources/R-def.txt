@@ -41,6 +41,7 @@ drawable bg_rounded_top_white
 drawable bg_white_blur_gradient
 drawable btn_outline_blue
 drawable card_background
+drawable filter_leaderboard
 drawable ic_1
 drawable ic_2
 drawable ic_3
@@ -104,6 +105,7 @@ drawable rounded_edittext
 drawable rounded_edittext_white
 drawable rounded_textview_white
 drawable rounded_top_white_bg
+drawable rounded_top_white_bg_shape
 drawable rounded_white
 drawable rounded_white_box
 drawable saldo_card
@@ -159,6 +161,11 @@ id etPin
 id et_amount
 id fab_leaderboard
 id fab_qr
+id filter3Bulan
+id filterContainer
+id filterSepanjangmasa
+id imgFilter3bulan
+id imgFiltersepanjangmasa
 id imgQRCode
 id imgTabLeftBg
 id imgTabRightBg
@@ -268,10 +275,13 @@ id tv_news_title
 id tv_profile_avatar
 id tv_profile_initial
 id tv_profile_name
+id tv_rank_number
 id tv_see_instructions
 id tv_total_weight
 id tv_user_name
 id tv_user_points
+id txtFilter3bulan
+id txtFiltersepanjangmasa
 id txtTabLeft
 id txtTabRight
 id webViewMap
@@ -307,7 +317,6 @@ layout item_leaderboard_rank
 layout item_mutasi_saldo
 layout item_riwayat_setoran
 layout item_tukar_poin
-layout leaderboard_lama
 layout section_news
 menu bottom_navigation_menu
 mipmap ic_launcher

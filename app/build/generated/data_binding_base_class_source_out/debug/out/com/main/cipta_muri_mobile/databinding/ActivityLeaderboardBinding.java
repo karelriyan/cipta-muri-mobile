@@ -28,6 +28,21 @@ public final class ActivityLeaderboardBinding implements ViewBinding {
   public final ImageView btnBack;
 
   @NonNull
+  public final FrameLayout filter3Bulan;
+
+  @NonNull
+  public final LinearLayout filterContainer;
+
+  @NonNull
+  public final FrameLayout filterSepanjangmasa;
+
+  @NonNull
+  public final ImageView imgFilter3bulan;
+
+  @NonNull
+  public final ImageView imgFiltersepanjangmasa;
+
+  @NonNull
   public final ImageView imgTabLeftBg;
 
   @NonNull
@@ -76,22 +91,37 @@ public final class ActivityLeaderboardBinding implements ViewBinding {
   public final TextView tvThirdPoints;
 
   @NonNull
+  public final TextView txtFilter3bulan;
+
+  @NonNull
+  public final TextView txtFiltersepanjangmasa;
+
+  @NonNull
   public final TextView txtTabLeft;
 
   @NonNull
   public final TextView txtTabRight;
 
   private ActivityLeaderboardBinding(@NonNull CoordinatorLayout rootView,
-      @NonNull ImageView btnBack, @NonNull ImageView imgTabLeftBg, @NonNull ImageView imgTabRightBg,
+      @NonNull ImageView btnBack, @NonNull FrameLayout filter3Bulan,
+      @NonNull LinearLayout filterContainer, @NonNull FrameLayout filterSepanjangmasa,
+      @NonNull ImageView imgFilter3bulan, @NonNull ImageView imgFiltersepanjangmasa,
+      @NonNull ImageView imgTabLeftBg, @NonNull ImageView imgTabRightBg,
       @NonNull LinearLayout podium1, @NonNull LinearLayout podium2, @NonNull LinearLayout podium3,
       @NonNull RecyclerView rvLeaderboard, @NonNull NestedScrollView scrollContent,
       @NonNull LinearLayout tabContainer, @NonNull FrameLayout tabLeft,
       @NonNull FrameLayout tabRight, @NonNull TextView tvFirstName, @NonNull TextView tvFirstPoints,
       @NonNull TextView tvSecondName, @NonNull TextView tvSecondPoints,
-      @NonNull TextView tvThirdName, @NonNull TextView tvThirdPoints, @NonNull TextView txtTabLeft,
-      @NonNull TextView txtTabRight) {
+      @NonNull TextView tvThirdName, @NonNull TextView tvThirdPoints,
+      @NonNull TextView txtFilter3bulan, @NonNull TextView txtFiltersepanjangmasa,
+      @NonNull TextView txtTabLeft, @NonNull TextView txtTabRight) {
     this.rootView = rootView;
     this.btnBack = btnBack;
+    this.filter3Bulan = filter3Bulan;
+    this.filterContainer = filterContainer;
+    this.filterSepanjangmasa = filterSepanjangmasa;
+    this.imgFilter3bulan = imgFilter3bulan;
+    this.imgFiltersepanjangmasa = imgFiltersepanjangmasa;
     this.imgTabLeftBg = imgTabLeftBg;
     this.imgTabRightBg = imgTabRightBg;
     this.podium1 = podium1;
@@ -108,6 +138,8 @@ public final class ActivityLeaderboardBinding implements ViewBinding {
     this.tvSecondPoints = tvSecondPoints;
     this.tvThirdName = tvThirdName;
     this.tvThirdPoints = tvThirdPoints;
+    this.txtFilter3bulan = txtFilter3bulan;
+    this.txtFiltersepanjangmasa = txtFiltersepanjangmasa;
     this.txtTabLeft = txtTabLeft;
     this.txtTabRight = txtTabRight;
   }
@@ -142,6 +174,36 @@ public final class ActivityLeaderboardBinding implements ViewBinding {
       id = R.id.btnBack;
       ImageView btnBack = ViewBindings.findChildViewById(rootView, id);
       if (btnBack == null) {
+        break missingId;
+      }
+
+      id = R.id.filter3Bulan;
+      FrameLayout filter3Bulan = ViewBindings.findChildViewById(rootView, id);
+      if (filter3Bulan == null) {
+        break missingId;
+      }
+
+      id = R.id.filterContainer;
+      LinearLayout filterContainer = ViewBindings.findChildViewById(rootView, id);
+      if (filterContainer == null) {
+        break missingId;
+      }
+
+      id = R.id.filterSepanjangmasa;
+      FrameLayout filterSepanjangmasa = ViewBindings.findChildViewById(rootView, id);
+      if (filterSepanjangmasa == null) {
+        break missingId;
+      }
+
+      id = R.id.imgFilter3bulan;
+      ImageView imgFilter3bulan = ViewBindings.findChildViewById(rootView, id);
+      if (imgFilter3bulan == null) {
+        break missingId;
+      }
+
+      id = R.id.imgFiltersepanjangmasa;
+      ImageView imgFiltersepanjangmasa = ViewBindings.findChildViewById(rootView, id);
+      if (imgFiltersepanjangmasa == null) {
         break missingId;
       }
 
@@ -241,6 +303,18 @@ public final class ActivityLeaderboardBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.txtFilter3bulan;
+      TextView txtFilter3bulan = ViewBindings.findChildViewById(rootView, id);
+      if (txtFilter3bulan == null) {
+        break missingId;
+      }
+
+      id = R.id.txtFiltersepanjangmasa;
+      TextView txtFiltersepanjangmasa = ViewBindings.findChildViewById(rootView, id);
+      if (txtFiltersepanjangmasa == null) {
+        break missingId;
+      }
+
       id = R.id.txtTabLeft;
       TextView txtTabLeft = ViewBindings.findChildViewById(rootView, id);
       if (txtTabLeft == null) {
@@ -253,10 +327,12 @@ public final class ActivityLeaderboardBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityLeaderboardBinding((CoordinatorLayout) rootView, btnBack, imgTabLeftBg,
-          imgTabRightBg, podium1, podium2, podium3, rvLeaderboard, scrollContent, tabContainer,
-          tabLeft, tabRight, tvFirstName, tvFirstPoints, tvSecondName, tvSecondPoints, tvThirdName,
-          tvThirdPoints, txtTabLeft, txtTabRight);
+      return new ActivityLeaderboardBinding((CoordinatorLayout) rootView, btnBack, filter3Bulan,
+          filterContainer, filterSepanjangmasa, imgFilter3bulan, imgFiltersepanjangmasa,
+          imgTabLeftBg, imgTabRightBg, podium1, podium2, podium3, rvLeaderboard, scrollContent,
+          tabContainer, tabLeft, tabRight, tvFirstName, tvFirstPoints, tvSecondName, tvSecondPoints,
+          tvThirdName, tvThirdPoints, txtFilter3bulan, txtFiltersepanjangmasa, txtTabLeft,
+          txtTabRight);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

@@ -24,16 +24,20 @@ public final class ItemLeaderboardRankBinding implements ViewBinding {
   public final CircleImageView ivUserAvatar;
 
   @NonNull
+  public final TextView tvRankNumber;
+
+  @NonNull
   public final TextView tvUserName;
 
   @NonNull
   public final TextView tvUserPoints;
 
   private ItemLeaderboardRankBinding(@NonNull LinearLayout rootView,
-      @NonNull CircleImageView ivUserAvatar, @NonNull TextView tvUserName,
-      @NonNull TextView tvUserPoints) {
+      @NonNull CircleImageView ivUserAvatar, @NonNull TextView tvRankNumber,
+      @NonNull TextView tvUserName, @NonNull TextView tvUserPoints) {
     this.rootView = rootView;
     this.ivUserAvatar = ivUserAvatar;
+    this.tvRankNumber = tvRankNumber;
     this.tvUserName = tvUserName;
     this.tvUserPoints = tvUserPoints;
   }
@@ -71,6 +75,12 @@ public final class ItemLeaderboardRankBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.tv_rank_number;
+      TextView tvRankNumber = ViewBindings.findChildViewById(rootView, id);
+      if (tvRankNumber == null) {
+        break missingId;
+      }
+
       id = R.id.tv_user_name;
       TextView tvUserName = ViewBindings.findChildViewById(rootView, id);
       if (tvUserName == null) {
@@ -83,8 +93,8 @@ public final class ItemLeaderboardRankBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ItemLeaderboardRankBinding((LinearLayout) rootView, ivUserAvatar, tvUserName,
-          tvUserPoints);
+      return new ItemLeaderboardRankBinding((LinearLayout) rootView, ivUserAvatar, tvRankNumber,
+          tvUserName, tvUserPoints);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
