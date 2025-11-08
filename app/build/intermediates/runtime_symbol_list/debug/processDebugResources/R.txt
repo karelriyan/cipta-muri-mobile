@@ -4019,7 +4019,6 @@ int id buttonPanel 0x7f080092
 int id cache_measures 0x7f080093
 int id callMeasure 0x7f080094
 int id cancel_button 0x7f080095
-int id cardRekening 0x7f080096
 int id cardRentangWaktu 0x7f080097
 int id cardRoot 0x7f0802b1
 int id cardSaldo 0x7f080098
@@ -4272,6 +4271,7 @@ int id navigation_menu_subheader_label 0x7f08018f
 int id navigation_news 0x7f080190
 int id navigation_placeholder 0x7f080191
 int id navigation_profile 0x7f080192
+int id nestedScroll 0x7f0802b3
 int id never 0x7f080193
 int id neverCompleteToEnd 0x7f080194
 int id neverCompleteToStart 0x7f080195
@@ -4506,7 +4506,6 @@ int id tvPetunjuk 0x7f080278
 int id tvPlastikHariIni 0x7f080279
 int id tvPlastikKeseluruhan 0x7f08027a
 int id tvPlastikTanggal 0x7f08027b
-int id tvRekening 0x7f08027c
 int id tvSaldo 0x7f08027d
 int id tvSaldoTotal 0x7f08027e
 int id tvSampaiTanggal 0x7f08027f
@@ -4517,6 +4516,7 @@ int id tvTotalKgHariIni 0x7f080283
 int id tvTotalKgKeseluruhan 0x7f080284
 int id tvTotalKgTanggal 0x7f080285
 int id tvTotalTransaksi 0x7f080286
+int id tvWaktu 0x7f0802b5
 int id tv_account_number 0x7f080287
 int id tv_balance 0x7f080288
 int id tv_check_mutation 0x7f080289

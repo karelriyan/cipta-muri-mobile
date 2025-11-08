@@ -16,10 +16,6 @@
         "source": "C:\\Users\\HP\\.gradle\\daemon\\8.13\\com.main.cipta_muri_mobile.app-main-61:\\layout\\activity_setor_sampah.xml"
     },
     {
-        "merged": "com.main.cipta_muri_mobile.app-mergeDebugResources-58:/layout/activity_login.xml",
-        "source": "com.main.cipta_muri_mobile.app-main-61:/layout/activity_login.xml"
-    },
-    {
         "merged": "C:\\Users\\HP\\.gradle\\daemon\\8.13\\com.main.cipta_muri_mobile.app-mergeDebugResources-58:\\layout\\activity_penarikan_berhasil.xml",
         "source": "C:\\Users\\HP\\.gradle\\daemon\\8.13\\com.main.cipta_muri_mobile.app-main-61:\\layout\\activity_penarikan_berhasil.xml"
     },
@@ -34,6 +30,10 @@
     {
         "merged": "C:\\Users\\HP\\.gradle\\daemon\\8.13\\com.main.cipta_muri_mobile.app-mergeDebugResources-58:\\layout\\activity_bank_sampah.xml",
         "source": "C:\\Users\\HP\\.gradle\\daemon\\8.13\\com.main.cipta_muri_mobile.app-main-61:\\layout\\activity_bank_sampah.xml"
+    },
+    {
+        "merged": "com.main.cipta_muri_mobile.app-mergeDebugResources-58:/layout/activity_mutasi_saldo.xml",
+        "source": "com.main.cipta_muri_mobile.app-main-61:/layout/activity_mutasi_saldo.xml"
     },
     {
         "merged": "C:\\Users\\HP\\.gradle\\daemon\\8.13\\com.main.cipta_muri_mobile.app-mergeDebugResources-58:\\layout\\section_news.xml",

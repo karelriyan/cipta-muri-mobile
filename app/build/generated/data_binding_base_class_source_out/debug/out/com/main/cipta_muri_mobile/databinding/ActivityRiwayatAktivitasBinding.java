@@ -4,7 +4,6 @@ package com.main.cipta_muri_mobile.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.cardview.widget.CardView;
@@ -31,9 +30,6 @@ public final class ActivityRiwayatAktivitasBinding implements ViewBinding {
   public final BottomNavigationView bottomNavigationView;
 
   @NonNull
-  public final CardView cardRekening;
-
-  @NonNull
   public final CardView cardRentangWaktu;
 
   @NonNull
@@ -42,22 +38,16 @@ public final class ActivityRiwayatAktivitasBinding implements ViewBinding {
   @NonNull
   public final RecyclerView rvAktivitas;
 
-  @NonNull
-  public final TextView tvRekening;
-
   private ActivityRiwayatAktivitasBinding(@NonNull CoordinatorLayout rootView,
       @NonNull BottomAppBar bottomAppBar, @NonNull BottomNavigationView bottomNavigationView,
-      @NonNull CardView cardRekening, @NonNull CardView cardRentangWaktu,
-      @NonNull FloatingActionButton fabQr, @NonNull RecyclerView rvAktivitas,
-      @NonNull TextView tvRekening) {
+      @NonNull CardView cardRentangWaktu, @NonNull FloatingActionButton fabQr,
+      @NonNull RecyclerView rvAktivitas) {
     this.rootView = rootView;
     this.bottomAppBar = bottomAppBar;
     this.bottomNavigationView = bottomNavigationView;
-    this.cardRekening = cardRekening;
     this.cardRentangWaktu = cardRentangWaktu;
     this.fabQr = fabQr;
     this.rvAktivitas = rvAktivitas;
-    this.tvRekening = tvRekening;
   }
 
   @Override
@@ -99,12 +89,6 @@ public final class ActivityRiwayatAktivitasBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.cardRekening;
-      CardView cardRekening = ViewBindings.findChildViewById(rootView, id);
-      if (cardRekening == null) {
-        break missingId;
-      }
-
       id = R.id.cardRentangWaktu;
       CardView cardRentangWaktu = ViewBindings.findChildViewById(rootView, id);
       if (cardRentangWaktu == null) {
@@ -123,14 +107,8 @@ public final class ActivityRiwayatAktivitasBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.tvRekening;
-      TextView tvRekening = ViewBindings.findChildViewById(rootView, id);
-      if (tvRekening == null) {
-        break missingId;
-      }
-
       return new ActivityRiwayatAktivitasBinding((CoordinatorLayout) rootView, bottomAppBar,
-          bottomNavigationView, cardRekening, cardRentangWaktu, fabQr, rvAktivitas, tvRekening);
+          bottomNavigationView, cardRentangWaktu, fabQr, rvAktivitas);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

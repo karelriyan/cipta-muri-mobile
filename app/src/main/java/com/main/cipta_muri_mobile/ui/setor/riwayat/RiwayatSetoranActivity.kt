@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.View
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.widget.NestedScrollView
 import androidx.lifecycle.observe
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.main.cipta_muri_mobile.R
@@ -16,6 +17,7 @@ class RiwayatSetoranActivity : AppCompatActivity() {
     private val viewModel: RiwayatSetoranViewModel by viewModels()
     private lateinit var adapter: RiwayatSetoranAdapter
     private lateinit var sessionManager: SessionManager
+    private var isBottomRefreshing: Boolean = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,17 +28,13 @@ class RiwayatSetoranActivity : AppCompatActivity() {
         setupRecyclerView()
         setupNavigation()
         observeData()
+        setupScrollListener()
+    }
 
-        // Panggil data dari ViewModel
-        val userId = sessionManager.getUserId()
-        if (!userId.isNullOrEmpty()) {
-            viewModel.loadRiwayatSetoran(userId)
-        }
-        else {
-            binding.tvKosong.apply {
-                visibility = View.VISIBLE
-            }
-        }
+    override fun onResume() {
+        super.onResume()
+        // Refresh setiap kali halaman dibuka/kembali tampil
+        refreshData()
     }
 
     private fun setupRecyclerView() {
@@ -54,6 +52,10 @@ class RiwayatSetoranActivity : AppCompatActivity() {
     private fun observeData() {
         viewModel.isLoading.observe(this) { isLoading ->
             binding.progressBar.visibility = if (isLoading) View.VISIBLE else View.GONE
+            if (!isLoading) {
+                // Izinkan trigger refresh berikutnya dari scroll bottom
+                isBottomRefreshing = false
+            }
         }
         viewModel.riwayatList.observe(this) { list ->
             if (list.isNotEmpty()) {
@@ -76,5 +78,36 @@ class RiwayatSetoranActivity : AppCompatActivity() {
                 }
             }
         }
+    }
+
+    private fun refreshData() {
+        val userId = sessionManager.getUserId()
+        if (!userId.isNullOrEmpty()) {
+            binding.tvKosong.visibility = View.GONE
+            viewModel.loadRiwayatSetoran(userId)
+        } else {
+            binding.tvKosong.apply {
+                visibility = View.VISIBLE
+                text = "Belum ada data penyetoran."
+            }
+        }
+    }
+
+    private fun setupScrollListener() {
+        binding.nestedScroll.setOnScrollChangeListener(
+            NestedScrollView.OnScrollChangeListener { v, _, scrollY, _, _ ->
+                val nested = v as? NestedScrollView ?: return@OnScrollChangeListener
+                val contentHeight = nested.getChildAt(0)?.measuredHeight ?: return@OnScrollChangeListener
+                val containerHeight = nested.measuredHeight
+
+                val isAtBottom = scrollY >= (contentHeight - containerHeight)
+                val isLoading = viewModel.isLoading.value == true
+
+                if (isAtBottom && !isLoading && !isBottomRefreshing) {
+                    isBottomRefreshing = true
+                    refreshData()
+                }
+            }
+        )
     }
 }

@@ -74,7 +74,7 @@ class MainActivity : AppCompatActivity() {
         viewModel.user.observe(this) { user ->
             user?.let {
                 binding.tvUserName.text = it.name.ifEmpty { "Pengguna Cipta Muri" }
-                binding.tvBalance.text = "Rp ${"%,.2f".format(it.balance)}"
+                binding.tvBalance.text = com.main.cipta_muri_mobile.util.Formatters.formatRupiah(it.balance)
                 binding.tvTotalWeight.text = "Total Berat Sampah Terjual: ${it.totalWasteKg} Kg"
                 binding.tvAccountNumber.text = "No. Rekening: ${it.accountNumber}"
             }

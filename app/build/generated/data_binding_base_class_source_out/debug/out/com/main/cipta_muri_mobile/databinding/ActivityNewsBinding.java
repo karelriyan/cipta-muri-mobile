@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.core.widget.NestedScrollView;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.google.android.material.bottomappbar.BottomAppBar;
@@ -30,12 +31,17 @@ public final class ActivityNewsBinding implements ViewBinding {
   @NonNull
   public final FloatingActionButton fabQr;
 
+  @NonNull
+  public final NestedScrollView nestedScroll;
+
   private ActivityNewsBinding(@NonNull FrameLayout rootView, @NonNull BottomAppBar bottomAppBar,
-      @NonNull BottomNavigationView bottomNavigationView, @NonNull FloatingActionButton fabQr) {
+      @NonNull BottomNavigationView bottomNavigationView, @NonNull FloatingActionButton fabQr,
+      @NonNull NestedScrollView nestedScroll) {
     this.rootView = rootView;
     this.bottomAppBar = bottomAppBar;
     this.bottomNavigationView = bottomNavigationView;
     this.fabQr = fabQr;
+    this.nestedScroll = nestedScroll;
   }
 
   @Override
@@ -83,8 +89,14 @@ public final class ActivityNewsBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.nestedScroll;
+      NestedScrollView nestedScroll = ViewBindings.findChildViewById(rootView, id);
+      if (nestedScroll == null) {
+        break missingId;
+      }
+
       return new ActivityNewsBinding((FrameLayout) rootView, bottomAppBar, bottomNavigationView,
-          fabQr);
+          fabQr, nestedScroll);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

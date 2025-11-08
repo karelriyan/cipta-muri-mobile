@@ -3,6 +3,7 @@ package com.main.cipta_muri_mobile.ui.aktivitas
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.lifecycleScope
 import com.main.cipta_muri_mobile.R
 import com.main.cipta_muri_mobile.databinding.ActivityRiwayatAktivitasBinding
 import com.main.cipta_muri_mobile.ui.main.MainActivity
@@ -11,10 +12,16 @@ import com.main.cipta_muri_mobile.ui.profile.ProfileActivity
 
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.main.cipta_muri_mobile.data.Aktivitas
+import com.main.cipta_muri_mobile.data.ApiRepository
+import kotlinx.coroutines.launch
+import com.main.cipta_muri_mobile.util.Formatters
 
 class RiwayatAktivitasActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityRiwayatAktivitasBinding
+    private lateinit var adapter: AktivitasAdapter
+    private var isBottomRefreshing: Boolean = false
+    private var isLoading: Boolean = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -47,17 +54,62 @@ class RiwayatAktivitasActivity : AppCompatActivity() {
             }
         }
 
-        // ✅ Tambahkan dummy data
-        val dummyList = listOf(
-            Aktivitas("09 Maret 2025", "Saldo Masuk", "Hasil Penjualan Sampah", "+Rp 10.000,00", true),
-            Aktivitas("09 Maret 2025", "Saldo Keluar", "Tarik Tunai ke Rekening", "-Rp 5.000,00", false),
-            Aktivitas("08 Maret 2025", "Saldo Masuk", "Bonus Poin Penukaran", "+Rp 2.500,00", true),
-            Aktivitas("07 Maret 2025", "Saldo Keluar", "Pembayaran Tagihan", "-Rp 15.000,00", false)
-        )
-
-        // ✅ Set adapter RecyclerView
+        // ✅ Setup RecyclerView + Adapter
         binding.rvAktivitas.layoutManager = LinearLayoutManager(this)
-        binding.rvAktivitas.adapter = AktivitasAdapter(dummyList)
+        adapter = AktivitasAdapter(emptyList())
+        binding.rvAktivitas.adapter = adapter
+
+        // ✅ Listener scroll untuk refresh saat mentok bawah
+        setupScrollListener()
+
+        // ✅ Muat awal / refresh saat halaman dibuka
+        refreshData()
+    }
+
+    override fun onResume() {
+        super.onResume()
+        refreshData()
+    }
+
+    private fun setupScrollListener() {
+        binding.rvAktivitas.addOnScrollListener(object : androidx.recyclerview.widget.RecyclerView.OnScrollListener() {
+            override fun onScrolled(recyclerView: androidx.recyclerview.widget.RecyclerView, dx: Int, dy: Int) {
+                super.onScrolled(recyclerView, dx, dy)
+                if (dy > 0 && !recyclerView.canScrollVertically(1) && !isBottomRefreshing && !isLoading) {
+                    isBottomRefreshing = true
+                    refreshData()
+                }
+            }
+        })
+    }
+
+    private fun refreshData() {
+        lifecycleScope.launch {
+            isLoading = true
+            try {
+                val repo = ApiRepository(this@RiwayatAktivitasActivity)
+                val result = repo.getSaldoTransactions(null)
+                result.onSuccess { list ->
+                    val mapped = list.map { tx ->
+                        val isMasuk = tx.type.equals("credit", ignoreCase = true)
+                        val nominalDisp = Formatters.formatRupiah(tx.amount, isMasuk)
+                        Aktivitas(
+                            tanggal = Formatters.formatTanggalIndo(tx.createdAt),
+                            jenis = if (isMasuk) "Saldo Masuk" else "Saldo Keluar",
+                            keterangan = tx.description ?: "",
+                            jumlah = nominalDisp,
+                            isMasuk = isMasuk,
+                            waktu = Formatters.formatWaktu(tx.createdAt)
+                        )
+                    }
+                    adapter.updateData(mapped)
+                }.onFailure {
+                    // fallback: keep current data or clear
+                }
+            } finally {
+                isLoading = false
+                isBottomRefreshing = false
+            }
+        }
     }
 }
-

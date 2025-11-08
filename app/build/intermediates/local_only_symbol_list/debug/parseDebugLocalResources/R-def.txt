@@ -146,7 +146,6 @@ id btn_amount_40k
 id btn_amount_50k
 id btn_continue
 id btn_logout
-id cardRekening
 id cardRentangWaktu
 id cardRoot
 id cardSaldo
@@ -180,6 +179,7 @@ id navigation_home
 id navigation_news
 id navigation_placeholder
 id navigation_profile
+id nestedScroll
 id podium_1
 id podium_2
 id podium_3
@@ -232,7 +232,6 @@ id tvPetunjuk
 id tvPlastikHariIni
 id tvPlastikKeseluruhan
 id tvPlastikTanggal
-id tvRekening
 id tvSaldo
 id tvSaldoTotal
 id tvSampaiTanggal
@@ -243,6 +242,7 @@ id tvTotalKgHariIni
 id tvTotalKgKeseluruhan
 id tvTotalKgTanggal
 id tvTotalTransaksi
+id tvWaktu
 id tv_account_number
 id tv_balance
 id tv_check_mutation

@@ -9,6 +9,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.core.widget.NestedScrollView;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
@@ -68,6 +69,9 @@ public final class ActivityMutasiSaldoBinding implements ViewBinding {
   public final MaterialButton btnSeptember;
 
   @NonNull
+  public final NestedScrollView nestedScroll;
+
+  @NonNull
   public final RecyclerView rvMutasiSaldo;
 
   @NonNull
@@ -84,8 +88,9 @@ public final class ActivityMutasiSaldoBinding implements ViewBinding {
       @NonNull MaterialButton btnJuni, @NonNull MaterialButton btnMaret,
       @NonNull MaterialButton btnMei, @NonNull MaterialButton btnNovember,
       @NonNull MaterialButton btnOktober, @NonNull ImageView btnSearch,
-      @NonNull MaterialButton btnSeptember, @NonNull RecyclerView rvMutasiSaldo,
-      @NonNull TextView tvSaldoTotal, @NonNull TextView tvTampilkanLebihBanyak) {
+      @NonNull MaterialButton btnSeptember, @NonNull NestedScrollView nestedScroll,
+      @NonNull RecyclerView rvMutasiSaldo, @NonNull TextView tvSaldoTotal,
+      @NonNull TextView tvTampilkanLebihBanyak) {
     this.rootView = rootView;
     this.btnAgustus = btnAgustus;
     this.btnApril = btnApril;
@@ -102,6 +107,7 @@ public final class ActivityMutasiSaldoBinding implements ViewBinding {
     this.btnOktober = btnOktober;
     this.btnSearch = btnSearch;
     this.btnSeptember = btnSeptember;
+    this.nestedScroll = nestedScroll;
     this.rvMutasiSaldo = rvMutasiSaldo;
     this.tvSaldoTotal = tvSaldoTotal;
     this.tvTampilkanLebihBanyak = tvTampilkanLebihBanyak;
@@ -224,6 +230,12 @@ public final class ActivityMutasiSaldoBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.nestedScroll;
+      NestedScrollView nestedScroll = ViewBindings.findChildViewById(rootView, id);
+      if (nestedScroll == null) {
+        break missingId;
+      }
+
       id = R.id.rvMutasiSaldo;
       RecyclerView rvMutasiSaldo = ViewBindings.findChildViewById(rootView, id);
       if (rvMutasiSaldo == null) {
@@ -244,8 +256,8 @@ public final class ActivityMutasiSaldoBinding implements ViewBinding {
 
       return new ActivityMutasiSaldoBinding((FrameLayout) rootView, btnAgustus, btnApril, btnBack,
           btnDesember, btnFebruari, btnFilter, btnJanuari, btnJuli, btnJuni, btnMaret, btnMei,
-          btnNovember, btnOktober, btnSearch, btnSeptember, rvMutasiSaldo, tvSaldoTotal,
-          tvTampilkanLebihBanyak);
+          btnNovember, btnOktober, btnSearch, btnSeptember, nestedScroll, rvMutasiSaldo,
+          tvSaldoTotal, tvTampilkanLebihBanyak);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

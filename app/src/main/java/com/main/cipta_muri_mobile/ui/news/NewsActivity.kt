@@ -13,6 +13,7 @@ import com.main.cipta_muri_mobile.ui.main.MainActivity
 class NewsActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityNewsBinding
+    private var isBottomRefreshing: Boolean = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -20,6 +21,12 @@ class NewsActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         setupBottomNavigation(binding.bottomNavigationView)
+        setupScrollListener()
+    }
+
+    override fun onResume() {
+        super.onResume()
+        refreshData()
     }
 
     private fun setupBottomNavigation(navView: BottomNavigationView) {
@@ -57,6 +64,27 @@ class NewsActivity : AppCompatActivity() {
     private fun startActivityWithFade(intent: Intent) {
         startActivity(intent)
         overridePendingTransition(R.anim.fade_in, R.anim.fade_out)
+    }
+
+    private fun setupScrollListener() {
+        binding.nestedScroll.setOnScrollChangeListener(
+            androidx.core.widget.NestedScrollView.OnScrollChangeListener { v, _, scrollY, _, _ ->
+                val nested = v as? androidx.core.widget.NestedScrollView ?: return@OnScrollChangeListener
+                val contentHeight = nested.getChildAt(0)?.measuredHeight ?: return@OnScrollChangeListener
+                val containerHeight = nested.measuredHeight
+                val isAtBottom = scrollY >= (contentHeight - containerHeight)
+                if (isAtBottom && !isBottomRefreshing) {
+                    isBottomRefreshing = true
+                    refreshData()
+                    isBottomRefreshing = false
+                }
+            }
+        )
+    }
+
+    private fun refreshData() {
+        // Hook untuk memuat ulang data berita saat halaman tampil atau scroll mentok.
+        // Implementasi pengambilan data dapat ditambahkan di sini.
     }
 
     // ✅ Override animasi saat activity dimulai

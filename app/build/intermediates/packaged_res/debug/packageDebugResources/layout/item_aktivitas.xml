@@ -68,6 +68,15 @@
                 android:textSize="13sp"
                 android:layout_marginTop="4dp" />
 
+            <TextView
+                android:id="@+id/tvWaktu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="14:35"
+                android:textColor="#999999"
+                android:textSize="12sp"
+                android:layout_marginTop="2dp" />
+
         </LinearLayout>
 
         <TextView

@@ -38,9 +38,13 @@ public final class ItemAktivitasBinding implements ViewBinding {
   @NonNull
   public final TextView tvTanggal;
 
+  @NonNull
+  public final TextView tvWaktu;
+
   private ItemAktivitasBinding(@NonNull LinearLayout rootView, @NonNull ImageView ivIcon,
       @NonNull LinearLayout layoutTransaksi, @NonNull TextView tvJenisTransaksi,
-      @NonNull TextView tvJumlah, @NonNull TextView tvKeterangan, @NonNull TextView tvTanggal) {
+      @NonNull TextView tvJumlah, @NonNull TextView tvKeterangan, @NonNull TextView tvTanggal,
+      @NonNull TextView tvWaktu) {
     this.rootView = rootView;
     this.ivIcon = ivIcon;
     this.layoutTransaksi = layoutTransaksi;
@@ -48,6 +52,7 @@ public final class ItemAktivitasBinding implements ViewBinding {
     this.tvJumlah = tvJumlah;
     this.tvKeterangan = tvKeterangan;
     this.tvTanggal = tvTanggal;
+    this.tvWaktu = tvWaktu;
   }
 
   @Override
@@ -113,8 +118,14 @@ public final class ItemAktivitasBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.tvWaktu;
+      TextView tvWaktu = ViewBindings.findChildViewById(rootView, id);
+      if (tvWaktu == null) {
+        break missingId;
+      }
+
       return new ItemAktivitasBinding((LinearLayout) rootView, ivIcon, layoutTransaksi,
-          tvJenisTransaksi, tvJumlah, tvKeterangan, tvTanggal);
+          tvJenisTransaksi, tvJumlah, tvKeterangan, tvTanggal, tvWaktu);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

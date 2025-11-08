@@ -10,6 +10,7 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.core.widget.NestedScrollView;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
@@ -69,6 +70,9 @@ public final class ActivityRiwayatSetoranBinding implements ViewBinding {
   public final MaterialButton btnSeptember;
 
   @NonNull
+  public final NestedScrollView nestedScroll;
+
+  @NonNull
   public final ProgressBar progressBar;
 
   @NonNull
@@ -85,8 +89,9 @@ public final class ActivityRiwayatSetoranBinding implements ViewBinding {
       @NonNull MaterialButton btnJuni, @NonNull MaterialButton btnMaret,
       @NonNull MaterialButton btnMei, @NonNull MaterialButton btnNovember,
       @NonNull MaterialButton btnOktober, @NonNull ImageView btnSearch,
-      @NonNull MaterialButton btnSeptember, @NonNull ProgressBar progressBar,
-      @NonNull RecyclerView rvRiwayatSetoran, @NonNull TextView tvKosong) {
+      @NonNull MaterialButton btnSeptember, @NonNull NestedScrollView nestedScroll,
+      @NonNull ProgressBar progressBar, @NonNull RecyclerView rvRiwayatSetoran,
+      @NonNull TextView tvKosong) {
     this.rootView = rootView;
     this.btnAgustus = btnAgustus;
     this.btnApril = btnApril;
@@ -103,6 +108,7 @@ public final class ActivityRiwayatSetoranBinding implements ViewBinding {
     this.btnOktober = btnOktober;
     this.btnSearch = btnSearch;
     this.btnSeptember = btnSeptember;
+    this.nestedScroll = nestedScroll;
     this.progressBar = progressBar;
     this.rvRiwayatSetoran = rvRiwayatSetoran;
     this.tvKosong = tvKosong;
@@ -225,6 +231,12 @@ public final class ActivityRiwayatSetoranBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.nestedScroll;
+      NestedScrollView nestedScroll = ViewBindings.findChildViewById(rootView, id);
+      if (nestedScroll == null) {
+        break missingId;
+      }
+
       id = R.id.progressBar;
       ProgressBar progressBar = ViewBindings.findChildViewById(rootView, id);
       if (progressBar == null) {
@@ -245,8 +257,8 @@ public final class ActivityRiwayatSetoranBinding implements ViewBinding {
 
       return new ActivityRiwayatSetoranBinding((FrameLayout) rootView, btnAgustus, btnApril,
           btnBack, btnDesember, btnFebruari, btnFilter, btnJanuari, btnJuli, btnJuni, btnMaret,
-          btnMei, btnNovember, btnOktober, btnSearch, btnSeptember, progressBar, rvRiwayatSetoran,
-          tvKosong);
+          btnMei, btnNovember, btnOktober, btnSearch, btnSeptember, nestedScroll, progressBar,
+          rvRiwayatSetoran, tvKosong);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
