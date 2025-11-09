@@ -143,9 +143,9 @@ class MainActivity : AppCompatActivity() {
         }
 
         // Tarik Saldo
-        binding.mnTarik.setOnClickListener {
-            startActivityWithFade(Intent(this, TarikSaldoActivity::class.java))
-        }
+//        binding.mnTarik.setOnClickListener {
+//            startActivityWithFade(Intent(this, TarikSaldoActivity::class.java))
+//        }
 
         // Riwayat Penarikan
         binding.mnRiwayatPenarikan.setOnClickListener {
@@ -153,9 +153,9 @@ class MainActivity : AppCompatActivity() {
         }
 
         // Donasi Sampah
-        binding.mnDonasi.setOnClickListener {
-            startActivityWithFade(Intent(this, DonasiSampahActivity::class.java))
-        }
+//        binding.mnDonasi.setOnClickListener {
+//            startActivityWithFade(Intent(this, DonasiSampahActivity::class.java))
+//        }
 
         // Leaderboard
         binding.mnLeaderboard.setOnClickListener {

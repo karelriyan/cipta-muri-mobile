@@ -29,13 +29,7 @@ public final class ActivityMainBinding implements ViewBinding {
   public final FloatingActionButton fabLeaderboard;
 
   @NonNull
-  public final LinearLayout mnDonasi;
-
-  @NonNull
   public final LinearLayout mnLeaderboard;
-
-  @NonNull
-  public final LinearLayout mnPlaceholder;
 
   @NonNull
   public final LinearLayout mnRiwayatPenarikan;
@@ -45,9 +39,6 @@ public final class ActivityMainBinding implements ViewBinding {
 
   @NonNull
   public final LinearLayout mnSetor;
-
-  @NonNull
-  public final LinearLayout mnTarik;
 
   @NonNull
   public final TextView tvAccountNumber;
@@ -71,23 +62,19 @@ public final class ActivityMainBinding implements ViewBinding {
   public final TextView tvUserName;
 
   private ActivityMainBinding(@NonNull CoordinatorLayout rootView, @NonNull FrameLayout cardSaldo,
-      @NonNull FloatingActionButton fabLeaderboard, @NonNull LinearLayout mnDonasi,
-      @NonNull LinearLayout mnLeaderboard, @NonNull LinearLayout mnPlaceholder,
+      @NonNull FloatingActionButton fabLeaderboard, @NonNull LinearLayout mnLeaderboard,
       @NonNull LinearLayout mnRiwayatPenarikan, @NonNull LinearLayout mnRiwayatSetor,
-      @NonNull LinearLayout mnSetor, @NonNull LinearLayout mnTarik,
-      @NonNull TextView tvAccountNumber, @NonNull TextView tvBalance, @NonNull TextView tvGreeting,
-      @NonNull TextView tvMutation, @NonNull TextView tvProfileInitial,
-      @NonNull TextView tvTotalWeight, @NonNull TextView tvUserName) {
+      @NonNull LinearLayout mnSetor, @NonNull TextView tvAccountNumber, @NonNull TextView tvBalance,
+      @NonNull TextView tvGreeting, @NonNull TextView tvMutation,
+      @NonNull TextView tvProfileInitial, @NonNull TextView tvTotalWeight,
+      @NonNull TextView tvUserName) {
     this.rootView = rootView;
     this.cardSaldo = cardSaldo;
     this.fabLeaderboard = fabLeaderboard;
-    this.mnDonasi = mnDonasi;
     this.mnLeaderboard = mnLeaderboard;
-    this.mnPlaceholder = mnPlaceholder;
     this.mnRiwayatPenarikan = mnRiwayatPenarikan;
     this.mnRiwayatSetor = mnRiwayatSetor;
     this.mnSetor = mnSetor;
-    this.mnTarik = mnTarik;
     this.tvAccountNumber = tvAccountNumber;
     this.tvBalance = tvBalance;
     this.tvGreeting = tvGreeting;
@@ -136,21 +123,9 @@ public final class ActivityMainBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.mnDonasi;
-      LinearLayout mnDonasi = ViewBindings.findChildViewById(rootView, id);
-      if (mnDonasi == null) {
-        break missingId;
-      }
-
       id = R.id.mnLeaderboard;
       LinearLayout mnLeaderboard = ViewBindings.findChildViewById(rootView, id);
       if (mnLeaderboard == null) {
-        break missingId;
-      }
-
-      id = R.id.mnPlaceholder;
-      LinearLayout mnPlaceholder = ViewBindings.findChildViewById(rootView, id);
-      if (mnPlaceholder == null) {
         break missingId;
       }
 
@@ -169,12 +144,6 @@ public final class ActivityMainBinding implements ViewBinding {
       id = R.id.mnSetor;
       LinearLayout mnSetor = ViewBindings.findChildViewById(rootView, id);
       if (mnSetor == null) {
-        break missingId;
-      }
-
-      id = R.id.mnTarik;
-      LinearLayout mnTarik = ViewBindings.findChildViewById(rootView, id);
-      if (mnTarik == null) {
         break missingId;
       }
 
@@ -221,9 +190,8 @@ public final class ActivityMainBinding implements ViewBinding {
       }
 
       return new ActivityMainBinding((CoordinatorLayout) rootView, cardSaldo, fabLeaderboard,
-          mnDonasi, mnLeaderboard, mnPlaceholder, mnRiwayatPenarikan, mnRiwayatSetor, mnSetor,
-          mnTarik, tvAccountNumber, tvBalance, tvGreeting, tvMutation, tvProfileInitial,
-          tvTotalWeight, tvUserName);
+          mnLeaderboard, mnRiwayatPenarikan, mnRiwayatSetor, mnSetor, tvAccountNumber, tvBalance,
+          tvGreeting, tvMutation, tvProfileInitial, tvTotalWeight, tvUserName);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

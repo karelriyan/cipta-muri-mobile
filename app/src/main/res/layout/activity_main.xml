@@ -197,17 +197,17 @@
                             <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="Riwayat Setoran" android:textAlignment="center" android:textSize="12sp"/>
                         </LinearLayout>
 
-                        <LinearLayout
-                            android:id="@+id/mnTarik"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_columnWeight="1"
-                            android:gravity="center"
-                            android:orientation="vertical"
-                            android:padding="4dp">
-                            <ImageView android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/ic_tarik_saldo" />
-                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="Tarik Saldo" android:textAlignment="center" android:textSize="12sp"/>
-                        </LinearLayout>
+<!--                        <LinearLayout-->
+<!--                            android:id="@+id/mnTarik"-->
+<!--                            android:layout_width="0dp"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_columnWeight="1"-->
+<!--                            android:gravity="center"-->
+<!--                            android:orientation="vertical"-->
+<!--                            android:padding="4dp">-->
+<!--                            <ImageView android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/ic_tarik_saldo" />-->
+<!--                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="Tarik Saldo" android:textAlignment="center" android:textSize="12sp"/>-->
+<!--                        </LinearLayout>-->
 
                         <LinearLayout
                             android:id="@+id/mnRiwayatPenarikan"
@@ -221,29 +221,18 @@
                             <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="Riwayat Penarikan" android:textAlignment="center" android:textSize="12sp"/>
                         </LinearLayout>
 
-                        <LinearLayout
-                            android:id="@+id/mnPlaceholder"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_columnWeight="1"
-                            android:gravity="center"
-                            android:orientation="vertical"
-                            android:padding="4dp"
-                            android:layout_marginTop="8dp">
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:id="@+id/mnDonasi"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_columnWeight="1"
-                            android:gravity="center"
-                            android:orientation="vertical"
-                            android:padding="4dp"
-                            android:layout_marginTop="8dp">
-                            <ImageView android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/ic_donasi" />
-                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="Donasi Sampah" android:textAlignment="center" android:textSize="12sp"/>
-                        </LinearLayout>
+                        <!--                        <LinearLayout-->
+<!--                            android:id="@+id/mnDonasi"-->
+<!--                            android:layout_width="0dp"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_columnWeight="1"-->
+<!--                            android:gravity="center"-->
+<!--                            android:orientation="vertical"-->
+<!--                            android:padding="4dp"-->
+<!--                            android:layout_marginTop="8dp">-->
+<!--                            <ImageView android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/ic_donasi" />-->
+<!--                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="Donasi Sampah" android:textAlignment="center" android:textSize="12sp"/>-->
+<!--                        </LinearLayout>-->
 
                         <LinearLayout
                             android:id="@+id/mnLeaderboard"

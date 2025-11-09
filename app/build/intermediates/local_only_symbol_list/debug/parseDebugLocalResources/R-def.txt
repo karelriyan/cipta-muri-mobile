@@ -179,13 +179,10 @@ id layoutSampaiTanggal
 id layoutTransaksi
 id logoImage
 id main
-id mnDonasi
 id mnLeaderboard
-id mnPlaceholder
 id mnRiwayatPenarikan
 id mnRiwayatSetor
 id mnSetor
-id mnTarik
 id navigation_history
 id navigation_home
 id navigation_news
