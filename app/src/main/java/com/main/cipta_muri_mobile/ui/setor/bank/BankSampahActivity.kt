@@ -1,4 +1,4 @@
-package com.main.cipta_muri_mobile.ui.setor.bank
+﻿package com.main.cipta_muri_mobile.ui.setor.bank
 
 import android.Manifest
 import android.content.Intent
@@ -96,8 +96,8 @@ class BankSampahActivity : AppCompatActivity() {
         checkAndGetLocation()
 
         // Bottom Navigation
-        val navView = findViewById<BottomNavigationView>(R.id.bottom_navigation_view)
-        setupBottomNavigation(navView)
+        val navView = findViewById<BottomNavigationView?>(R.id.bottom_navigation_view)
+        if (navView != null) { setupBottomNavigation(navView) }
     }
 
     // 🧭 Hitung jarak dari lokasi pengguna

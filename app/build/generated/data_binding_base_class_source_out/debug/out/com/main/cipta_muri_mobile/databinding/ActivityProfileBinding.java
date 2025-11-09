@@ -11,10 +11,7 @@ import androidx.annotation.Nullable;
 import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
-import com.google.android.material.bottomappbar.BottomAppBar;
-import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.button.MaterialButton;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.main.cipta_muri_mobile.R;
 import java.lang.NullPointerException;
 import java.lang.Override;
@@ -25,16 +22,7 @@ public final class ActivityProfileBinding implements ViewBinding {
   private final CoordinatorLayout rootView;
 
   @NonNull
-  public final BottomAppBar bottomAppBar;
-
-  @NonNull
-  public final BottomNavigationView bottomNavigationView;
-
-  @NonNull
   public final MaterialButton btnLogout;
-
-  @NonNull
-  public final FloatingActionButton fabQr;
 
   @NonNull
   public final ImageView ivEditPhoto;
@@ -46,15 +34,10 @@ public final class ActivityProfileBinding implements ViewBinding {
   public final TextView tvProfileName;
 
   private ActivityProfileBinding(@NonNull CoordinatorLayout rootView,
-      @NonNull BottomAppBar bottomAppBar, @NonNull BottomNavigationView bottomNavigationView,
-      @NonNull MaterialButton btnLogout, @NonNull FloatingActionButton fabQr,
-      @NonNull ImageView ivEditPhoto, @NonNull TextView tvProfileAvatar,
-      @NonNull TextView tvProfileName) {
+      @NonNull MaterialButton btnLogout, @NonNull ImageView ivEditPhoto,
+      @NonNull TextView tvProfileAvatar, @NonNull TextView tvProfileName) {
     this.rootView = rootView;
-    this.bottomAppBar = bottomAppBar;
-    this.bottomNavigationView = bottomNavigationView;
     this.btnLogout = btnLogout;
-    this.fabQr = fabQr;
     this.ivEditPhoto = ivEditPhoto;
     this.tvProfileAvatar = tvProfileAvatar;
     this.tvProfileName = tvProfileName;
@@ -87,27 +70,9 @@ public final class ActivityProfileBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.bottom_app_bar;
-      BottomAppBar bottomAppBar = ViewBindings.findChildViewById(rootView, id);
-      if (bottomAppBar == null) {
-        break missingId;
-      }
-
-      id = R.id.bottom_navigation_view;
-      BottomNavigationView bottomNavigationView = ViewBindings.findChildViewById(rootView, id);
-      if (bottomNavigationView == null) {
-        break missingId;
-      }
-
       id = R.id.btn_logout;
       MaterialButton btnLogout = ViewBindings.findChildViewById(rootView, id);
       if (btnLogout == null) {
-        break missingId;
-      }
-
-      id = R.id.fab_qr;
-      FloatingActionButton fabQr = ViewBindings.findChildViewById(rootView, id);
-      if (fabQr == null) {
         break missingId;
       }
 
@@ -129,8 +94,8 @@ public final class ActivityProfileBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityProfileBinding((CoordinatorLayout) rootView, bottomAppBar,
-          bottomNavigationView, btnLogout, fabQr, ivEditPhoto, tvProfileAvatar, tvProfileName);
+      return new ActivityProfileBinding((CoordinatorLayout) rootView, btnLogout, ivEditPhoto,
+          tvProfileAvatar, tvProfileName);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

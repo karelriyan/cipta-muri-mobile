@@ -20,8 +20,8 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        // BottomNavigationView yang kita gunakan untuk navigasi manual
-        val navView: BottomNavigationView = binding.bottomNavigationView
+        // BottomNavigationView (via include); akses dengan findViewById
+        val navView: BottomNavigationView = findViewById(R.id.bottom_navigation_view)
 
         // Kode Navigasi yang ERROR dihapus:
         // val navController = findNavController(R.id.nav_host_fragment_activity_main)

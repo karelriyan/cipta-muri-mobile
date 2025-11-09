@@ -10,9 +10,6 @@ import androidx.annotation.Nullable;
 import androidx.core.widget.NestedScrollView;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
-import com.google.android.material.bottomappbar.BottomAppBar;
-import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.main.cipta_muri_mobile.R;
 import java.lang.NullPointerException;
 import java.lang.Override;
@@ -23,24 +20,11 @@ public final class ActivityNewsBinding implements ViewBinding {
   private final FrameLayout rootView;
 
   @NonNull
-  public final BottomAppBar bottomAppBar;
-
-  @NonNull
-  public final BottomNavigationView bottomNavigationView;
-
-  @NonNull
-  public final FloatingActionButton fabQr;
-
-  @NonNull
   public final NestedScrollView nestedScroll;
 
-  private ActivityNewsBinding(@NonNull FrameLayout rootView, @NonNull BottomAppBar bottomAppBar,
-      @NonNull BottomNavigationView bottomNavigationView, @NonNull FloatingActionButton fabQr,
+  private ActivityNewsBinding(@NonNull FrameLayout rootView,
       @NonNull NestedScrollView nestedScroll) {
     this.rootView = rootView;
-    this.bottomAppBar = bottomAppBar;
-    this.bottomNavigationView = bottomNavigationView;
-    this.fabQr = fabQr;
     this.nestedScroll = nestedScroll;
   }
 
@@ -71,32 +55,13 @@ public final class ActivityNewsBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.bottom_app_bar;
-      BottomAppBar bottomAppBar = ViewBindings.findChildViewById(rootView, id);
-      if (bottomAppBar == null) {
-        break missingId;
-      }
-
-      id = R.id.bottom_navigation_view;
-      BottomNavigationView bottomNavigationView = ViewBindings.findChildViewById(rootView, id);
-      if (bottomNavigationView == null) {
-        break missingId;
-      }
-
-      id = R.id.fab_qr;
-      FloatingActionButton fabQr = ViewBindings.findChildViewById(rootView, id);
-      if (fabQr == null) {
-        break missingId;
-      }
-
       id = R.id.nestedScroll;
       NestedScrollView nestedScroll = ViewBindings.findChildViewById(rootView, id);
       if (nestedScroll == null) {
         break missingId;
       }
 
-      return new ActivityNewsBinding((FrameLayout) rootView, bottomAppBar, bottomNavigationView,
-          fabQr, nestedScroll);
+      return new ActivityNewsBinding((FrameLayout) rootView, nestedScroll);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

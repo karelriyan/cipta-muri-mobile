@@ -11,9 +11,6 @@ import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
-import com.google.android.material.bottomappbar.BottomAppBar;
-import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.main.cipta_muri_mobile.R;
 import java.lang.NullPointerException;
 import java.lang.Override;
@@ -24,29 +21,15 @@ public final class ActivityRiwayatAktivitasBinding implements ViewBinding {
   private final CoordinatorLayout rootView;
 
   @NonNull
-  public final BottomAppBar bottomAppBar;
-
-  @NonNull
-  public final BottomNavigationView bottomNavigationView;
-
-  @NonNull
   public final CardView cardRentangWaktu;
-
-  @NonNull
-  public final FloatingActionButton fabQr;
 
   @NonNull
   public final RecyclerView rvAktivitas;
 
   private ActivityRiwayatAktivitasBinding(@NonNull CoordinatorLayout rootView,
-      @NonNull BottomAppBar bottomAppBar, @NonNull BottomNavigationView bottomNavigationView,
-      @NonNull CardView cardRentangWaktu, @NonNull FloatingActionButton fabQr,
-      @NonNull RecyclerView rvAktivitas) {
+      @NonNull CardView cardRentangWaktu, @NonNull RecyclerView rvAktivitas) {
     this.rootView = rootView;
-    this.bottomAppBar = bottomAppBar;
-    this.bottomNavigationView = bottomNavigationView;
     this.cardRentangWaktu = cardRentangWaktu;
-    this.fabQr = fabQr;
     this.rvAktivitas = rvAktivitas;
   }
 
@@ -77,27 +60,9 @@ public final class ActivityRiwayatAktivitasBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.bottom_app_bar;
-      BottomAppBar bottomAppBar = ViewBindings.findChildViewById(rootView, id);
-      if (bottomAppBar == null) {
-        break missingId;
-      }
-
-      id = R.id.bottom_navigation_view;
-      BottomNavigationView bottomNavigationView = ViewBindings.findChildViewById(rootView, id);
-      if (bottomNavigationView == null) {
-        break missingId;
-      }
-
       id = R.id.cardRentangWaktu;
       CardView cardRentangWaktu = ViewBindings.findChildViewById(rootView, id);
       if (cardRentangWaktu == null) {
-        break missingId;
-      }
-
-      id = R.id.fab_qr;
-      FloatingActionButton fabQr = ViewBindings.findChildViewById(rootView, id);
-      if (fabQr == null) {
         break missingId;
       }
 
@@ -107,8 +72,8 @@ public final class ActivityRiwayatAktivitasBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityRiwayatAktivitasBinding((CoordinatorLayout) rootView, bottomAppBar,
-          bottomNavigationView, cardRentangWaktu, fabQr, rvAktivitas);
+      return new ActivityRiwayatAktivitasBinding((CoordinatorLayout) rootView, cardRentangWaktu,
+          rvAktivitas);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

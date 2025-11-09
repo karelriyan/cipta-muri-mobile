@@ -12,8 +12,6 @@ import androidx.annotation.Nullable;
 import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
-import com.google.android.material.bottomappbar.BottomAppBar;
-import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.main.cipta_muri_mobile.R;
 import java.lang.NullPointerException;
@@ -25,19 +23,10 @@ public final class ActivityMainBinding implements ViewBinding {
   private final CoordinatorLayout rootView;
 
   @NonNull
-  public final BottomAppBar bottomAppBar;
-
-  @NonNull
-  public final BottomNavigationView bottomNavigationView;
-
-  @NonNull
   public final FrameLayout cardSaldo;
 
   @NonNull
   public final FloatingActionButton fabLeaderboard;
-
-  @NonNull
-  public final FloatingActionButton fabQr;
 
   @NonNull
   public final LinearLayout mnDonasi;
@@ -81,10 +70,8 @@ public final class ActivityMainBinding implements ViewBinding {
   @NonNull
   public final TextView tvUserName;
 
-  private ActivityMainBinding(@NonNull CoordinatorLayout rootView,
-      @NonNull BottomAppBar bottomAppBar, @NonNull BottomNavigationView bottomNavigationView,
-      @NonNull FrameLayout cardSaldo, @NonNull FloatingActionButton fabLeaderboard,
-      @NonNull FloatingActionButton fabQr, @NonNull LinearLayout mnDonasi,
+  private ActivityMainBinding(@NonNull CoordinatorLayout rootView, @NonNull FrameLayout cardSaldo,
+      @NonNull FloatingActionButton fabLeaderboard, @NonNull LinearLayout mnDonasi,
       @NonNull LinearLayout mnLeaderboard, @NonNull LinearLayout mnPlaceholder,
       @NonNull LinearLayout mnRiwayatPenarikan, @NonNull LinearLayout mnRiwayatSetor,
       @NonNull LinearLayout mnSetor, @NonNull LinearLayout mnTarik,
@@ -92,11 +79,8 @@ public final class ActivityMainBinding implements ViewBinding {
       @NonNull TextView tvMutation, @NonNull TextView tvProfileInitial,
       @NonNull TextView tvTotalWeight, @NonNull TextView tvUserName) {
     this.rootView = rootView;
-    this.bottomAppBar = bottomAppBar;
-    this.bottomNavigationView = bottomNavigationView;
     this.cardSaldo = cardSaldo;
     this.fabLeaderboard = fabLeaderboard;
-    this.fabQr = fabQr;
     this.mnDonasi = mnDonasi;
     this.mnLeaderboard = mnLeaderboard;
     this.mnPlaceholder = mnPlaceholder;
@@ -140,18 +124,6 @@ public final class ActivityMainBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.bottom_app_bar;
-      BottomAppBar bottomAppBar = ViewBindings.findChildViewById(rootView, id);
-      if (bottomAppBar == null) {
-        break missingId;
-      }
-
-      id = R.id.bottom_navigation_view;
-      BottomNavigationView bottomNavigationView = ViewBindings.findChildViewById(rootView, id);
-      if (bottomNavigationView == null) {
-        break missingId;
-      }
-
       id = R.id.cardSaldo;
       FrameLayout cardSaldo = ViewBindings.findChildViewById(rootView, id);
       if (cardSaldo == null) {
@@ -161,12 +133,6 @@ public final class ActivityMainBinding implements ViewBinding {
       id = R.id.fab_leaderboard;
       FloatingActionButton fabLeaderboard = ViewBindings.findChildViewById(rootView, id);
       if (fabLeaderboard == null) {
-        break missingId;
-      }
-
-      id = R.id.fab_qr;
-      FloatingActionButton fabQr = ViewBindings.findChildViewById(rootView, id);
-      if (fabQr == null) {
         break missingId;
       }
 
@@ -254,10 +220,10 @@ public final class ActivityMainBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityMainBinding((CoordinatorLayout) rootView, bottomAppBar,
-          bottomNavigationView, cardSaldo, fabLeaderboard, fabQr, mnDonasi, mnLeaderboard,
-          mnPlaceholder, mnRiwayatPenarikan, mnRiwayatSetor, mnSetor, mnTarik, tvAccountNumber,
-          tvBalance, tvGreeting, tvMutation, tvProfileInitial, tvTotalWeight, tvUserName);
+      return new ActivityMainBinding((CoordinatorLayout) rootView, cardSaldo, fabLeaderboard,
+          mnDonasi, mnLeaderboard, mnPlaceholder, mnRiwayatPenarikan, mnRiwayatSetor, mnSetor,
+          mnTarik, tvAccountNumber, tvBalance, tvGreeting, tvMutation, tvProfileInitial,
+          tvTotalWeight, tvUserName);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

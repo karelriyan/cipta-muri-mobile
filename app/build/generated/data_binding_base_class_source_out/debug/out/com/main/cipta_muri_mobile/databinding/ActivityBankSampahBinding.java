@@ -12,9 +12,6 @@ import androidx.annotation.Nullable;
 import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
-import com.google.android.material.bottomappbar.BottomAppBar;
-import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.main.cipta_muri_mobile.R;
 import java.lang.NullPointerException;
 import java.lang.Override;
@@ -25,19 +22,10 @@ public final class ActivityBankSampahBinding implements ViewBinding {
   private final CoordinatorLayout rootView;
 
   @NonNull
-  public final BottomAppBar bottomAppBar;
-
-  @NonNull
-  public final BottomNavigationView bottomNavigationView;
-
-  @NonNull
   public final ImageView btnBack;
 
   @NonNull
   public final TextView btnBagikan;
-
-  @NonNull
-  public final FloatingActionButton fabQr;
 
   @NonNull
   public final TextView tvJarak;
@@ -48,16 +36,12 @@ public final class ActivityBankSampahBinding implements ViewBinding {
   @NonNull
   public final WebView webViewMap;
 
-  private ActivityBankSampahBinding(@NonNull CoordinatorLayout rootView,
-      @NonNull BottomAppBar bottomAppBar, @NonNull BottomNavigationView bottomNavigationView,
-      @NonNull ImageView btnBack, @NonNull TextView btnBagikan, @NonNull FloatingActionButton fabQr,
-      @NonNull TextView tvJarak, @NonNull TextView tvNamaBank, @NonNull WebView webViewMap) {
+  private ActivityBankSampahBinding(@NonNull CoordinatorLayout rootView, @NonNull ImageView btnBack,
+      @NonNull TextView btnBagikan, @NonNull TextView tvJarak, @NonNull TextView tvNamaBank,
+      @NonNull WebView webViewMap) {
     this.rootView = rootView;
-    this.bottomAppBar = bottomAppBar;
-    this.bottomNavigationView = bottomNavigationView;
     this.btnBack = btnBack;
     this.btnBagikan = btnBagikan;
-    this.fabQr = fabQr;
     this.tvJarak = tvJarak;
     this.tvNamaBank = tvNamaBank;
     this.webViewMap = webViewMap;
@@ -90,18 +74,6 @@ public final class ActivityBankSampahBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.bottom_app_bar;
-      BottomAppBar bottomAppBar = ViewBindings.findChildViewById(rootView, id);
-      if (bottomAppBar == null) {
-        break missingId;
-      }
-
-      id = R.id.bottom_navigation_view;
-      BottomNavigationView bottomNavigationView = ViewBindings.findChildViewById(rootView, id);
-      if (bottomNavigationView == null) {
-        break missingId;
-      }
-
       id = R.id.btnBack;
       ImageView btnBack = ViewBindings.findChildViewById(rootView, id);
       if (btnBack == null) {
@@ -111,12 +83,6 @@ public final class ActivityBankSampahBinding implements ViewBinding {
       id = R.id.btnBagikan;
       TextView btnBagikan = ViewBindings.findChildViewById(rootView, id);
       if (btnBagikan == null) {
-        break missingId;
-      }
-
-      id = R.id.fab_qr;
-      FloatingActionButton fabQr = ViewBindings.findChildViewById(rootView, id);
-      if (fabQr == null) {
         break missingId;
       }
 
@@ -138,8 +104,8 @@ public final class ActivityBankSampahBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityBankSampahBinding((CoordinatorLayout) rootView, bottomAppBar,
-          bottomNavigationView, btnBack, btnBagikan, fabQr, tvJarak, tvNamaBank, webViewMap);
+      return new ActivityBankSampahBinding((CoordinatorLayout) rootView, btnBack, btnBagikan,
+          tvJarak, tvNamaBank, webViewMap);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

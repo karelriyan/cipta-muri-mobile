@@ -3662,13 +3662,13 @@ drawable bg_circle_bronze
 drawable bg_circle_gold
 drawable bg_gradient
 drawable bg_gradient2
+drawable bg_gradient_header
 drawable bg_leaderboard
 drawable bg_podium_center
 drawable bg_podium_side_left
 drawable bg_podium_side_right
 drawable bg_qr_border
 drawable bg_rounded_border
-drawable bg_rounded_top_white
 drawable bg_white_blur_gradient
 drawable btn_checkbox_checked_mtrl
 drawable btn_checkbox_checked_to_unchecked_mtrl_animation
@@ -4752,6 +4752,7 @@ layout fragment_leaderboard_weight
 layout fragment_notifications
 layout ime_base_split_test_activity
 layout ime_secondary_split_test_activity
+layout include_bottom_nav
 layout item_aktivitas
 layout item_leaderboard_rank
 layout item_mutasi_saldo

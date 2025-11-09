@@ -1,4 +1,4 @@
-package com.main.cipta_muri_mobile.ui.profile
+﻿package com.main.cipta_muri_mobile.ui.profile
 
 import android.content.Intent
 import android.os.Bundle
@@ -15,6 +15,7 @@ import com.main.cipta_muri_mobile.ui.aktivitas.RiwayatAktivitasActivity
 import com.main.cipta_muri_mobile.ui.login.LoginActivity
 import com.main.cipta_muri_mobile.ui.main.MainActivity
 import com.main.cipta_muri_mobile.ui.news.NewsActivity
+import com.main.cipta_muri_mobile.ui.setor.SetorSampahActivity
 
 class ProfileActivity : AppCompatActivity() {
 
@@ -35,7 +36,7 @@ class ProfileActivity : AppCompatActivity() {
         binding.tvProfileAvatar.text = if (name.isNotEmpty()) name.first().uppercaseChar().toString() else "P"
 
         // ✅ Setup bottom navigation
-        setupBottomNavigation(binding.bottomNavigationView)
+        setupBottomNavigation(findViewById(R.id.bottom_navigation_view))
 
         // BARU: Tambahkan listener untuk tombol logout dari XML
         // Pastikan ID di XML adalah btn_logout
@@ -48,6 +49,13 @@ class ProfileActivity : AppCompatActivity() {
     private fun setupBottomNavigation(navView: BottomNavigationView) {
         navView.itemIconTintList = null
         navView.selectedItemId = R.id.navigation_profile
+
+        // FAB QR from included bottom nav
+        findViewById<com.google.android.material.floatingactionbutton.FloatingActionButton>(R.id.fab_qr)
+            ?.setOnClickListener {
+                startActivityWithFade(Intent(this, SetorSampahActivity::class.java))
+            }
+
         navView.setOnItemSelectedListener { item ->
             when (item.itemId) {
                 R.id.navigation_home -> {

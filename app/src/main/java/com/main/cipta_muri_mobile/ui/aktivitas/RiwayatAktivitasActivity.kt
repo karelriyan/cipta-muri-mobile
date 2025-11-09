@@ -8,6 +8,7 @@ import com.main.cipta_muri_mobile.R
 import com.main.cipta_muri_mobile.databinding.ActivityRiwayatAktivitasBinding
 import com.main.cipta_muri_mobile.ui.main.MainActivity
 import com.main.cipta_muri_mobile.ui.news.NewsActivity
+import com.main.cipta_muri_mobile.ui.setor.SetorSampahActivity
 import com.main.cipta_muri_mobile.ui.profile.ProfileActivity
 
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -28,9 +29,15 @@ class RiwayatAktivitasActivity : AppCompatActivity() {
         binding = ActivityRiwayatAktivitasBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val navView = binding.bottomNavigationView
+        val navView = findViewById<com.google.android.material.bottomnavigation.BottomNavigationView>(R.id.bottom_navigation_view)
         navView.itemIconTintList = null
         navView.selectedItemId = R.id.navigation_history
+
+        // FAB QR from included bottom nav
+        findViewById<com.google.android.material.floatingactionbutton.FloatingActionButton>(R.id.fab_qr)
+            ?.setOnClickListener {
+                startActivityWithFade(Intent(this, SetorSampahActivity::class.java))
+            }
 
         navView.setOnItemSelectedListener { item ->
             when (item.itemId) {
@@ -111,5 +118,10 @@ class RiwayatAktivitasActivity : AppCompatActivity() {
                 isBottomRefreshing = false
             }
         }
+    }
+
+    private fun startActivityWithFade(intent: Intent) {
+        startActivity(intent)
+        overridePendingTransition(R.anim.fade_in, R.anim.fade_out)
     }
 }

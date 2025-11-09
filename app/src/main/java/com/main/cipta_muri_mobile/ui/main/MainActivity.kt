@@ -1,4 +1,4 @@
-package com.main.cipta_muri_mobile.ui.main
+﻿package com.main.cipta_muri_mobile.ui.main
 
 import android.content.Intent
 import android.os.Build
@@ -14,6 +14,7 @@ import com.main.cipta_muri_mobile.ui.aktivitas.RiwayatAktivitasActivity
 import com.main.cipta_muri_mobile.ui.donasi.DonasiSampahActivity
 import com.main.cipta_muri_mobile.ui.leaderboard.LeaderboardActivity
 import com.main.cipta_muri_mobile.ui.mutasi.MutasiSaldoActivity
+import com.main.cipta_muri_mobile.ui.news.NewsActivity
 import com.main.cipta_muri_mobile.ui.profile.ProfileActivity
 import com.main.cipta_muri_mobile.ui.saldo.tarik.TarikSaldoActivity
 import com.main.cipta_muri_mobile.ui.saldo.riwayat.RiwayatPenarikanActivity
@@ -48,7 +49,7 @@ class MainActivity : AppCompatActivity() {
         observeUserData()
 
         // ✅ 4. Bottom navigation
-        setupBottomNavListener(binding.bottomNavigationView)
+        setupBottomNavListener(findViewById(R.id.bottom_navigation_view))
 
         // ✅ 5. Setup navigasi menu utama (GridLayout)
         setupMenuNavigation()
@@ -75,18 +76,36 @@ class MainActivity : AppCompatActivity() {
             user?.let {
                 binding.tvUserName.text = it.name.ifEmpty { "Pengguna Cipta Muri" }
                 binding.tvBalance.text = com.main.cipta_muri_mobile.util.Formatters.formatRupiah(it.balance)
-                binding.tvTotalWeight.text = "Total Berat Sampah Terjual: ${it.totalWasteKg} Kg"
+                // tv_total_weight akan diisi LiveData totalWeightText di bawah
                 binding.tvAccountNumber.text = "No. Rekening: ${it.accountNumber}"
+                // Trigger refresh total weight berdasarkan no_rekening saat ini
+                if (it.accountNumber.isNotEmpty()) {
+                    viewModel.refreshTotalWeightFromRanking(it.accountNumber)
+                }
             }
         }
         viewModel.userInitial.observe(this) { initial ->
             binding.tvProfileInitial.text = initial
+        }
+        viewModel.totalWeightText.observe(this) { text ->
+            binding.tvTotalWeight.text = text
         }
     }
 
     private fun setupBottomNavListener(navView: BottomNavigationView) {
         navView.itemIconTintList = null
         navView.selectedItemId = R.id.navigation_home
+
+        // FAB QR from included bottom nav
+        findViewById<com.google.android.material.floatingactionbutton.FloatingActionButton>(R.id.fab_qr)
+            ?.setOnClickListener {
+                startActivityWithFade(Intent(this, SetorSampahActivity::class.java))
+            }
+
+        // FAB Leaderboard
+        binding.fabLeaderboard.setOnClickListener {
+            startActivityWithFade(Intent(this, LeaderboardActivity::class.java))
+        }
 
         navView.setOnItemSelectedListener { item ->
             when (item.itemId) {
@@ -96,11 +115,10 @@ class MainActivity : AppCompatActivity() {
                     true
                 }
                 R.id.navigation_placeholder -> {
-                    // TODO: Tambahkan navigasi ke SetorSammpah Tapi di FAB
                     true
                 }
                 R.id.navigation_news -> {
-                    // TODO: NEWS
+                    startActivityWithFade(Intent(this, NewsActivity::class.java))
                     true
                 }
                 R.id.navigation_history -> {
@@ -109,6 +127,7 @@ class MainActivity : AppCompatActivity() {
                 }
                 else -> false
             }
+
         }
     }
 
@@ -153,15 +172,7 @@ class MainActivity : AppCompatActivity() {
             startActivityWithFade(Intent(this, ProfileActivity::class.java))
         }
 
-        // FAB QR
-        binding.fabQr.setOnClickListener {
-            startActivityWithFade(Intent(this, SetorSampahActivity::class.java))
-        }
 
-        // FAB Leaderboard
-        binding.fabLeaderboard.setOnClickListener {
-            startActivityWithFade(Intent(this, LeaderboardActivity::class.java))
-        }
     }
 
     // ✅ Fungsi untuk navigasi dengan efek fade

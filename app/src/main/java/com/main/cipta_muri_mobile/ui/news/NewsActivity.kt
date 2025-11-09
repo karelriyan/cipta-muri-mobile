@@ -9,6 +9,8 @@ import com.main.cipta_muri_mobile.data.SessionManager
 import com.main.cipta_muri_mobile.databinding.ActivityNewsBinding
 import com.main.cipta_muri_mobile.ui.aktivitas.RiwayatAktivitasActivity
 import com.main.cipta_muri_mobile.ui.main.MainActivity
+import com.main.cipta_muri_mobile.ui.profile.ProfileActivity
+import com.main.cipta_muri_mobile.ui.setor.SetorSampahActivity
 
 class NewsActivity : AppCompatActivity() {
 
@@ -20,7 +22,7 @@ class NewsActivity : AppCompatActivity() {
         binding = ActivityNewsBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        setupBottomNavigation(binding.bottomNavigationView)
+        setupBottomNavigation(findViewById(R.id.bottom_navigation_view))
         setupScrollListener()
     }
 
@@ -36,6 +38,12 @@ class NewsActivity : AppCompatActivity() {
         // ✅ Tandai item News sebagai yang terpilih
         navView.selectedItemId = R.id.navigation_news
 
+        // FAB QR from included bottom nav
+        findViewById<com.google.android.material.floatingactionbutton.FloatingActionButton>(R.id.fab_qr)
+            ?.setOnClickListener {
+                startActivityWithFade(Intent(this, SetorSampahActivity::class.java))
+            }
+
         navView.setOnItemSelectedListener { item ->
             when (item.itemId) {
                 R.id.navigation_home -> {
@@ -43,7 +51,11 @@ class NewsActivity : AppCompatActivity() {
                     finish()
                     true
                 }
-                R.id.navigation_profile -> true // sudah di halaman ini
+                R.id.navigation_profile -> {
+                    startActivityWithFade(Intent(this, ProfileActivity::class.java))
+                    finish()
+                    true
+                }
                 R.id.navigation_history -> {
                     startActivityWithFade(Intent(this, RiwayatAktivitasActivity::class.java))
                     finish()
@@ -51,8 +63,7 @@ class NewsActivity : AppCompatActivity() {
                 }
                 R.id.navigation_placeholder -> true // kalau nanti mau pakai FAB
                 R.id.navigation_news -> {
-                    startActivityWithFade(Intent(this, NewsActivity::class.java))
-                    finish()
+
                     true
                 } // kalau nanti mau pakai berita
                 else -> false

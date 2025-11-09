@@ -1,11 +1,11 @@
 [
     {
-        "merged": "C:\\Users\\HP\\.gradle\\daemon\\8.13\\com.main.cipta_muri_mobile.app-debug-60:\\drawable_ic_qr_nav.png.flat",
-        "source": "C:\\Users\\HP\\.gradle\\daemon\\8.13\\com.main.cipta_muri_mobile.app-main-62:\\drawable\\ic_qr_nav.png"
-    },
-    {
         "merged": "C:\\Users\\HP\\.gradle\\daemon\\8.13\\com.main.cipta_muri_mobile.app-debug-60:\\layout_item_mutasi_saldo.xml.flat",
         "source": "C:\\Users\\HP\\.gradle\\daemon\\8.13\\com.main.cipta_muri_mobile.app-main-62:\\layout\\item_mutasi_saldo.xml"
+    },
+    {
+        "merged": "C:\\Users\\HP\\.gradle\\daemon\\8.13\\com.main.cipta_muri_mobile.app-debug-60:\\drawable_ic_qr_nav.png.flat",
+        "source": "C:\\Users\\HP\\.gradle\\daemon\\8.13\\com.main.cipta_muri_mobile.app-main-62:\\drawable\\ic_qr_nav.png"
     },
     {
         "merged": "C:\\Users\\HP\\.gradle\\daemon\\8.13\\com.main.cipta_muri_mobile.app-debug-60:\\drawable_bg_qr_border.xml.flat",
@@ -16,12 +16,12 @@
         "source": "C:\\Users\\HP\\.gradle\\daemon\\8.13\\com.main.cipta_muri_mobile.app-main-62:\\drawable\\ic_share.xml"
     },
     {
-        "merged": "C:\\Users\\HP\\.gradle\\daemon\\8.13\\com.main.cipta_muri_mobile.app-debug-60:\\drawable_ic_notifications_black_24dp.xml.flat",
-        "source": "C:\\Users\\HP\\.gradle\\daemon\\8.13\\com.main.cipta_muri_mobile.app-main-62:\\drawable\\ic_notifications_black_24dp.xml"
-    },
-    {
         "merged": "C:\\Users\\HP\\.gradle\\daemon\\8.13\\com.main.cipta_muri_mobile.app-debug-60:\\xml_file_paths.xml.flat",
         "source": "C:\\Users\\HP\\.gradle\\daemon\\8.13\\com.main.cipta_muri_mobile.app-main-62:\\xml\\file_paths.xml"
+    },
+    {
+        "merged": "C:\\Users\\HP\\.gradle\\daemon\\8.13\\com.main.cipta_muri_mobile.app-debug-60:\\drawable_ic_notifications_black_24dp.xml.flat",
+        "source": "C:\\Users\\HP\\.gradle\\daemon\\8.13\\com.main.cipta_muri_mobile.app-main-62:\\drawable\\ic_notifications_black_24dp.xml"
     },
     {
         "merged": "C:\\Users\\HP\\.gradle\\daemon\\8.13\\com.main.cipta_muri_mobile.app-debug-60:\\drawable_sample_map.png.flat",
@@ -40,6 +40,10 @@
         "source": "C:\\Users\\HP\\.gradle\\daemon\\8.13\\com.main.cipta_muri_mobile.app-main-62:\\layout\\fragment_home.xml"
     },
     {
+        "merged": "C:\\Users\\HP\\.gradle\\daemon\\8.13\\com.main.cipta_muri_mobile.app-debug-60:\\drawable_bg_gradient_header.png.flat",
+        "source": "C:\\Users\\HP\\.gradle\\daemon\\8.13\\com.main.cipta_muri_mobile.app-main-62:\\drawable\\bg_gradient_header.png"
+    },
+    {
         "merged": "C:\\Users\\HP\\.gradle\\daemon\\8.13\\com.main.cipta_muri_mobile.app-debug-60:\\layout_activity_petunjuk_penarikan.xml.flat",
         "source": "C:\\Users\\HP\\.gradle\\daemon\\8.13\\com.main.cipta_muri_mobile.app-main-62:\\layout\\activity_petunjuk_penarikan.xml"
     },
@@ -48,12 +52,12 @@
         "source": "C:\\Users\\HP\\.gradle\\daemon\\8.13\\com.main.cipta_muri_mobile.app-main-62:\\drawable\\ic_point_leaderboard.png"
     },
     {
-        "merged": "C:\\Users\\HP\\.gradle\\daemon\\8.13\\com.main.cipta_muri_mobile.app-debug-60:\\drawable_bg_podium_side_left.png.flat",
-        "source": "C:\\Users\\HP\\.gradle\\daemon\\8.13\\com.main.cipta_muri_mobile.app-main-62:\\drawable\\bg_podium_side_left.png"
-    },
-    {
         "merged": "C:\\Users\\HP\\.gradle\\daemon\\8.13\\com.main.cipta_muri_mobile.app-debug-60:\\drawable_bg_circle_bronze.xml.flat",
         "source": "C:\\Users\\HP\\.gradle\\daemon\\8.13\\com.main.cipta_muri_mobile.app-main-62:\\drawable\\bg_circle_bronze.xml"
+    },
+    {
+        "merged": "C:\\Users\\HP\\.gradle\\daemon\\8.13\\com.main.cipta_muri_mobile.app-debug-60:\\drawable_bg_podium_side_left.png.flat",
+        "source": "C:\\Users\\HP\\.gradle\\daemon\\8.13\\com.main.cipta_muri_mobile.app-main-62:\\drawable\\bg_podium_side_left.png"
     },
     {
         "merged": "C:\\Users\\HP\\.gradle\\daemon\\8.13\\com.main.cipta_muri_mobile.app-debug-60:\\xml_backup_rules.xml.flat",
@@ -104,10 +108,6 @@
         "source": "C:\\Users\\HP\\.gradle\\daemon\\8.13\\com.main.cipta_muri_mobile.app-main-62:\\drawable\\bg_circle_avatar.xml"
     },
     {
-        "merged": "com.main.cipta_muri_mobile.app-debug-60:/layout_activity_main.xml.flat",
-        "source": "com.main.cipta_muri_mobile.app-main-62:/layout/activity_main.xml"
-    },
-    {
         "merged": "C:\\Users\\HP\\.gradle\\daemon\\8.13\\com.main.cipta_muri_mobile.app-debug-60:\\drawable_ic_clock.png.flat",
         "source": "C:\\Users\\HP\\.gradle\\daemon\\8.13\\com.main.cipta_muri_mobile.app-main-62:\\drawable\\ic_clock.png"
     },
@@ -130,10 +130,6 @@
     {
         "merged": "C:\\Users\\HP\\.gradle\\daemon\\8.13\\com.main.cipta_muri_mobile.app-debug-60:\\drawable_ic_back.xml.flat",
         "source": "C:\\Users\\HP\\.gradle\\daemon\\8.13\\com.main.cipta_muri_mobile.app-main-62:\\drawable\\ic_back.xml"
-    },
-    {
-        "merged": "C:\\Users\\HP\\.gradle\\daemon\\8.13\\com.main.cipta_muri_mobile.app-debug-60:\\layout_leaderboard_lama.xml.flat",
-        "source": "C:\\Users\\HP\\.gradle\\daemon\\8.13\\com.main.cipta_muri_mobile.app-main-62:\\layout\\leaderboard_lama.xml"
     },
     {
         "merged": "C:\\Users\\HP\\.gradle\\daemon\\8.13\\com.main.cipta_muri_mobile.app-debug-60:\\drawable_ic_bottom_nav_history_active.png.flat",
@@ -260,6 +256,10 @@
         "source": "C:\\Users\\HP\\.gradle\\daemon\\8.13\\com.main.cipta_muri_mobile.app-main-62:\\layout\\fragment_dashboard.xml"
     },
     {
+        "merged": "C:\\Users\\HP\\.gradle\\daemon\\8.13\\com.main.cipta_muri_mobile.app-debug-60:\\layout_include_bottom_nav.xml.flat",
+        "source": "C:\\Users\\HP\\.gradle\\daemon\\8.13\\com.main.cipta_muri_mobile.app-main-62:\\layout\\include_bottom_nav.xml"
+    },
+    {
         "merged": "C:\\Users\\HP\\.gradle\\daemon\\8.13\\com.main.cipta_muri_mobile.app-debug-60:\\drawable_ic_riwayat_penarikan.png.flat",
         "source": "C:\\Users\\HP\\.gradle\\daemon\\8.13\\com.main.cipta_muri_mobile.app-main-62:\\drawable\\ic_riwayat_penarikan.png"
     },
@@ -324,6 +324,10 @@
         "source": "C:\\Users\\HP\\.gradle\\daemon\\8.13\\com.main.cipta_muri_mobile.app-main-62:\\drawable\\avatar.png"
     },
     {
+        "merged": "C:\\Users\\HP\\.gradle\\daemon\\8.13\\com.main.cipta_muri_mobile.app-debug-60:\\drawable_rounded_top_white_bg.xml.flat",
+        "source": "C:\\Users\\HP\\.gradle\\daemon\\8.13\\com.main.cipta_muri_mobile.app-main-62:\\drawable\\rounded_top_white_bg.xml"
+    },
+    {
         "merged": "C:\\Users\\HP\\.gradle\\daemon\\8.13\\com.main.cipta_muri_mobile.app-debug-60:\\mipmap-xhdpi_ic_launcher.webp.flat",
         "source": "C:\\Users\\HP\\.gradle\\daemon\\8.13\\com.main.cipta_muri_mobile.app-main-62:\\mipmap-xhdpi\\ic_launcher.webp"
     },
@@ -342,6 +346,10 @@
     {
         "merged": "C:\\Users\\HP\\.gradle\\daemon\\8.13\\com.main.cipta_muri_mobile.app-debug-60:\\layout_activity_konfirmasi_penarikan.xml.flat",
         "source": "C:\\Users\\HP\\.gradle\\daemon\\8.13\\com.main.cipta_muri_mobile.app-main-62:\\layout\\activity_konfirmasi_penarikan.xml"
+    },
+    {
+        "merged": "com.main.cipta_muri_mobile.app-debug-60:/drawable_ic_leaderboard.png.flat",
+        "source": "com.main.cipta_muri_mobile.app-main-62:/drawable/ic_leaderboard.png"
     },
     {
         "merged": "C:\\Users\\HP\\.gradle\\daemon\\8.13\\com.main.cipta_muri_mobile.app-debug-60:\\drawable_ic_bottom_nav_home_active.png.flat",
@@ -402,10 +410,6 @@
     {
         "merged": "C:\\Users\\HP\\.gradle\\daemon\\8.13\\com.main.cipta_muri_mobile.app-debug-60:\\drawable_rounded_textview_white.xml.flat",
         "source": "C:\\Users\\HP\\.gradle\\daemon\\8.13\\com.main.cipta_muri_mobile.app-main-62:\\drawable\\rounded_textview_white.xml"
-    },
-    {
-        "merged": "C:\\Users\\HP\\.gradle\\daemon\\8.13\\com.main.cipta_muri_mobile.app-debug-60:\\drawable_bg_rounded_top_white.xml.flat",
-        "source": "C:\\Users\\HP\\.gradle\\daemon\\8.13\\com.main.cipta_muri_mobile.app-main-62:\\drawable\\bg_rounded_top_white.xml"
     },
     {
         "merged": "C:\\Users\\HP\\.gradle\\daemon\\8.13\\com.main.cipta_muri_mobile.app-debug-60:\\drawable_ic_3.png.flat",
@@ -568,12 +572,12 @@
         "source": "C:\\Users\\HP\\.gradle\\daemon\\8.13\\com.main.cipta_muri_mobile.app-main-62:\\layout\\section_news.xml"
     },
     {
-        "merged": "C:\\Users\\HP\\.gradle\\daemon\\8.13\\com.main.cipta_muri_mobile.app-debug-60:\\drawable_ic_profile_nav_selector.xml.flat",
-        "source": "C:\\Users\\HP\\.gradle\\daemon\\8.13\\com.main.cipta_muri_mobile.app-main-62:\\drawable\\ic_profile_nav_selector.xml"
-    },
-    {
         "merged": "C:\\Users\\HP\\.gradle\\daemon\\8.13\\com.main.cipta_muri_mobile.app-debug-60:\\layout_activity_rincian_setoran.xml.flat",
         "source": "C:\\Users\\HP\\.gradle\\daemon\\8.13\\com.main.cipta_muri_mobile.app-main-62:\\layout\\activity_rincian_setoran.xml"
+    },
+    {
+        "merged": "C:\\Users\\HP\\.gradle\\daemon\\8.13\\com.main.cipta_muri_mobile.app-debug-60:\\drawable_ic_profile_nav_selector.xml.flat",
+        "source": "C:\\Users\\HP\\.gradle\\daemon\\8.13\\com.main.cipta_muri_mobile.app-main-62:\\drawable\\ic_profile_nav_selector.xml"
     },
     {
         "merged": "C:\\Users\\HP\\.gradle\\daemon\\8.13\\com.main.cipta_muri_mobile.app-debug-60:\\drawable_bg_gradient2.xml.flat",
