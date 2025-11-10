@@ -4178,7 +4178,6 @@ id is_pooling_container_tag
 id italic
 id item_touch_helper_previous_elevation
 id ivIcon
-id iv_edit_photo
 id iv_news_image
 id iv_user_avatar
 id jumpToEnd

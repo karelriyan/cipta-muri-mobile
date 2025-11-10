@@ -42,7 +42,6 @@
         android:label="@string/app_name"
         android:roundIcon="@drawable/ic_logo_bank_sampah_large"
         android:supportsRtl="true"
-        android:testOnly="true"
         android:theme="@style/Theme.Ciptamurimobile"
         android:usesCleartextTraffic="true" >
         <provider

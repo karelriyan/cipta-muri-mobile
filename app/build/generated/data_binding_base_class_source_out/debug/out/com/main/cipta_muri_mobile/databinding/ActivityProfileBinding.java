@@ -4,7 +4,6 @@ package com.main.cipta_muri_mobile.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -25,20 +24,16 @@ public final class ActivityProfileBinding implements ViewBinding {
   public final MaterialButton btnLogout;
 
   @NonNull
-  public final ImageView ivEditPhoto;
-
-  @NonNull
   public final TextView tvProfileAvatar;
 
   @NonNull
   public final TextView tvProfileName;
 
   private ActivityProfileBinding(@NonNull CoordinatorLayout rootView,
-      @NonNull MaterialButton btnLogout, @NonNull ImageView ivEditPhoto,
-      @NonNull TextView tvProfileAvatar, @NonNull TextView tvProfileName) {
+      @NonNull MaterialButton btnLogout, @NonNull TextView tvProfileAvatar,
+      @NonNull TextView tvProfileName) {
     this.rootView = rootView;
     this.btnLogout = btnLogout;
-    this.ivEditPhoto = ivEditPhoto;
     this.tvProfileAvatar = tvProfileAvatar;
     this.tvProfileName = tvProfileName;
   }
@@ -76,12 +71,6 @@ public final class ActivityProfileBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.iv_edit_photo;
-      ImageView ivEditPhoto = ViewBindings.findChildViewById(rootView, id);
-      if (ivEditPhoto == null) {
-        break missingId;
-      }
-
       id = R.id.tv_profile_avatar;
       TextView tvProfileAvatar = ViewBindings.findChildViewById(rootView, id);
       if (tvProfileAvatar == null) {
@@ -94,8 +83,8 @@ public final class ActivityProfileBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityProfileBinding((CoordinatorLayout) rootView, btnLogout, ivEditPhoto,
-          tvProfileAvatar, tvProfileName);
+      return new ActivityProfileBinding((CoordinatorLayout) rootView, btnLogout, tvProfileAvatar,
+          tvProfileName);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

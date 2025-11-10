@@ -170,7 +170,6 @@ id imgQRCode
 id imgTabLeftBg
 id imgTabRightBg
 id ivIcon
-id iv_edit_photo
 id iv_news_image
 id iv_user_avatar
 id layoutDariTanggal
