@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.main.cipta_muri_mobile.app-mergeDebugResources-58:/values-pt-rBR/values-pt-rBR.xml",
+            "outputFile": "com.main.cipta_muri_mobile.app-mergeDebugResources-59:/values-pt-rBR/values-pt-rBR.xml",
             "map": [
                 {
                     "source": "C:\\Users\\HP\\.gradle\\caches\\8.13\\transforms\\f42de817a6d78a353d192a79f4b76254\\transformed\\appcompat-1.7.1\\res\\values-pt-rBR\\values-pt-rBR.xml",

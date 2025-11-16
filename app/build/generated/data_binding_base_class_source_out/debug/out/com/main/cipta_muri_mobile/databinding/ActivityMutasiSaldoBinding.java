@@ -63,9 +63,6 @@ public final class ActivityMutasiSaldoBinding implements ViewBinding {
   public final MaterialButton btnOktober;
 
   @NonNull
-  public final ImageView btnSearch;
-
-  @NonNull
   public final MaterialButton btnSeptember;
 
   @NonNull
@@ -87,10 +84,9 @@ public final class ActivityMutasiSaldoBinding implements ViewBinding {
       @NonNull MaterialButton btnJanuari, @NonNull MaterialButton btnJuli,
       @NonNull MaterialButton btnJuni, @NonNull MaterialButton btnMaret,
       @NonNull MaterialButton btnMei, @NonNull MaterialButton btnNovember,
-      @NonNull MaterialButton btnOktober, @NonNull ImageView btnSearch,
-      @NonNull MaterialButton btnSeptember, @NonNull NestedScrollView nestedScroll,
-      @NonNull RecyclerView rvMutasiSaldo, @NonNull TextView tvSaldoTotal,
-      @NonNull TextView tvTampilkanLebihBanyak) {
+      @NonNull MaterialButton btnOktober, @NonNull MaterialButton btnSeptember,
+      @NonNull NestedScrollView nestedScroll, @NonNull RecyclerView rvMutasiSaldo,
+      @NonNull TextView tvSaldoTotal, @NonNull TextView tvTampilkanLebihBanyak) {
     this.rootView = rootView;
     this.btnAgustus = btnAgustus;
     this.btnApril = btnApril;
@@ -105,7 +101,6 @@ public final class ActivityMutasiSaldoBinding implements ViewBinding {
     this.btnMei = btnMei;
     this.btnNovember = btnNovember;
     this.btnOktober = btnOktober;
-    this.btnSearch = btnSearch;
     this.btnSeptember = btnSeptember;
     this.nestedScroll = nestedScroll;
     this.rvMutasiSaldo = rvMutasiSaldo;
@@ -218,12 +213,6 @@ public final class ActivityMutasiSaldoBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.btnSearch;
-      ImageView btnSearch = ViewBindings.findChildViewById(rootView, id);
-      if (btnSearch == null) {
-        break missingId;
-      }
-
       id = R.id.btnSeptember;
       MaterialButton btnSeptember = ViewBindings.findChildViewById(rootView, id);
       if (btnSeptember == null) {
@@ -256,8 +245,8 @@ public final class ActivityMutasiSaldoBinding implements ViewBinding {
 
       return new ActivityMutasiSaldoBinding((FrameLayout) rootView, btnAgustus, btnApril, btnBack,
           btnDesember, btnFebruari, btnFilter, btnJanuari, btnJuli, btnJuni, btnMaret, btnMei,
-          btnNovember, btnOktober, btnSearch, btnSeptember, nestedScroll, rvMutasiSaldo,
-          tvSaldoTotal, tvTampilkanLebihBanyak);
+          btnNovember, btnOktober, btnSeptember, nestedScroll, rvMutasiSaldo, tvSaldoTotal,
+          tvTampilkanLebihBanyak);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

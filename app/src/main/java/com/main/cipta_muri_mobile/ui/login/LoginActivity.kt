@@ -2,6 +2,8 @@ package com.main.cipta_muri_mobile.ui.login
 
 import android.content.Intent
 import android.os.Bundle
+import android.text.Editable
+import android.text.TextWatcher
 import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
@@ -17,6 +19,7 @@ class LoginActivity : AppCompatActivity() {
     // 1. DECLARE the binding object and viewModel
     private lateinit var binding: ActivityLoginBinding
     private val viewModel: LoginViewModel by viewModels()
+    private var isFormattingDate = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,7 +30,39 @@ class LoginActivity : AppCompatActivity() {
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        setupDateInputFormat()
         setupListeners()
+    }
+
+    private fun setupDateInputFormat() {
+        binding.etPin.addTextChangedListener(object : TextWatcher {
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
+
+            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {}
+
+            override fun afterTextChanged(s: Editable?) {
+                if (isFormattingDate) return
+
+                val digits = s?.filter { it.isDigit() }?.take(8) ?: ""
+                val formatted = StringBuilder()
+
+                digits.forEachIndexed { index, c ->
+                    formatted.append(c)
+                    val shouldInsertDaySeparator = index == 1 && digits.length > 2
+                    val shouldInsertMonthSeparator = index == 3 && digits.length > 4
+                    if (shouldInsertDaySeparator || shouldInsertMonthSeparator) {
+                        formatted.append('-')
+                    }
+                }
+
+                val displayText = formatted.toString()
+
+                isFormattingDate = true
+                binding.etPin.setText(displayText)
+                binding.etPin.setSelection(displayText.length)
+                isFormattingDate = false
+            }
+        })
     }
 
     private fun setupListeners() {
@@ -67,8 +102,14 @@ class LoginActivity : AppCompatActivity() {
         val trimmed = input.trim()
         // Remove unexpected trailing chars (e.g., accidental 'S')
         val sanitized = trimmed.filter { it.isDigit() || it == '-' || it == '/' || it == '.' }
-        val regex = Regex("^\\d{4}-\\d{2}-\\d{2}$")
-        if (regex.matches(sanitized)) return sanitized
+        val backendRegex = Regex("^\\d{4}-\\d{2}-\\d{2}$")
+        if (backendRegex.matches(sanitized)) return sanitized
+
+        val displayRegex = Regex("^\\d{2}-\\d{2}-\\d{4}$")
+        if (displayRegex.matches(sanitized)) {
+            val parts = sanitized.split("-")
+            return "${parts[2]}-${parts[1]}-${parts[0]}"
+        }
 
         // Try dd-MM-yyyy or dd/MM/yyyy or ddMMyyyy
         val digits = sanitized.replace("/", "-").replace(".", "-")

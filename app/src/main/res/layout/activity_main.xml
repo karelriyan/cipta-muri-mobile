@@ -260,8 +260,10 @@
 
                     <ImageView
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_height="wrap_content"
                         android:layout_margin="0dp"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitXY"
                         android:src="@drawable/rounded_top_white_bg" />
 
                     <TextView
@@ -274,7 +276,9 @@
                         android:layout_marginStart="16dp"
                         android:textStyle="bold" />
 
-                    <include layout="@layout/section_news"/>
+                    <include
+                        android:id="@+id/sectionNews"
+                        layout="@layout/section_news" />
 
                 </LinearLayout>
             </LinearLayout>

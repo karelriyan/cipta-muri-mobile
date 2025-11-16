@@ -6,6 +6,8 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.main.cipta_muri_mobile.data.User
 import com.main.cipta_muri_mobile.data.ranking.RankingRepository
+import com.main.cipta_muri_mobile.data.news.NewsRepository
+import com.main.cipta_muri_mobile.data.news.NewsUiState
 import kotlinx.coroutines.launch
 import java.math.RoundingMode
 
@@ -23,6 +25,10 @@ class MainViewModel : ViewModel() {
     val totalWeightText: LiveData<String> = _totalWeightText
 
     private val rankingRepo = RankingRepository()
+    private val newsRepository = NewsRepository()
+
+    private val _newsState = MutableLiveData(NewsUiState())
+    val newsState: LiveData<NewsUiState> = _newsState
 
     // Dipanggil setelah user berhasil login
     fun setUserData(user: User) {
@@ -56,9 +62,36 @@ class MainViewModel : ViewModel() {
         }
     }
 
+    fun fetchLatestNews(limit: Int = 5) {
+        _newsState.value = _newsState.value?.copy(loading = true, error = null)
+            ?: NewsUiState(loading = true)
+        viewModelScope.launch {
+            newsRepository.fetchNews(limit)
+                .onSuccess { items ->
+                    _newsState.postValue(
+                        NewsUiState(
+                            loading = false,
+                            items = items,
+                            error = null
+                        )
+                    )
+                }
+                .onFailure { throwable ->
+                    _newsState.postValue(
+                        NewsUiState(
+                            loading = false,
+                            items = emptyList(),
+                            error = throwable.message ?: "Gagal memuat berita"
+                        )
+                    )
+                }
+        }
+    }
+
     fun clearUserData() {
         _user.value = null
         _userInitial.value = "?"
         _totalWeightText.value = "Total Berat Sampah Terjual: 0 Kg"
+        _newsState.value = NewsUiState()
     }
 }

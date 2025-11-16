@@ -2,11 +2,14 @@ package com.main.cipta_muri_mobile.ui.news
 
 import android.content.Intent
 import android.os.Bundle
+import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.isVisible
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.main.cipta_muri_mobile.R
-import com.main.cipta_muri_mobile.data.SessionManager
 import com.main.cipta_muri_mobile.databinding.ActivityNewsBinding
+import com.main.cipta_muri_mobile.databinding.SectionNewsBinding
 import com.main.cipta_muri_mobile.ui.aktivitas.RiwayatAktivitasActivity
 import com.main.cipta_muri_mobile.ui.main.MainActivity
 import com.main.cipta_muri_mobile.ui.profile.ProfileActivity
@@ -16,14 +19,21 @@ class NewsActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityNewsBinding
     private var isBottomRefreshing: Boolean = false
+    private val viewModel: NewsViewModel by viewModels()
+    private lateinit var newsAdapter: NewsAdapter
+    private lateinit var sectionNewsBinding: SectionNewsBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityNewsBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        sectionNewsBinding = SectionNewsBinding.bind(binding.root.findViewById(R.id.sectionNews))
 
+        setupNewsList()
         setupBottomNavigation(findViewById(R.id.bottom_navigation_view))
         setupScrollListener()
+
+        viewModel.refresh()
     }
 
     override fun onResume() {
@@ -94,8 +104,28 @@ class NewsActivity : AppCompatActivity() {
     }
 
     private fun refreshData() {
-        // Hook untuk memuat ulang data berita saat halaman tampil atau scroll mentok.
-        // Implementasi pengambilan data dapat ditambahkan di sini.
+        viewModel.refresh()
+    }
+
+    private fun setupNewsList() {
+        newsAdapter = NewsAdapter()
+        sectionNewsBinding.rvNews.apply {
+            layoutManager = LinearLayoutManager(this@NewsActivity)
+            adapter = newsAdapter
+        }
+        sectionNewsBinding.tvViewMore.isVisible = false
+
+        viewModel.state.observe(this) { state ->
+            sectionNewsBinding.progressNews.isVisible = state.loading
+
+            val showMessage = !state.loading && (state.error != null || state.items.isEmpty())
+            sectionNewsBinding.tvNewsMessage.isVisible = showMessage
+            sectionNewsBinding.tvNewsMessage.text = state.error ?: "Belum ada berita"
+
+            sectionNewsBinding.rvNews.isVisible = state.items.isNotEmpty()
+
+            newsAdapter.submitList(state.items)
+        }
     }
 
     // ✅ Override animasi saat activity dimulai

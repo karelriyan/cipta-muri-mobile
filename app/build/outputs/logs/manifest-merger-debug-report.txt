@@ -11,10 +11,10 @@ INJECTED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\A
 	android:name
 		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:19:13-62
 manifest
-ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:2:1-127:12
-INJECTED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:2:1-127:12
-INJECTED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:2:1-127:12
-INJECTED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:2:1-127:12
+ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:2:1-147:12
+INJECTED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:2:1-147:12
+INJECTED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:2:1-147:12
+INJECTED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:2:1-147:12
 MERGED from [androidx.databinding:viewbinding:8.13.0] C:\Users\HP\.gradle\caches\8.13\transforms\b95bbd11b9d414d1feadb4da3e33d08e\transformed\viewbinding-8.13.0\AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.navigation:navigation-common:2.6.0] C:\Users\HP\.gradle\caches\8.13\transforms\0112b568fcf7c680e377716f759424f3\transformed\navigation-common-2.6.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.navigation:navigation-common-ktx:2.6.0] C:\Users\HP\.gradle\caches\8.13\transforms\c38a81992f52be6f3805ff851b5d11e3\transformed\navigation-common-ktx-2.6.0\AndroidManifest.xml:17:1-22:12
@@ -28,8 +28,9 @@ MERGED from [com.google.android.material:material:1.13.0] C:\Users\HP\.gradle\ca
 MERGED from [androidx.constraintlayout:constraintlayout:2.2.1] C:\Users\HP\.gradle\caches\8.13\transforms\bee64d769165c5619214d32a79bed843\transformed\constraintlayout-2.2.1\AndroidManifest.xml:2:1-9:12
 MERGED from [androidx.appcompat:appcompat-resources:1.7.1] C:\Users\HP\.gradle\caches\8.13\transforms\246269f570f4dddca5c1bf0ca0da226e\transformed\appcompat-resources-1.7.1\AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.appcompat:appcompat:1.7.1] C:\Users\HP\.gradle\caches\8.13\transforms\f42de817a6d78a353d192a79f4b76254\transformed\appcompat-1.7.1\AndroidManifest.xml:2:1-7:12
+MERGED from [com.github.bumptech.glide:glide:4.16.0] C:\Users\HP\.gradle\caches\8.13\transforms\c5249bfb42c2fe1623ea95fd6cc69b32\transformed\glide-4.16.0\AndroidManifest.xml:2:1-9:12
 MERGED from [com.google.android.gms:play-services-maps:18.2.0] C:\Users\HP\.gradle\caches\8.13\transforms\914466cfe1cd7d585d03dd58fd0694db\transformed\play-services-maps-18.2.0\AndroidManifest.xml:17:1-44:12
-MERGED from [androidx.recyclerview:recyclerview:1.3.1] C:\Users\HP\.gradle\caches\8.13\transforms\03bef3eb13e8eebec2725ffb24ecc419\transformed\recyclerview-1.3.1\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.recyclerview:recyclerview:1.3.2] C:\Users\HP\.gradle\caches\8.13\transforms\3904daab5e8aa89eca0b70ce1f7440b6\transformed\recyclerview-1.3.2\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.viewpager2:viewpager2:1.1.0] C:\Users\HP\.gradle\caches\8.13\transforms\2215c43d15f88a72c6c2b63d114fedca\transformed\viewpager2-1.1.0\AndroidManifest.xml:2:1-7:12
 MERGED from [com.google.android.gms:play-services-location:21.3.0] C:\Users\HP\.gradle\caches\8.13\transforms\b2f31d46c7752d24aa78946c1f3f8d16\transformed\play-services-location-21.3.0\AndroidManifest.xml:2:1-8:12
 MERGED from [com.google.android.gms:play-services-base:18.5.0] C:\Users\HP\.gradle\caches\8.13\transforms\a19eb22654c99da427b864cdf82a94b1\transformed\play-services-base-18.5.0\AndroidManifest.xml:2:1-7:12
@@ -53,6 +54,7 @@ MERGED from [androidx.customview:customview:1.1.0] C:\Users\HP\.gradle\caches\8.
 MERGED from [androidx.loader:loader:1.0.0] C:\Users\HP\.gradle\caches\8.13\transforms\4a1d5c7c200f580d9e3bc6f77c9ab8b4\transformed\loader-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.window:window:1.0.0] C:\Users\HP\.gradle\caches\8.13\transforms\04fdb0fcf93b530405bc7a23fb90fa12\transformed\window-1.0.0\AndroidManifest.xml:17:1-33:12
 MERGED from [androidx.core:core:1.17.0] C:\Users\HP\.gradle\caches\8.13\transforms\b23afcb35c9db2b3599009cddda32d02\transformed\core-1.17.0\AndroidManifest.xml:17:1-30:12
+MERGED from [androidx.customview:customview-poolingcontainer:1.0.0] C:\Users\HP\.gradle\caches\8.13\transforms\a6c5ee38e1516deba85e9920b0311032\transformed\customview-poolingcontainer-1.0.0\AndroidManifest.xml:17:1-23:12
 MERGED from [androidx.graphics:graphics-shapes-android:1.0.1] C:\Users\HP\.gradle\caches\8.13\transforms\75523e9ae353bf3c0fbf2c6ba2308322\transformed\graphics-shapes-release\AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.savedstate:savedstate-ktx:1.2.1] C:\Users\HP\.gradle\caches\8.13\transforms\ee899bfeffa1660d47bea815ad03b73e\transformed\savedstate-ktx-1.2.1\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.savedstate:savedstate:1.2.1] C:\Users\HP\.gradle\caches\8.13\transforms\5593ab00d4c40ff664066e1908b1f129\transformed\savedstate-1.2.1\AndroidManifest.xml:17:1-22:12
@@ -67,7 +69,6 @@ MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.8.6] C:\Users\HP\.
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.8.6] C:\Users\HP\.gradle\caches\8.13\transforms\620001600084de622a65ccbf72dbb743\transformed\lifecycle-livedata-core-2.8.6\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-runtime-ktx-android:2.8.6] C:\Users\HP\.gradle\caches\8.13\transforms\9d0819c1ea9ab7b2a7c9f68c9aec1079\transformed\lifecycle-runtime-ktx-release\AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.8.6] C:\Users\HP\.gradle\caches\8.13\transforms\a9ecbf9dc3ff05aef87d18eedae32ba0\transformed\lifecycle-viewmodel-savedstate-2.8.6\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.customview:customview-poolingcontainer:1.0.0] C:\Users\HP\.gradle\caches\8.13\transforms\a6c5ee38e1516deba85e9920b0311032\transformed\customview-poolingcontainer-1.0.0\AndroidManifest.xml:17:1-23:12
 MERGED from [androidx.core:core-ktx:1.17.0] C:\Users\HP\.gradle\caches\8.13\transforms\93911e31cf1bf777c9ddbc62d174d71e\transformed\core-ktx-1.17.0\AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.datastore:datastore-core-android:1.1.1] C:\Users\HP\.gradle\caches\8.13\transforms\21f0923bdea65935551c6ab9967ba760\transformed\datastore-core-release\AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.datastore:datastore-android:1.1.1] C:\Users\HP\.gradle\caches\8.13\transforms\ad256b407a0dc815f2a8f4754fd18edd\transformed\datastore-release\AndroidManifest.xml:17:1-22:12
@@ -76,6 +77,8 @@ MERGED from [androidx.core:core-viewtree:1.0.0] C:\Users\HP\.gradle\caches\8.13\
 MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\HP\.gradle\caches\8.13\transforms\353752ed2825fdd2b88c861dd249dde2\transformed\cursoradapter-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\HP\.gradle\caches\8.13\transforms\a40afa240d3c2c268cace8d103541f53\transformed\cardview-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\HP\.gradle\caches\8.13\transforms\a0c50224ab9198f0ea7f5b477298db42\transformed\profileinstaller-1.4.0\AndroidManifest.xml:17:1-55:12
+MERGED from [com.github.bumptech.glide:gifdecoder:4.16.0] C:\Users\HP\.gradle\caches\8.13\transforms\dca492d59b3b9be19d77fbc196d03c98\transformed\gifdecoder-4.16.0\AndroidManifest.xml:2:1-9:12
+MERGED from [androidx.exifinterface:exifinterface:1.3.6] C:\Users\HP\.gradle\caches\8.13\transforms\9fbb1abfd709cfcf3fe848084afe12e1\transformed\exifinterface-1.3.6\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\HP\.gradle\caches\8.13\transforms\722589d4874d1aa50315e02bc78586cb\transformed\startup-runtime-1.1.1\AndroidManifest.xml:17:1-33:12
 MERGED from [androidx.tracing:tracing:1.2.0] C:\Users\HP\.gradle\caches\8.13\transforms\71b858dfd9c8168446fc85fc30c29e99\transformed\tracing-1.2.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\HP\.gradle\caches\8.13\transforms\d73f844a2e6def98f703a26a64d0bc94\transformed\interpolator-1.0.0\AndroidManifest.xml:17:1-22:12
@@ -108,8 +111,8 @@ ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\Andr
 	android:name
 		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:6:22-78
 application
-ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:8:5-123:19
-INJECTED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:8:5-123:19
+ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:8:5-143:19
+INJECTED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:8:5-143:19
 MERGED from [com.google.android.material:material:1.13.0] C:\Users\HP\.gradle\caches\8.13\transforms\093a0065225ded3e8b16dd27ba614f74\transformed\material-1.13.0\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.13.0] C:\Users\HP\.gradle\caches\8.13\transforms\093a0065225ded3e8b16dd27ba614f74\transformed\material-1.13.0\AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.2.1] C:\Users\HP\.gradle\caches\8.13\transforms\bee64d769165c5619214d32a79bed843\transformed\constraintlayout-2.2.1\AndroidManifest.xml:7:5-20
@@ -169,213 +172,253 @@ ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\Andr
 	android:name
 		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:29:13-58
 activity#com.main.cipta_muri_mobile.ui.splash.SplashActivity
-ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:31:9-40:20
+ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:31:9-41:20
+	android:screenOrientation
+		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:34:13-49
 	android:exported
 		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:33:13-36
 	android:theme
-		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:34:13-69
+		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:35:13-69
 	android:name
 		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:32:13-53
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:35:13-39:29
+ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:36:13-40:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:36:17-69
+ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:37:17-69
 	android:name
-		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:36:25-66
+		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:37:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:38:17-77
+ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:39:17-77
 	android:name
-		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:38:27-74
+		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:39:27-74
 activity#com.main.cipta_muri_mobile.ui.login.LoginActivity
-ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:41:9-45:63
+ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:42:9-47:63
+	android:screenOrientation
+		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:46:13-49
 	android:label
-		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:44:13-45
+		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:45:13-45
 	android:exported
-		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:43:13-36
+		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:44:13-36
 	android:theme
-		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:45:13-60
+		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:47:13-60
 	android:name
-		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:42:13-51
+		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:43:13-51
 activity#com.main.cipta_muri_mobile.ui.login.LupaPinActivity
-ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:46:9-50:63
-	android:label
-		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:49:13-45
-	android:exported
-		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:48:13-36
-	android:theme
-		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:50:13-60
-	android:name
-		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:47:13-53
-activity#com.main.cipta_muri_mobile.ui.main.MainActivity
-ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:51:9-55:62
-	android:label
-		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:54:13-45
-	android:exported
-		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:53:13-36
-	android:theme
-		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:55:13-60
-	android:name
+ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:48:9-53:63
+	android:screenOrientation
 		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:52:13-49
-activity#com.main.cipta_muri_mobile.ui.setor.riwayat.RiwayatSetoranActivity
-ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:56:9-60:62
 	android:label
-		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:59:13-45
+		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:51:13-45
 	android:exported
-		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:58:13-36
+		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:50:13-36
 	android:theme
-		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:60:13-60
+		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:53:13-60
 	android:name
-		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:57:13-68
-activity#com.main.cipta_muri_mobile.ui.setor.SetorSampahActivity
-ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:61:9-64:62
+		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:49:13-53
+activity#com.main.cipta_muri_mobile.ui.main.MainActivity
+ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:54:9-59:62
+	android:screenOrientation
+		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:58:13-49
+	android:label
+		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:57:13-45
+	android:exported
+		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:56:13-36
+	android:theme
+		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:59:13-60
+	android:name
+		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:55:13-49
+activity#com.main.cipta_muri_mobile.ui.setor.riwayat.RiwayatSetoranActivity
+ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:60:9-65:62
+	android:screenOrientation
+		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:64:13-49
 	android:label
 		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:63:13-45
 	android:exported
 		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:62:13-36
 	android:theme
-		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:64:13-60
+		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:65:13-60
 	android:name
-		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:61:19-63
+		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:61:13-68
+activity#com.main.cipta_muri_mobile.ui.setor.SetorSampahActivity
+ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:66:9-70:62
+	android:screenOrientation
+		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:69:13-49
+	android:label
+		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:68:13-45
+	android:exported
+		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:67:13-36
+	android:theme
+		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:70:13-60
+	android:name
+		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:66:19-63
 activity#com.main.cipta_muri_mobile.ui.saldo.tarik.TarikSaldoActivity
-ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:65:9-68:62
+ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:71:9-75:62
+	android:screenOrientation
+		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:74:13-49
 	android:label
-		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:67:13-45
+		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:73:13-45
 	android:exported
-		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:66:13-36
+		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:72:13-36
 	android:theme
-		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:68:13-60
+		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:75:13-60
 	android:name
-		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:65:19-68
+		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:71:19-68
 activity#com.main.cipta_muri_mobile.ui.saldo.riwayat.RiwayatPenarikanActivity
-ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:69:9-72:62
+ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:76:9-80:62
+	android:screenOrientation
+		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:79:13-49
 	android:label
-		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:71:13-45
+		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:78:13-45
 	android:exported
-		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:70:13-36
-	android:theme
-		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:72:13-60
-	android:name
-		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:69:19-76
-activity#com.main.cipta_muri_mobile.ui.donasi.DonasiSampahActivity
-ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:73:9-76:62
-	android:label
-		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:75:13-45
-	android:exported
-		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:74:13-36
-	android:theme
-		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:76:13-60
-	android:name
-		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:73:19-65
-activity#com.main.cipta_muri_mobile.ui.aktivitas.RiwayatAktivitasActivity
-ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:77:9-80:62
-	android:label
-		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:79:13-45
-	android:exported
-		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:78:13-36
+		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:77:13-36
 	android:theme
 		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:80:13-60
 	android:name
-		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:77:19-72
-activity#com.main.cipta_muri_mobile.ui.profile.ProfileActivity
-ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:81:9-84:62
+		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:76:19-76
+activity#com.main.cipta_muri_mobile.ui.donasi.DonasiSampahActivity
+ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:81:9-85:62
+	android:screenOrientation
+		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:84:13-49
 	android:label
 		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:83:13-45
 	android:exported
 		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:82:13-36
 	android:theme
-		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:84:13-60
+		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:85:13-60
 	android:name
-		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:81:19-61
+		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:81:19-65
+activity#com.main.cipta_muri_mobile.ui.aktivitas.RiwayatAktivitasActivity
+ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:86:9-90:62
+	android:screenOrientation
+		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:89:13-49
+	android:label
+		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:88:13-45
+	android:exported
+		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:87:13-36
+	android:theme
+		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:90:13-60
+	android:name
+		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:86:19-72
+activity#com.main.cipta_muri_mobile.ui.profile.ProfileActivity
+ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:91:9-95:62
+	android:screenOrientation
+		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:94:13-49
+	android:label
+		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:93:13-45
+	android:exported
+		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:92:13-36
+	android:theme
+		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:95:13-60
+	android:name
+		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:91:19-61
 activity#com.main.cipta_muri_mobile.ui.setor.harga.HargaSampahActivity
-ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:85:9-88:62
+ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:96:9-100:62
+	android:screenOrientation
+		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:99:13-49
 	android:label
-		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:87:13-45
+		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:98:13-45
 	android:exported
-		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:86:13-36
+		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:97:13-36
 	android:theme
-		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:88:13-60
+		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:100:13-60
 	android:name
-		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:85:19-69
+		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:96:19-69
 activity#com.main.cipta_muri_mobile.ui.mutasi.MutasiSaldoActivity
-ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:89:9-92:62
+ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:101:9-105:62
+	android:screenOrientation
+		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:104:13-49
 	android:label
-		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:91:13-45
+		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:103:13-45
 	android:exported
-		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:90:13-36
+		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:102:13-36
 	android:theme
-		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:92:13-60
+		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:105:13-60
 	android:name
-		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:89:19-64
+		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:101:19-64
 activity#com.main.cipta_muri_mobile.ui.setor.bank.BankSampahActivity
-ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:93:9-97:62
-	android:label
-		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:96:13-45
-	android:exported
-		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:95:13-36
-	android:theme
-		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:97:13-60
-	android:name
-		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:94:13-61
-activity#com.main.cipta_muri_mobile.ui.leaderboard.LeaderboardActivity
-ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:98:9-101:63
-	android:label
-		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:100:13-45
-	android:exported
-		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:99:13-36
-	android:theme
-		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:101:13-60
-	android:name
-		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:98:19-69
-activity#com.main.cipta_muri_mobile.ui.saldo.petunjuk.PetunjukPenarikanActivity
-ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:102:9-106:63
-	android:label
-		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:105:13-45
-	android:exported
-		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:104:13-36
-	android:theme
-		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:106:13-60
-	android:name
-		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:103:13-72
-activity#com.main.cipta_muri_mobile.ui.saldo.animasi.AnimasiActivity
-ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:107:9-110:63
+ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:106:9-111:62
+	android:screenOrientation
+		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:110:13-49
 	android:label
 		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:109:13-45
 	android:exported
 		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:108:13-36
 	android:theme
-		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:110:13-60
+		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:111:13-60
 	android:name
-		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:107:19-67
-activity#com.main.cipta_muri_mobile.ui.saldo.konfirmasi.KonfirmasiPenarikanActivity
-ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:111:9-114:63
+		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:107:13-61
+activity#com.main.cipta_muri_mobile.ui.leaderboard.LeaderboardActivity
+ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:112:9-116:63
+	android:screenOrientation
+		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:115:13-49
 	android:label
-		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:113:13-45
+		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:114:13-45
 	android:exported
-		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:112:13-36
+		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:113:13-36
 	android:theme
-		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:114:13-60
+		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:116:13-60
 	android:name
-		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:111:19-82
-activity#com.main.cipta_muri_mobile.ui.saldo.berhasil.PenarikanBerhasilActivity
-ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:115:9-118:63
+		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:112:19-69
+activity#com.main.cipta_muri_mobile.ui.saldo.petunjuk.PetunjukPenarikanActivity
+ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:117:9-122:63
+	android:screenOrientation
+		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:121:13-49
 	android:label
-		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:117:13-45
+		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:120:13-45
 	android:exported
-		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:116:13-36
-	android:theme
-		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:118:13-60
-	android:name
-		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:115:19-78
-activity#com.main.cipta_muri_mobile.ui.news.NewsActivity
-ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:119:9-122:63
-	android:label
-		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:121:13-45
-	android:exported
-		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:120:13-36
+		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:119:13-36
 	android:theme
 		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:122:13-60
 	android:name
-		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:119:19-55
+		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:118:13-72
+activity#com.main.cipta_muri_mobile.ui.saldo.animasi.AnimasiActivity
+ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:123:9-127:63
+	android:screenOrientation
+		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:126:13-49
+	android:label
+		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:125:13-45
+	android:exported
+		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:124:13-36
+	android:theme
+		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:127:13-60
+	android:name
+		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:123:19-67
+activity#com.main.cipta_muri_mobile.ui.saldo.konfirmasi.KonfirmasiPenarikanActivity
+ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:128:9-132:63
+	android:screenOrientation
+		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:131:13-49
+	android:label
+		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:130:13-45
+	android:exported
+		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:129:13-36
+	android:theme
+		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:132:13-60
+	android:name
+		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:128:19-82
+activity#com.main.cipta_muri_mobile.ui.saldo.berhasil.PenarikanBerhasilActivity
+ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:133:9-137:63
+	android:screenOrientation
+		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:136:13-49
+	android:label
+		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:135:13-45
+	android:exported
+		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:134:13-36
+	android:theme
+		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:137:13-60
+	android:name
+		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:133:19-78
+activity#com.main.cipta_muri_mobile.ui.news.NewsActivity
+ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:138:9-142:63
+	android:screenOrientation
+		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:141:13-49
+	android:label
+		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:140:13-45
+	android:exported
+		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:139:13-36
+	android:theme
+		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:142:13-60
+	android:name
+		ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:138:19-55
 meta-data#android.support.FILE_PROVIDER_PATHS
 ADDED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml:23:13-25:54
 	android:resource
@@ -412,10 +455,12 @@ MERGED from [androidx.appcompat:appcompat-resources:1.7.1] C:\Users\HP\.gradle\c
 MERGED from [androidx.appcompat:appcompat-resources:1.7.1] C:\Users\HP\.gradle\caches\8.13\transforms\246269f570f4dddca5c1bf0ca0da226e\transformed\appcompat-resources-1.7.1\AndroidManifest.xml:5:5-44
 MERGED from [androidx.appcompat:appcompat:1.7.1] C:\Users\HP\.gradle\caches\8.13\transforms\f42de817a6d78a353d192a79f4b76254\transformed\appcompat-1.7.1\AndroidManifest.xml:5:5-44
 MERGED from [androidx.appcompat:appcompat:1.7.1] C:\Users\HP\.gradle\caches\8.13\transforms\f42de817a6d78a353d192a79f4b76254\transformed\appcompat-1.7.1\AndroidManifest.xml:5:5-44
+MERGED from [com.github.bumptech.glide:glide:4.16.0] C:\Users\HP\.gradle\caches\8.13\transforms\c5249bfb42c2fe1623ea95fd6cc69b32\transformed\glide-4.16.0\AndroidManifest.xml:5:5-7:41
+MERGED from [com.github.bumptech.glide:glide:4.16.0] C:\Users\HP\.gradle\caches\8.13\transforms\c5249bfb42c2fe1623ea95fd6cc69b32\transformed\glide-4.16.0\AndroidManifest.xml:5:5-7:41
 MERGED from [com.google.android.gms:play-services-maps:18.2.0] C:\Users\HP\.gradle\caches\8.13\transforms\914466cfe1cd7d585d03dd58fd0694db\transformed\play-services-maps-18.2.0\AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-maps:18.2.0] C:\Users\HP\.gradle\caches\8.13\transforms\914466cfe1cd7d585d03dd58fd0694db\transformed\play-services-maps-18.2.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.recyclerview:recyclerview:1.3.1] C:\Users\HP\.gradle\caches\8.13\transforms\03bef3eb13e8eebec2725ffb24ecc419\transformed\recyclerview-1.3.1\AndroidManifest.xml:20:5-44
-MERGED from [androidx.recyclerview:recyclerview:1.3.1] C:\Users\HP\.gradle\caches\8.13\transforms\03bef3eb13e8eebec2725ffb24ecc419\transformed\recyclerview-1.3.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.recyclerview:recyclerview:1.3.2] C:\Users\HP\.gradle\caches\8.13\transforms\3904daab5e8aa89eca0b70ce1f7440b6\transformed\recyclerview-1.3.2\AndroidManifest.xml:20:5-44
+MERGED from [androidx.recyclerview:recyclerview:1.3.2] C:\Users\HP\.gradle\caches\8.13\transforms\3904daab5e8aa89eca0b70ce1f7440b6\transformed\recyclerview-1.3.2\AndroidManifest.xml:20:5-44
 MERGED from [androidx.viewpager2:viewpager2:1.1.0] C:\Users\HP\.gradle\caches\8.13\transforms\2215c43d15f88a72c6c2b63d114fedca\transformed\viewpager2-1.1.0\AndroidManifest.xml:5:5-44
 MERGED from [androidx.viewpager2:viewpager2:1.1.0] C:\Users\HP\.gradle\caches\8.13\transforms\2215c43d15f88a72c6c2b63d114fedca\transformed\viewpager2-1.1.0\AndroidManifest.xml:5:5-44
 MERGED from [com.google.android.gms:play-services-location:21.3.0] C:\Users\HP\.gradle\caches\8.13\transforms\b2f31d46c7752d24aa78946c1f3f8d16\transformed\play-services-location-21.3.0\AndroidManifest.xml:4:5-44
@@ -462,6 +507,8 @@ MERGED from [androidx.window:window:1.0.0] C:\Users\HP\.gradle\caches\8.13\trans
 MERGED from [androidx.window:window:1.0.0] C:\Users\HP\.gradle\caches\8.13\transforms\04fdb0fcf93b530405bc7a23fb90fa12\transformed\window-1.0.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.core:core:1.17.0] C:\Users\HP\.gradle\caches\8.13\transforms\b23afcb35c9db2b3599009cddda32d02\transformed\core-1.17.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.core:core:1.17.0] C:\Users\HP\.gradle\caches\8.13\transforms\b23afcb35c9db2b3599009cddda32d02\transformed\core-1.17.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview-poolingcontainer:1.0.0] C:\Users\HP\.gradle\caches\8.13\transforms\a6c5ee38e1516deba85e9920b0311032\transformed\customview-poolingcontainer-1.0.0\AndroidManifest.xml:20:5-21:38
+MERGED from [androidx.customview:customview-poolingcontainer:1.0.0] C:\Users\HP\.gradle\caches\8.13\transforms\a6c5ee38e1516deba85e9920b0311032\transformed\customview-poolingcontainer-1.0.0\AndroidManifest.xml:20:5-21:38
 MERGED from [androidx.graphics:graphics-shapes-android:1.0.1] C:\Users\HP\.gradle\caches\8.13\transforms\75523e9ae353bf3c0fbf2c6ba2308322\transformed\graphics-shapes-release\AndroidManifest.xml:5:5-44
 MERGED from [androidx.graphics:graphics-shapes-android:1.0.1] C:\Users\HP\.gradle\caches\8.13\transforms\75523e9ae353bf3c0fbf2c6ba2308322\transformed\graphics-shapes-release\AndroidManifest.xml:5:5-44
 MERGED from [androidx.savedstate:savedstate-ktx:1.2.1] C:\Users\HP\.gradle\caches\8.13\transforms\ee899bfeffa1660d47bea815ad03b73e\transformed\savedstate-ktx-1.2.1\AndroidManifest.xml:20:5-44
@@ -490,8 +537,6 @@ MERGED from [androidx.lifecycle:lifecycle-runtime-ktx-android:2.8.6] C:\Users\HP
 MERGED from [androidx.lifecycle:lifecycle-runtime-ktx-android:2.8.6] C:\Users\HP\.gradle\caches\8.13\transforms\9d0819c1ea9ab7b2a7c9f68c9aec1079\transformed\lifecycle-runtime-ktx-release\AndroidManifest.xml:5:5-44
 MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.8.6] C:\Users\HP\.gradle\caches\8.13\transforms\a9ecbf9dc3ff05aef87d18eedae32ba0\transformed\lifecycle-viewmodel-savedstate-2.8.6\AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.8.6] C:\Users\HP\.gradle\caches\8.13\transforms\a9ecbf9dc3ff05aef87d18eedae32ba0\transformed\lifecycle-viewmodel-savedstate-2.8.6\AndroidManifest.xml:20:5-44
-MERGED from [androidx.customview:customview-poolingcontainer:1.0.0] C:\Users\HP\.gradle\caches\8.13\transforms\a6c5ee38e1516deba85e9920b0311032\transformed\customview-poolingcontainer-1.0.0\AndroidManifest.xml:20:5-21:38
-MERGED from [androidx.customview:customview-poolingcontainer:1.0.0] C:\Users\HP\.gradle\caches\8.13\transforms\a6c5ee38e1516deba85e9920b0311032\transformed\customview-poolingcontainer-1.0.0\AndroidManifest.xml:20:5-21:38
 MERGED from [androidx.core:core-ktx:1.17.0] C:\Users\HP\.gradle\caches\8.13\transforms\93911e31cf1bf777c9ddbc62d174d71e\transformed\core-ktx-1.17.0\AndroidManifest.xml:5:5-44
 MERGED from [androidx.core:core-ktx:1.17.0] C:\Users\HP\.gradle\caches\8.13\transforms\93911e31cf1bf777c9ddbc62d174d71e\transformed\core-ktx-1.17.0\AndroidManifest.xml:5:5-44
 MERGED from [androidx.datastore:datastore-core-android:1.1.1] C:\Users\HP\.gradle\caches\8.13\transforms\21f0923bdea65935551c6ab9967ba760\transformed\datastore-core-release\AndroidManifest.xml:5:5-44
@@ -508,6 +553,10 @@ MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\HP\.gradle\caches\8.13\t
 MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\HP\.gradle\caches\8.13\transforms\a40afa240d3c2c268cace8d103541f53\transformed\cardview-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\HP\.gradle\caches\8.13\transforms\a0c50224ab9198f0ea7f5b477298db42\transformed\profileinstaller-1.4.0\AndroidManifest.xml:21:5-44
 MERGED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\HP\.gradle\caches\8.13\transforms\a0c50224ab9198f0ea7f5b477298db42\transformed\profileinstaller-1.4.0\AndroidManifest.xml:21:5-44
+MERGED from [com.github.bumptech.glide:gifdecoder:4.16.0] C:\Users\HP\.gradle\caches\8.13\transforms\dca492d59b3b9be19d77fbc196d03c98\transformed\gifdecoder-4.16.0\AndroidManifest.xml:5:5-7:41
+MERGED from [com.github.bumptech.glide:gifdecoder:4.16.0] C:\Users\HP\.gradle\caches\8.13\transforms\dca492d59b3b9be19d77fbc196d03c98\transformed\gifdecoder-4.16.0\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.exifinterface:exifinterface:1.3.6] C:\Users\HP\.gradle\caches\8.13\transforms\9fbb1abfd709cfcf3fe848084afe12e1\transformed\exifinterface-1.3.6\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.exifinterface:exifinterface:1.3.6] C:\Users\HP\.gradle\caches\8.13\transforms\9fbb1abfd709cfcf3fe848084afe12e1\transformed\exifinterface-1.3.6\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\HP\.gradle\caches\8.13\transforms\722589d4874d1aa50315e02bc78586cb\transformed\startup-runtime-1.1.1\AndroidManifest.xml:21:5-23:41
 MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\HP\.gradle\caches\8.13\transforms\722589d4874d1aa50315e02bc78586cb\transformed\startup-runtime-1.1.1\AndroidManifest.xml:21:5-23:41
 MERGED from [androidx.tracing:tracing:1.2.0] C:\Users\HP\.gradle\caches\8.13\transforms\71b858dfd9c8168446fc85fc30c29e99\transformed\tracing-1.2.0\AndroidManifest.xml:20:5-44

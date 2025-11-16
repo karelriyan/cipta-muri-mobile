@@ -97,7 +97,7 @@
                 android:id="@+id/etPin"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Tanggal Lahir (YYYY-MM-DD)"
+                android:hint="Tanggal Lahir (DD-MM-YYYY)"
                 android:inputType="date|text"
                 android:padding="16dp"
                 android:textColor="@android:color/white"
@@ -110,7 +110,7 @@
             android:id="@+id/tvFormatTanggal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Format: YYYY-MM-DD"
+            android:text="Format: DD-MM-YYYY"
             android:textSize="12sp"
             android:textColor="@android:color/white"
             android:layout_marginBottom="8dp" />
@@ -132,8 +132,9 @@
             android:orientation="horizontal"
             android:gravity="end">
 
-            <Button
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnMasuk"
+                style="@style/Widget.MaterialComponents.Button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Masuk"
@@ -143,8 +144,9 @@
                 android:paddingEnd="32dp"
                 android:paddingTop="12dp"
                 android:paddingBottom="12dp"
-                android:background="@drawable/rounded_button_white"
-                android:textColor="@color/black" />
+                android:textColor="@color/black"
+                app:backgroundTint="@color/white"
+                app:cornerRadius="10dp" />
         </LinearLayout>
     </LinearLayout>
 

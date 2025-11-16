@@ -41,6 +41,9 @@ public final class ActivityMainBinding implements ViewBinding {
   public final LinearLayout mnSetor;
 
   @NonNull
+  public final SectionNewsBinding sectionNews;
+
+  @NonNull
   public final TextView tvAccountNumber;
 
   @NonNull
@@ -64,10 +67,10 @@ public final class ActivityMainBinding implements ViewBinding {
   private ActivityMainBinding(@NonNull CoordinatorLayout rootView, @NonNull FrameLayout cardSaldo,
       @NonNull FloatingActionButton fabLeaderboard, @NonNull LinearLayout mnLeaderboard,
       @NonNull LinearLayout mnRiwayatPenarikan, @NonNull LinearLayout mnRiwayatSetor,
-      @NonNull LinearLayout mnSetor, @NonNull TextView tvAccountNumber, @NonNull TextView tvBalance,
-      @NonNull TextView tvGreeting, @NonNull TextView tvMutation,
-      @NonNull TextView tvProfileInitial, @NonNull TextView tvTotalWeight,
-      @NonNull TextView tvUserName) {
+      @NonNull LinearLayout mnSetor, @NonNull SectionNewsBinding sectionNews,
+      @NonNull TextView tvAccountNumber, @NonNull TextView tvBalance, @NonNull TextView tvGreeting,
+      @NonNull TextView tvMutation, @NonNull TextView tvProfileInitial,
+      @NonNull TextView tvTotalWeight, @NonNull TextView tvUserName) {
     this.rootView = rootView;
     this.cardSaldo = cardSaldo;
     this.fabLeaderboard = fabLeaderboard;
@@ -75,6 +78,7 @@ public final class ActivityMainBinding implements ViewBinding {
     this.mnRiwayatPenarikan = mnRiwayatPenarikan;
     this.mnRiwayatSetor = mnRiwayatSetor;
     this.mnSetor = mnSetor;
+    this.sectionNews = sectionNews;
     this.tvAccountNumber = tvAccountNumber;
     this.tvBalance = tvBalance;
     this.tvGreeting = tvGreeting;
@@ -147,6 +151,13 @@ public final class ActivityMainBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.sectionNews;
+      View sectionNews = ViewBindings.findChildViewById(rootView, id);
+      if (sectionNews == null) {
+        break missingId;
+      }
+      SectionNewsBinding binding_sectionNews = SectionNewsBinding.bind(sectionNews);
+
       id = R.id.tv_account_number;
       TextView tvAccountNumber = ViewBindings.findChildViewById(rootView, id);
       if (tvAccountNumber == null) {
@@ -190,8 +201,9 @@ public final class ActivityMainBinding implements ViewBinding {
       }
 
       return new ActivityMainBinding((CoordinatorLayout) rootView, cardSaldo, fabLeaderboard,
-          mnLeaderboard, mnRiwayatPenarikan, mnRiwayatSetor, mnSetor, tvAccountNumber, tvBalance,
-          tvGreeting, tvMutation, tvProfileInitial, tvTotalWeight, tvUserName);
+          mnLeaderboard, mnRiwayatPenarikan, mnRiwayatSetor, mnSetor, binding_sectionNews,
+          tvAccountNumber, tvBalance, tvGreeting, tvMutation, tvProfileInitial, tvTotalWeight,
+          tvUserName);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

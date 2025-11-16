@@ -66,7 +66,9 @@
                     android:textStyle="bold"
                     android:textColor="@color/black" />
 
-                <include layout="@layout/section_news"/>
+                <include
+                    android:id="@+id/sectionNews"
+                    layout="@layout/section_news" />
             </LinearLayout>
 
         </LinearLayout>

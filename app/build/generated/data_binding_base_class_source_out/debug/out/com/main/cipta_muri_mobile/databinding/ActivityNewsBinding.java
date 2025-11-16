@@ -22,10 +22,14 @@ public final class ActivityNewsBinding implements ViewBinding {
   @NonNull
   public final NestedScrollView nestedScroll;
 
-  private ActivityNewsBinding(@NonNull FrameLayout rootView,
-      @NonNull NestedScrollView nestedScroll) {
+  @NonNull
+  public final SectionNewsBinding sectionNews;
+
+  private ActivityNewsBinding(@NonNull FrameLayout rootView, @NonNull NestedScrollView nestedScroll,
+      @NonNull SectionNewsBinding sectionNews) {
     this.rootView = rootView;
     this.nestedScroll = nestedScroll;
+    this.sectionNews = sectionNews;
   }
 
   @Override
@@ -61,7 +65,14 @@ public final class ActivityNewsBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityNewsBinding((FrameLayout) rootView, nestedScroll);
+      id = R.id.sectionNews;
+      View sectionNews = ViewBindings.findChildViewById(rootView, id);
+      if (sectionNews == null) {
+        break missingId;
+      }
+      SectionNewsBinding binding_sectionNews = SectionNewsBinding.bind(sectionNews);
+
+      return new ActivityNewsBinding((FrameLayout) rootView, nestedScroll, binding_sectionNews);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

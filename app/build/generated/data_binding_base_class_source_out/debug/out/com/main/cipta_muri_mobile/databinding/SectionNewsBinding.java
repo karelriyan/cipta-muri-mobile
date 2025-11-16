@@ -4,11 +4,12 @@ package com.main.cipta_muri_mobile.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.main.cipta_muri_mobile.R;
@@ -21,20 +22,24 @@ public final class SectionNewsBinding implements ViewBinding {
   private final LinearLayout rootView;
 
   @NonNull
-  public final ImageView ivNewsImage;
+  public final ProgressBar progressNews;
 
   @NonNull
-  public final TextView tvNewsSubtitle;
+  public final RecyclerView rvNews;
 
   @NonNull
-  public final TextView tvNewsTitle;
+  public final TextView tvNewsMessage;
 
-  private SectionNewsBinding(@NonNull LinearLayout rootView, @NonNull ImageView ivNewsImage,
-      @NonNull TextView tvNewsSubtitle, @NonNull TextView tvNewsTitle) {
+  @NonNull
+  public final TextView tvViewMore;
+
+  private SectionNewsBinding(@NonNull LinearLayout rootView, @NonNull ProgressBar progressNews,
+      @NonNull RecyclerView rvNews, @NonNull TextView tvNewsMessage, @NonNull TextView tvViewMore) {
     this.rootView = rootView;
-    this.ivNewsImage = ivNewsImage;
-    this.tvNewsSubtitle = tvNewsSubtitle;
-    this.tvNewsTitle = tvNewsTitle;
+    this.progressNews = progressNews;
+    this.rvNews = rvNews;
+    this.tvNewsMessage = tvNewsMessage;
+    this.tvViewMore = tvViewMore;
   }
 
   @Override
@@ -64,26 +69,32 @@ public final class SectionNewsBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.iv_news_image;
-      ImageView ivNewsImage = ViewBindings.findChildViewById(rootView, id);
-      if (ivNewsImage == null) {
+      id = R.id.progressNews;
+      ProgressBar progressNews = ViewBindings.findChildViewById(rootView, id);
+      if (progressNews == null) {
         break missingId;
       }
 
-      id = R.id.tv_news_subtitle;
-      TextView tvNewsSubtitle = ViewBindings.findChildViewById(rootView, id);
-      if (tvNewsSubtitle == null) {
+      id = R.id.rvNews;
+      RecyclerView rvNews = ViewBindings.findChildViewById(rootView, id);
+      if (rvNews == null) {
         break missingId;
       }
 
-      id = R.id.tv_news_title;
-      TextView tvNewsTitle = ViewBindings.findChildViewById(rootView, id);
-      if (tvNewsTitle == null) {
+      id = R.id.tvNewsMessage;
+      TextView tvNewsMessage = ViewBindings.findChildViewById(rootView, id);
+      if (tvNewsMessage == null) {
         break missingId;
       }
 
-      return new SectionNewsBinding((LinearLayout) rootView, ivNewsImage, tvNewsSubtitle,
-          tvNewsTitle);
+      id = R.id.tvViewMore;
+      TextView tvViewMore = ViewBindings.findChildViewById(rootView, id);
+      if (tvViewMore == null) {
+        break missingId;
+      }
+
+      return new SectionNewsBinding((LinearLayout) rootView, progressNews, rvNews, tvNewsMessage,
+          tvViewMore);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

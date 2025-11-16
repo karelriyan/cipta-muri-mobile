@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.main.cipta_muri_mobile.app-mergeDebugResources-58:/values-zh-rTW/values-zh-rTW.xml",
+            "outputFile": "com.main.cipta_muri_mobile.app-mergeDebugResources-59:/values-zh-rTW/values-zh-rTW.xml",
             "map": [
                 {
                     "source": "C:\\Users\\HP\\.gradle\\caches\\8.13\\transforms\\093a0065225ded3e8b16dd27ba614f74\\transformed\\material-1.13.0\\res\\values-zh-rTW\\values-zh-rTW.xml",

@@ -5,16 +5,20 @@ import android.os.Build
 import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.isVisible
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.main.cipta_muri_mobile.R
 import com.main.cipta_muri_mobile.data.SessionManager
 import com.main.cipta_muri_mobile.data.User
 import com.main.cipta_muri_mobile.databinding.ActivityMainBinding
+import com.main.cipta_muri_mobile.databinding.SectionNewsBinding
 import com.main.cipta_muri_mobile.ui.aktivitas.RiwayatAktivitasActivity
 import com.main.cipta_muri_mobile.ui.donasi.DonasiSampahActivity
 import com.main.cipta_muri_mobile.ui.leaderboard.LeaderboardActivity
 import com.main.cipta_muri_mobile.ui.mutasi.MutasiSaldoActivity
 import com.main.cipta_muri_mobile.ui.news.NewsActivity
+import com.main.cipta_muri_mobile.ui.news.NewsAdapter
 import com.main.cipta_muri_mobile.ui.profile.ProfileActivity
 import com.main.cipta_muri_mobile.ui.saldo.tarik.TarikSaldoActivity
 import com.main.cipta_muri_mobile.ui.saldo.riwayat.RiwayatPenarikanActivity
@@ -27,6 +31,8 @@ class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     private val viewModel: MainViewModel by viewModels()
     private lateinit var sessionManager: SessionManager
+    private lateinit var newsAdapter: NewsAdapter
+    private lateinit var sectionNewsBinding: SectionNewsBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -39,6 +45,7 @@ class MainActivity : AppCompatActivity() {
 
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        sectionNewsBinding = SectionNewsBinding.bind(binding.root.findViewById(R.id.sectionNews))
 
         sessionManager = SessionManager(this)
 
@@ -53,6 +60,9 @@ class MainActivity : AppCompatActivity() {
 
         // ✅ 5. Setup navigasi menu utama (GridLayout)
         setupMenuNavigation()
+
+        // ✅ 6. News list di halaman utama
+        setupNewsSection()
     }
 
     private fun setUserDataFromSession() {
@@ -173,6 +183,33 @@ class MainActivity : AppCompatActivity() {
         }
 
 
+    }
+
+    private fun setupNewsSection() {
+        newsAdapter = NewsAdapter()
+        sectionNewsBinding.rvNews.apply {
+            layoutManager = LinearLayoutManager(this@MainActivity)
+            adapter = newsAdapter
+        }
+
+        sectionNewsBinding.tvViewMore.setOnClickListener {
+            startActivityWithFade(Intent(this, NewsActivity::class.java))
+        }
+
+        viewModel.newsState.observe(this) { state ->
+            sectionNewsBinding.progressNews.isVisible = state.loading
+
+            val showMessage = !state.loading && (state.error != null || state.items.isEmpty())
+            sectionNewsBinding.tvNewsMessage.isVisible = showMessage
+            sectionNewsBinding.tvNewsMessage.text = state.error ?: "Belum ada berita"
+
+            sectionNewsBinding.rvNews.isVisible = state.items.isNotEmpty()
+            sectionNewsBinding.tvViewMore.isVisible = state.items.isNotEmpty()
+
+            newsAdapter.submitList(state.items)
+        }
+
+        viewModel.fetchLatestNews(limit = 5)
     }
 
     // ✅ Fungsi untuk navigasi dengan efek fade

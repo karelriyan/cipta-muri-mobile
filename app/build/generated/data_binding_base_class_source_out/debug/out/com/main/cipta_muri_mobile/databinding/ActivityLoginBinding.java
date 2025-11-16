@@ -4,7 +4,6 @@ package com.main.cipta_muri_mobile.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -12,6 +11,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
+import com.google.android.material.button.MaterialButton;
 import com.main.cipta_muri_mobile.R;
 import java.lang.NullPointerException;
 import java.lang.Override;
@@ -22,7 +22,7 @@ public final class ActivityLoginBinding implements ViewBinding {
   private final LinearLayout rootView;
 
   @NonNull
-  public final Button btnMasuk;
+  public final MaterialButton btnMasuk;
 
   @NonNull
   public final EditText etNik;
@@ -36,7 +36,7 @@ public final class ActivityLoginBinding implements ViewBinding {
   @NonNull
   public final TextView tvLupaPin;
 
-  private ActivityLoginBinding(@NonNull LinearLayout rootView, @NonNull Button btnMasuk,
+  private ActivityLoginBinding(@NonNull LinearLayout rootView, @NonNull MaterialButton btnMasuk,
       @NonNull EditText etNik, @NonNull EditText etPin, @NonNull TextView tvFormatTanggal,
       @NonNull TextView tvLupaPin) {
     this.rootView = rootView;
@@ -75,7 +75,7 @@ public final class ActivityLoginBinding implements ViewBinding {
     int id;
     missingId: {
       id = R.id.btnMasuk;
-      Button btnMasuk = ViewBindings.findChildViewById(rootView, id);
+      MaterialButton btnMasuk = ViewBindings.findChildViewById(rootView, id);
       if (btnMasuk == null) {
         break missingId;
       }

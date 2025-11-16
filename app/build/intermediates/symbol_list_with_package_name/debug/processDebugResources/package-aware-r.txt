@@ -4140,6 +4140,7 @@ id frost
 id fullscreen_header
 id ghost_view
 id ghost_view_holder
+id glide_custom_view_target_tag
 id gone
 id graph
 id graph_wrap
@@ -4178,7 +4179,7 @@ id is_pooling_container_tag
 id italic
 id item_touch_helper_previous_elevation
 id ivIcon
-id iv_news_image
+id ivNewsImage
 id iv_user_avatar
 id jumpToEnd
 id jumpToStart
@@ -4336,6 +4337,7 @@ id position
 id postLayout
 id pressed
 id progressBar
+id progressNews
 id progress_circular
 id progress_horizontal
 id radio
@@ -4354,6 +4356,7 @@ id rtl
 id rvAktivitas
 id rvLeaderboard
 id rvMutasiSaldo
+id rvNews
 id rvRiwayatSetoran
 id rvTukarPoin
 id rv_leaderboard
@@ -4379,6 +4382,7 @@ id search_mag_icon
 id search_plate
 id search_src_text
 id search_voice_btn
+id sectionNews
 id select_dialog_listview
 id selected
 id selection_type
@@ -4513,6 +4517,10 @@ id tvLihatPetunjuk
 id tvLupaPin
 id tvMutation
 id tvNamaBank
+id tvNewsExcerpt
+id tvNewsMessage
+id tvNewsSubtitle
+id tvNewsTitle
 id tvNik
 id tvNilaiRupiahHariIni
 id tvNilaiRupiahKeseluruhan
@@ -4538,13 +4546,12 @@ id tvTotalKgHariIni
 id tvTotalKgKeseluruhan
 id tvTotalKgTanggal
 id tvTotalTransaksi
+id tvViewMore
 id tvWaktu
 id tv_account_number
 id tv_balance
 id tv_check_mutation
 id tv_greeting
-id tv_news_subtitle
-id tv_news_title
 id tv_profile_avatar
 id tv_profile_initial
 id tv_profile_name
@@ -4752,6 +4759,7 @@ layout include_bottom_nav
 layout item_aktivitas
 layout item_leaderboard_rank
 layout item_mutasi_saldo
+layout item_news
 layout item_riwayat_setoran
 layout item_tukar_poin
 layout m3_alert_dialog
