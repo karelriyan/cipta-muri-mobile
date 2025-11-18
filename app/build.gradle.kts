@@ -66,6 +66,9 @@ dependencies {
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.9.0")
     // DataStore for token storage
     implementation("androidx.datastore:datastore-preferences:1.1.1")
+    // Secure credential storage + biometric prompt for login autofill
+    implementation("androidx.security:security-crypto:1.1.0-alpha06")
+    implementation("androidx.biometric:biometric:1.1.0")
     implementation ("org.jetbrains.kotlin:kotlin-reflect")
     implementation("de.hdodenhof:circleimageview:3.1.0")
     implementation("com.google.android.gms:play-services-maps:18.2.0")

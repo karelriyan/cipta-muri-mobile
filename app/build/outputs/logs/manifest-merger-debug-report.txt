@@ -26,6 +26,7 @@ MERGED from [androidx.navigation:navigation-ui-ktx:2.6.0] C:\Users\HP\.gradle\ca
 MERGED from [androidx.navigation:navigation-ui:2.6.0] C:\Users\HP\.gradle\caches\8.13\transforms\62e1602bec98967156eae20d44e62840\transformed\navigation-ui-2.6.0\AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.android.material:material:1.13.0] C:\Users\HP\.gradle\caches\8.13\transforms\093a0065225ded3e8b16dd27ba614f74\transformed\material-1.13.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.2.1] C:\Users\HP\.gradle\caches\8.13\transforms\bee64d769165c5619214d32a79bed843\transformed\constraintlayout-2.2.1\AndroidManifest.xml:2:1-9:12
+MERGED from [androidx.biometric:biometric:1.1.0] C:\Users\HP\.gradle\caches\8.13\transforms\7311d7bee15fac5ece268725a3198446\transformed\biometric-1.1.0\AndroidManifest.xml:17:1-29:12
 MERGED from [androidx.appcompat:appcompat-resources:1.7.1] C:\Users\HP\.gradle\caches\8.13\transforms\246269f570f4dddca5c1bf0ca0da226e\transformed\appcompat-resources-1.7.1\AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.appcompat:appcompat:1.7.1] C:\Users\HP\.gradle\caches\8.13\transforms\f42de817a6d78a353d192a79f4b76254\transformed\appcompat-1.7.1\AndroidManifest.xml:2:1-7:12
 MERGED from [com.github.bumptech.glide:glide:4.16.0] C:\Users\HP\.gradle\caches\8.13\transforms\c5249bfb42c2fe1623ea95fd6cc69b32\transformed\glide-4.16.0\AndroidManifest.xml:2:1-9:12
@@ -74,6 +75,7 @@ MERGED from [androidx.datastore:datastore-core-android:1.1.1] C:\Users\HP\.gradl
 MERGED from [androidx.datastore:datastore-android:1.1.1] C:\Users\HP\.gradle\caches\8.13\transforms\ad256b407a0dc815f2a8f4754fd18edd\transformed\datastore-release\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.datastore:datastore-preferences-android:1.1.1] C:\Users\HP\.gradle\caches\8.13\transforms\e68b7dd8ea72ae79456801d881bf7a98\transformed\datastore-preferences-release\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.core:core-viewtree:1.0.0] C:\Users\HP\.gradle\caches\8.13\transforms\bd1cf6df9c8cdcda90d55bc63e04fca6\transformed\core-viewtree-1.0.0\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.security:security-crypto:1.1.0-alpha06] C:\Users\HP\.gradle\caches\8.13\transforms\b83a8065455b045c82d8f7280c89ea6d\transformed\security-crypto-1.1.0-alpha06\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\HP\.gradle\caches\8.13\transforms\353752ed2825fdd2b88c861dd249dde2\transformed\cursoradapter-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\HP\.gradle\caches\8.13\transforms\a40afa240d3c2c268cace8d103541f53\transformed\cardview-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\HP\.gradle\caches\8.13\transforms\a0c50224ab9198f0ea7f5b477298db42\transformed\profileinstaller-1.4.0\AndroidManifest.xml:17:1-55:12
@@ -463,6 +465,8 @@ MERGED from [com.google.android.material:material:1.13.0] C:\Users\HP\.gradle\ca
 MERGED from [com.google.android.material:material:1.13.0] C:\Users\HP\.gradle\caches\8.13\transforms\093a0065225ded3e8b16dd27ba614f74\transformed\material-1.13.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.constraintlayout:constraintlayout:2.2.1] C:\Users\HP\.gradle\caches\8.13\transforms\bee64d769165c5619214d32a79bed843\transformed\constraintlayout-2.2.1\AndroidManifest.xml:5:5-44
 MERGED from [androidx.constraintlayout:constraintlayout:2.2.1] C:\Users\HP\.gradle\caches\8.13\transforms\bee64d769165c5619214d32a79bed843\transformed\constraintlayout-2.2.1\AndroidManifest.xml:5:5-44
+MERGED from [androidx.biometric:biometric:1.1.0] C:\Users\HP\.gradle\caches\8.13\transforms\7311d7bee15fac5ece268725a3198446\transformed\biometric-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.biometric:biometric:1.1.0] C:\Users\HP\.gradle\caches\8.13\transforms\7311d7bee15fac5ece268725a3198446\transformed\biometric-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.appcompat:appcompat-resources:1.7.1] C:\Users\HP\.gradle\caches\8.13\transforms\246269f570f4dddca5c1bf0ca0da226e\transformed\appcompat-resources-1.7.1\AndroidManifest.xml:5:5-44
 MERGED from [androidx.appcompat:appcompat-resources:1.7.1] C:\Users\HP\.gradle\caches\8.13\transforms\246269f570f4dddca5c1bf0ca0da226e\transformed\appcompat-resources-1.7.1\AndroidManifest.xml:5:5-44
 MERGED from [androidx.appcompat:appcompat:1.7.1] C:\Users\HP\.gradle\caches\8.13\transforms\f42de817a6d78a353d192a79f4b76254\transformed\appcompat-1.7.1\AndroidManifest.xml:5:5-44
@@ -559,6 +563,8 @@ MERGED from [androidx.datastore:datastore-preferences-android:1.1.1] C:\Users\HP
 MERGED from [androidx.datastore:datastore-preferences-android:1.1.1] C:\Users\HP\.gradle\caches\8.13\transforms\e68b7dd8ea72ae79456801d881bf7a98\transformed\datastore-preferences-release\AndroidManifest.xml:20:5-44
 MERGED from [androidx.core:core-viewtree:1.0.0] C:\Users\HP\.gradle\caches\8.13\transforms\bd1cf6df9c8cdcda90d55bc63e04fca6\transformed\core-viewtree-1.0.0\AndroidManifest.xml:5:5-44
 MERGED from [androidx.core:core-viewtree:1.0.0] C:\Users\HP\.gradle\caches\8.13\transforms\bd1cf6df9c8cdcda90d55bc63e04fca6\transformed\core-viewtree-1.0.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.security:security-crypto:1.1.0-alpha06] C:\Users\HP\.gradle\caches\8.13\transforms\b83a8065455b045c82d8f7280c89ea6d\transformed\security-crypto-1.1.0-alpha06\AndroidManifest.xml:20:5-44
+MERGED from [androidx.security:security-crypto:1.1.0-alpha06] C:\Users\HP\.gradle\caches\8.13\transforms\b83a8065455b045c82d8f7280c89ea6d\transformed\security-crypto-1.1.0-alpha06\AndroidManifest.xml:20:5-44
 MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\HP\.gradle\caches\8.13\transforms\353752ed2825fdd2b88c861dd249dde2\transformed\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\HP\.gradle\caches\8.13\transforms\353752ed2825fdd2b88c861dd249dde2\transformed\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\HP\.gradle\caches\8.13\transforms\a40afa240d3c2c268cace8d103541f53\transformed\cardview-1.0.0\AndroidManifest.xml:20:5-44
@@ -587,6 +593,14 @@ MERGED from [de.hdodenhof:circleimageview:3.1.0] C:\Users\HP\.gradle\caches\8.13
 		INJECTED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml
 	android:minSdkVersion
 		INJECTED from C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\AndroidManifest.xml
+uses-permission#android.permission.USE_BIOMETRIC
+ADDED from [androidx.biometric:biometric:1.1.0] C:\Users\HP\.gradle\caches\8.13\transforms\7311d7bee15fac5ece268725a3198446\transformed\biometric-1.1.0\AndroidManifest.xml:24:5-72
+	android:name
+		ADDED from [androidx.biometric:biometric:1.1.0] C:\Users\HP\.gradle\caches\8.13\transforms\7311d7bee15fac5ece268725a3198446\transformed\biometric-1.1.0\AndroidManifest.xml:24:22-69
+uses-permission#android.permission.USE_FINGERPRINT
+ADDED from [androidx.biometric:biometric:1.1.0] C:\Users\HP\.gradle\caches\8.13\transforms\7311d7bee15fac5ece268725a3198446\transformed\biometric-1.1.0\AndroidManifest.xml:27:5-74
+	android:name
+		ADDED from [androidx.biometric:biometric:1.1.0] C:\Users\HP\.gradle\caches\8.13\transforms\7311d7bee15fac5ece268725a3198446\transformed\biometric-1.1.0\AndroidManifest.xml:27:22-71
 uses-permission#android.permission.ACCESS_NETWORK_STATE
 ADDED from [com.google.android.gms:play-services-maps:18.2.0] C:\Users\HP\.gradle\caches\8.13\transforms\914466cfe1cd7d585d03dd58fd0694db\transformed\play-services-maps-18.2.0\AndroidManifest.xml:23:5-79
 	android:name

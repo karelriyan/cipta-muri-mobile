@@ -9,4 +9,11 @@
     3. Petugas akan memberitahukan PIN anda\n
     4. Anda juga dapat merubah PIN sesuka anda dengan meminta perubahan PIN pada petugas
     </string>
+    <string name="login_autofill_button">Isi otomatis</string>
+    <string name="login_autofill_prompt_title">Isi otomatis data login</string>
+    <string name="login_autofill_prompt_subtitle">Masukkan kunci layar Anda untuk mengisi NIK dan tanggal lahir.</string>
+    <string name="login_autofill_keyguard_description">Gunakan kunci layar bawaan (PIN, pola, atau sandi) untuk mengisi otomatis data login Anda.</string>
+    <string name="login_autofill_success">Data login terisi otomatis.</string>
+    <string name="login_autofill_cancelled">Autentikasi dibatalkan.</string>
+    <string name="login_autofill_no_data">Belum ada data login yang disimpan.</string>
 </resources>

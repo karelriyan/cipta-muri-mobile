@@ -4,7 +4,7 @@
     2. Datangi Petugas Bank Sampah dengan membawa KK (Kartu Keluarga)\n
     3. Petugas akan memberitahukan PIN anda\n
     4. Anda juga dapat merubah PIN sesuka anda dengan meminta perubahan PIN pada petugas
-    </string></file><file path="C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\res\values\styles.xml" qualifiers=""><style name="rounded_corners_16">
+    </string><string name="login_autofill_success">Data login terisi otomatis.</string><string name="login_autofill_button">Isi otomatis</string><string name="login_autofill_keyguard_description">Gunakan kunci layar bawaan (PIN, pola, atau sandi) untuk mengisi otomatis data login Anda.</string><string name="login_autofill_prompt_title">Isi otomatis data login</string><string name="login_autofill_cancelled">Autentikasi dibatalkan.</string><string name="login_autofill_prompt_subtitle">Masukkan kunci layar Anda untuk mengisi NIK dan tanggal lahir.</string><string name="login_autofill_no_data">Belum ada data login yang disimpan.</string></file><file path="C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\res\values\styles.xml" qualifiers=""><style name="rounded_corners_16">
         <item name="cornerFamily">rounded</item>
         <item name="cornerSize">16dp</item>
     </style></file><file path="C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\src\main\res\values\themes.xml" qualifiers=""><style name="Theme.Ciptamurimobile" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
