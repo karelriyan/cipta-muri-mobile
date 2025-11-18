@@ -1,0 +1,7 @@
+com.main.cipta_muri_mobile.test.app-tracing-1.2.0-0 C:\Users\HP\.gradle\caches\8.13\transforms\71b858dfd9c8168446fc85fc30c29e99\transformed\tracing-1.2.0\res
+com.main.cipta_muri_mobile.test.app-core-1.7.0-1 C:\Users\HP\.gradle\caches\8.13\transforms\84709b23976c80f36d78e308c3d17901\transformed\core-1.7.0\res
+com.main.cipta_muri_mobile.test.app-androidTest-2 C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\build\generated\res\resValues\androidTest\debug
+com.main.cipta_muri_mobile.test.app-updated_navigation_xml-3 C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\build\generated\updated_navigation_xml\debugAndroidTest
+com.main.cipta_muri_mobile.test.app-mergeDebugAndroidTestResources-4 C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\merged.dir
+com.main.cipta_muri_mobile.test.app-mergeDebugAndroidTestResources-5 C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\stripped.dir
+com.main.cipta_muri_mobile.test.app-debugAndroidTest-6 C:\Users\HP\AndroidStudioProjects\cipta-muri-mobile\app\build\intermediates\merged_res\debugAndroidTest\mergeDebugAndroidTestResources

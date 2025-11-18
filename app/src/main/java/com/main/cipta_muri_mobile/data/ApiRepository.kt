@@ -71,6 +71,18 @@ class ApiRepository(private val ctx: Context) {
     suspend fun createTarikSaldo(amount: Int, desc: String?) =
         runCatching { api.tarikSaldo(TarikSaldoRequest(amount, desc)).data }
 
+    suspend fun getRiwayatSetoran() = runCatching {
+        val res = api.setorSampah()
+        if (!res.success) error(res.message ?: "Gagal memuat riwayat setoran")
+        res.data.orEmpty()
+    }
+
+    suspend fun getRiwayatTarikSaldo() = runCatching {
+        val res = api.listTarikSaldo()
+        if (!res.success) error(res.message ?: "Gagal memuat riwayat penarikan")
+        res.data.orEmpty()
+    }
+
     private fun String.toBigDecimalOrNull(): BigDecimal? = try {
         BigDecimal(this.replace(",", "").trim())
     } catch (_: Exception) { null }

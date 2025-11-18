@@ -209,7 +209,7 @@ class MainActivity : AppCompatActivity() {
             newsAdapter.submitList(state.items)
         }
 
-        viewModel.fetchLatestNews(limit = 5)
+        viewModel.fetchLatestNews(limit = 3)
     }
 
     // ✅ Fungsi untuk navigasi dengan efek fade

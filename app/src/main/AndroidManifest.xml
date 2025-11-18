@@ -135,6 +135,11 @@
             android:label="@string/app_name"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.Ciptamuri.NoPurple" />
+        <activity android:name=".ui.registrasi.RegistrasiActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Ciptamuri.NoPurple" />
         <activity android:name=".ui.news.NewsActivity"
             android:exported="true"
             android:label="@string/app_name"

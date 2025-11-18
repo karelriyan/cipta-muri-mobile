@@ -12,6 +12,7 @@ import com.main.cipta_muri_mobile.ui.main.MainActivity
 import com.main.cipta_muri_mobile.data.User
 // Import SessionManager for the initial check (recommended)
 import com.main.cipta_muri_mobile.data.SessionManager
+import com.main.cipta_muri_mobile.ui.registrasi.RegistrasiActivity
 import kotlinx.coroutines.launch
 
 class LoginActivity : AppCompatActivity() {
@@ -92,8 +93,7 @@ class LoginActivity : AppCompatActivity() {
         }
 
         binding.tvLupaPin.setOnClickListener {
-            val intent = Intent(this, LupaPinActivity::class.java)
-            startActivity(intent)
+            startActivity(Intent(this, RegistrasiActivity::class.java))
         }
     }
 

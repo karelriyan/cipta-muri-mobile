@@ -1,12 +1,19 @@
 package com.main.cipta_muri_mobile.ui.setor.riwayat
 
+import android.app.Application
+import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.main.cipta_muri_mobile.data.ApiRepository
+import com.main.cipta_muri_mobile.data.SetoranSampahResponse
+import com.main.cipta_muri_mobile.util.Formatters
 import kotlinx.coroutines.launch
+import java.math.RoundingMode
 
-class RiwayatSetoranViewModel : ViewModel() {
+class RiwayatSetoranViewModel(application: Application) : AndroidViewModel(application) {
+
+    private val repository = ApiRepository(application.applicationContext)
 
     private val _riwayatList = MutableLiveData<List<RiwayatSetoran>>()
     val riwayatList: LiveData<List<RiwayatSetoran>> = _riwayatList
@@ -17,44 +24,61 @@ class RiwayatSetoranViewModel : ViewModel() {
     private val _errorMessage = MutableLiveData<String>()
     val errorMessage: LiveData<String> = _errorMessage
 
-    // 🚀 Versi dummy: tidak perlu panggil API sama sekali
-    fun loadRiwayatSetoran(userId: String) {
-        _isLoading.value = true
-        _errorMessage.value = ""
+    fun loadRiwayatSetoran(userId: String? = null) {
+        _isLoading.postValue(true)
+        _errorMessage.postValue("")
 
         viewModelScope.launch {
-            try {
-                // 📦 langsung isi dengan dummy data
-                _riwayatList.value = getDummyData()
-            } catch (e: Exception) {
-                _errorMessage.value = "Kesalahan: ${e.localizedMessage}"
-            } finally {
-                _isLoading.value = false
-            }
+            repository.getRiwayatSetoran()
+                .onSuccess { items ->
+                    val mapped = items.map { it.toUiModel() }
+                    _riwayatList.postValue(mapped)
+                }
+                .onFailure { throwable ->
+                    _riwayatList.postValue(emptyList())
+                    _errorMessage.postValue(throwable.message ?: "Gagal memuat riwayat setoran")
+                }
+
+            _isLoading.postValue(false)
         }
     }
 
-    // ✅ Dummy data
-    private fun getDummyData(): List<RiwayatSetoran> {
-        return listOf(
-            RiwayatSetoran(
-                tanggal = "05 Februari 2025",
-                jenisSetoran = "Setor Plastik",
-                beratFormatted = "15 kg",
-                totalSaldoFormatted = "Rp 12.000"
-            ),
-            RiwayatSetoran(
-                tanggal = "15 Maret 2025",
-                jenisSetoran = "Setor Kardus",
-                beratFormatted = "8 kg",
-                totalSaldoFormatted = "Rp 8.000"
-            ),
-            RiwayatSetoran(
-                tanggal = "30 April 2025",
-                jenisSetoran = "Setor Logam",
-                beratFormatted = "5 kg",
-                totalSaldoFormatted = "Rp 20.000"
-            )
+    private fun SetoranSampahResponse.toUiModel(): RiwayatSetoran {
+        val detailItem = detail?.firstOrNull()
+        val jenis = detailItem?.namaSampah
+            ?: detailItem?.kategori
+            ?: jenisSetoran
+            ?: "Setoran Sampah"
+
+        val beratRaw = totalBerat ?: detailItem?.jumlahKg
+        val beratFormatted = formatKg(beratRaw)
+
+        val nominalRaw = totalHarga ?: detailItem?.hargaTotal
+        val nominalFormatted = if (!nominalRaw.isNullOrBlank()) {
+            Formatters.formatRupiah(nominalRaw)
+        } else {
+            "Rp 0"
+        }
+
+        val tanggalFormatted = Formatters.formatTanggalIndo(tanggal).ifBlank { tanggal ?: "" }
+
+        return RiwayatSetoran(
+            tanggal = tanggalFormatted,
+            jenisSetoran = jenis,
+            beratFormatted = beratFormatted,
+            totalSaldoFormatted = nominalFormatted
         )
+    }
+
+    private fun formatKg(raw: String?): String {
+        if (raw.isNullOrBlank()) return "0 Kg"
+        val normalized = raw.replace(",", ".").trim()
+        val value = normalized.toBigDecimalOrNull()
+        return if (value != null) {
+            val stripped = value.setScale(2, RoundingMode.HALF_UP).stripTrailingZeros()
+            "${stripped.toPlainString()} Kg"
+        } else {
+            "$raw Kg"
+        }
     }
 }

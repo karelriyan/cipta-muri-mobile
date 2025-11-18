@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.card.MaterialCardView
 import com.main.cipta_muri_mobile.R
 
-class RiwayatPenarikanAdapter(private val items: List<RiwayatPenarikanItem>) :
+class RiwayatPenarikanAdapter(private var items: List<RiwayatPenarikanItem>) :
     RecyclerView.Adapter<RiwayatPenarikanAdapter.ViewHolder>() {
 
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
@@ -35,4 +35,9 @@ class RiwayatPenarikanAdapter(private val items: List<RiwayatPenarikanItem>) :
     }
 
     override fun getItemCount() = items.size
+
+    fun updateData(newItems: List<RiwayatPenarikanItem>) {
+        items = newItems
+        notifyDataSetChanged()
+    }
 }

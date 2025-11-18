@@ -4005,6 +4005,7 @@ int id btnMasuk 0x7f08007f
 int id btnMei 0x7f080080
 int id btnNovember 0x7f080081
 int id btnOktober 0x7f080082
+int id btnRetry 0x7f0802cd
 int id btnRiwayatPenyetoran 0x7f080083
 int id btnSearch 0x7f080084
 int id btnSeptember 0x7f080085
@@ -4186,6 +4187,7 @@ int id labeled 0x7f080134
 int id layout 0x7f080135
 int id layoutDariTanggal 0x7f080136
 int id layoutDatePicker 0x7f080137
+int id layoutError 0x7f0802ce
 int id layoutSampaiTanggal 0x7f080138
 int id layoutTransaksi 0x7f080139
 int id left 0x7f08013a
@@ -4491,6 +4493,7 @@ int id tvBesiTanggal 0x7f080265
 int id tvDariTanggal 0x7f080266
 int id tvDateTime 0x7f080267
 int id tvDiskon 0x7f080268
+int id tvErrorMessage 0x7f0802cf
 int id tvFirstName 0x7f080269
 int id tvFirstPoints 0x7f08026a
 int id tvFormatTanggal 0x7f08026b
@@ -4579,6 +4582,7 @@ int id view_tree_saved_state_registry_owner 0x7f0802bd
 int id view_tree_view_model_store_owner 0x7f0802be
 int id visible 0x7f0802bf
 int id visible_removing_fragment_view_tag 0x7f0802c0
+int id webRegistrasi 0x7f0802d0
 int id webViewMap 0x7f0802c1
 int id webViewMapLokasi 0x7f0802c2
 int id west 0x7f0802c3
@@ -4724,6 +4728,7 @@ int layout activity_news 0x7f0b0026
 int layout activity_penarikan_berhasil 0x7f0b0027
 int layout activity_petunjuk_penarikan 0x7f0b0028
 int layout activity_profile 0x7f0b0029
+int layout activity_registrasi 0x7f0b008f
 int layout activity_rincian_setoran 0x7f0b002a
 int layout activity_riwayat_aktivitas 0x7f0b002b
 int layout activity_riwayat_penarikan 0x7f0b002c

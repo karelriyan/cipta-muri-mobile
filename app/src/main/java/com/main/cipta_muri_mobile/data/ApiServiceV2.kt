@@ -23,13 +23,13 @@ interface ApiServiceV2 {
     suspend fun saldoTransactions(@Query("type") type: String? = null): ApiResponse<List<SaldoTransaction>>
 
     @GET("setor-sampah")
-    suspend fun setorSampah(): ApiResponse<List<Any>>
+    suspend fun setorSampah(): ApiResponse<List<SetoranSampahResponse>>
 
     @POST("tarik-saldo")
     suspend fun tarikSaldo(@Body body: TarikSaldoRequest): ApiResponse<Any>
 
     @GET("tarik-saldo")
-    suspend fun listTarikSaldo(): ApiResponse<List<Any>>
+    suspend fun listTarikSaldo(): ApiResponse<List<TarikSaldoResponse>>
 
     @GET("berita")
     suspend fun berita(
@@ -46,4 +46,3 @@ interface ApiServiceV2 {
     @GET("sampah/{id}")
     suspend fun sampahDetail(@Path("id") id: String): ApiResponse<Any>
 }
-
