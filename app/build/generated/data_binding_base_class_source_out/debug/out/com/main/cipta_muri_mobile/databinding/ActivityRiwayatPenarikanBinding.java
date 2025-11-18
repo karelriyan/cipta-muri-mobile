@@ -63,9 +63,6 @@ public final class ActivityRiwayatPenarikanBinding implements ViewBinding {
   public final MaterialButton btnOktober;
 
   @NonNull
-  public final ImageView btnSearch;
-
-  @NonNull
   public final MaterialButton btnSeptember;
 
   @NonNull
@@ -84,9 +81,9 @@ public final class ActivityRiwayatPenarikanBinding implements ViewBinding {
       @NonNull MaterialButton btnJanuari, @NonNull MaterialButton btnJuli,
       @NonNull MaterialButton btnJuni, @NonNull MaterialButton btnMaret,
       @NonNull MaterialButton btnMei, @NonNull MaterialButton btnNovember,
-      @NonNull MaterialButton btnOktober, @NonNull ImageView btnSearch,
-      @NonNull MaterialButton btnSeptember, @NonNull ProgressBar progressBar,
-      @NonNull RecyclerView rvTukarPoin, @NonNull TextView tvKosong) {
+      @NonNull MaterialButton btnOktober, @NonNull MaterialButton btnSeptember,
+      @NonNull ProgressBar progressBar, @NonNull RecyclerView rvTukarPoin,
+      @NonNull TextView tvKosong) {
     this.rootView = rootView;
     this.btnAgustus = btnAgustus;
     this.btnApril = btnApril;
@@ -101,7 +98,6 @@ public final class ActivityRiwayatPenarikanBinding implements ViewBinding {
     this.btnMei = btnMei;
     this.btnNovember = btnNovember;
     this.btnOktober = btnOktober;
-    this.btnSearch = btnSearch;
     this.btnSeptember = btnSeptember;
     this.progressBar = progressBar;
     this.rvTukarPoin = rvTukarPoin;
@@ -213,12 +209,6 @@ public final class ActivityRiwayatPenarikanBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.btnSearch;
-      ImageView btnSearch = ViewBindings.findChildViewById(rootView, id);
-      if (btnSearch == null) {
-        break missingId;
-      }
-
       id = R.id.btnSeptember;
       MaterialButton btnSeptember = ViewBindings.findChildViewById(rootView, id);
       if (btnSeptember == null) {
@@ -245,8 +235,7 @@ public final class ActivityRiwayatPenarikanBinding implements ViewBinding {
 
       return new ActivityRiwayatPenarikanBinding((FrameLayout) rootView, btnAgustus, btnApril,
           btnBack, btnDesember, btnFebruari, btnFilter, btnJanuari, btnJuli, btnJuni, btnMaret,
-          btnMei, btnNovember, btnOktober, btnSearch, btnSeptember, progressBar, rvTukarPoin,
-          tvKosong);
+          btnMei, btnNovember, btnOktober, btnSeptember, progressBar, rvTukarPoin, tvKosong);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

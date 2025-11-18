@@ -275,6 +275,7 @@
                                 android:layout_height="wrap_content"
                                 android:textColor="@android:color/black"
                                 android:textStyle="bold"
+                                android:textAlignment="center"
                                 android:text="-"/>
 
                             <TextView
@@ -284,6 +285,7 @@
                                 android:textColor="@android:color/black"
                                 android:textSize="18sp"
                                 android:textStyle="bold"
+                                android:textAlignment="center"
                                 android:text="-" />
                         </LinearLayout>
 
@@ -363,6 +365,7 @@
                                     android:textColor="@android:color/black"
                                     android:textSize="20sp"
                                     android:textStyle="bold"
+                                    android:textAlignment="center"
                                     android:text="-" />
                             </LinearLayout>
 
@@ -430,6 +433,7 @@
                                 android:textColor="@android:color/black"
                                 android:textSize="18sp"
                                 android:textStyle="bold"
+                                android:textAlignment="center"
                                 android:text="-" />
                         </LinearLayout>
 

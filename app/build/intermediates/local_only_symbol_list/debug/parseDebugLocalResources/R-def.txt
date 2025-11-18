@@ -139,7 +139,6 @@ id btnNovember
 id btnOktober
 id btnRetry
 id btnRiwayatPenyetoran
-id btnSearch
 id btnSeptember
 id btnSimpan
 id btnTampilkan
@@ -243,7 +242,6 @@ id tvLihatPetunjuk
 id tvLupaPin
 id tvMutation
 id tvNamaBank
-id tvNewsExcerpt
 id tvNewsMessage
 id tvNewsSubtitle
 id tvNewsTitle

@@ -4017,7 +4017,6 @@ int id btnNovember 0x7f090082
 int id btnOktober 0x7f090083
 int id btnRetry 0x7f090084
 int id btnRiwayatPenyetoran 0x7f090085
-int id btnSearch 0x7f090086
 int id btnSeptember 0x7f090087
 int id btnSimpan 0x7f090088
 int id btnTampilkan 0x7f090089
@@ -4533,7 +4532,6 @@ int id tvLihatPetunjuk 0x7f090286
 int id tvLupaPin 0x7f090287
 int id tvMutation 0x7f090288
 int id tvNamaBank 0x7f090289
-int id tvNewsExcerpt 0x7f09028a
 int id tvNewsMessage 0x7f09028b
 int id tvNewsSubtitle 0x7f09028c
 int id tvNewsTitle 0x7f09028d

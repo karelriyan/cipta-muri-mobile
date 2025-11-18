@@ -36,10 +36,6 @@ class NewsAdapter(
             }
             binding.tvNewsSubtitle.text = subtitle.ifBlank { "Tanggal tidak tersedia" }
 
-            val excerpt = item.excerpt?.trim().orEmpty()
-            binding.tvNewsExcerpt.isVisible = excerpt.isNotEmpty()
-            binding.tvNewsExcerpt.text = excerpt
-
             val placeholder = R.drawable.loading_bg
             val imageUrl = resolveImageUrl(item.thumbnailUrl)
             if (imageUrl.isNullOrBlank()) {

@@ -64,9 +64,6 @@ public final class ActivityRiwayatSetoranBinding implements ViewBinding {
   public final MaterialButton btnOktober;
 
   @NonNull
-  public final ImageView btnSearch;
-
-  @NonNull
   public final MaterialButton btnSeptember;
 
   @NonNull
@@ -88,10 +85,9 @@ public final class ActivityRiwayatSetoranBinding implements ViewBinding {
       @NonNull MaterialButton btnJanuari, @NonNull MaterialButton btnJuli,
       @NonNull MaterialButton btnJuni, @NonNull MaterialButton btnMaret,
       @NonNull MaterialButton btnMei, @NonNull MaterialButton btnNovember,
-      @NonNull MaterialButton btnOktober, @NonNull ImageView btnSearch,
-      @NonNull MaterialButton btnSeptember, @NonNull NestedScrollView nestedScroll,
-      @NonNull ProgressBar progressBar, @NonNull RecyclerView rvRiwayatSetoran,
-      @NonNull TextView tvKosong) {
+      @NonNull MaterialButton btnOktober, @NonNull MaterialButton btnSeptember,
+      @NonNull NestedScrollView nestedScroll, @NonNull ProgressBar progressBar,
+      @NonNull RecyclerView rvRiwayatSetoran, @NonNull TextView tvKosong) {
     this.rootView = rootView;
     this.btnAgustus = btnAgustus;
     this.btnApril = btnApril;
@@ -106,7 +102,6 @@ public final class ActivityRiwayatSetoranBinding implements ViewBinding {
     this.btnMei = btnMei;
     this.btnNovember = btnNovember;
     this.btnOktober = btnOktober;
-    this.btnSearch = btnSearch;
     this.btnSeptember = btnSeptember;
     this.nestedScroll = nestedScroll;
     this.progressBar = progressBar;
@@ -219,12 +214,6 @@ public final class ActivityRiwayatSetoranBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.btnSearch;
-      ImageView btnSearch = ViewBindings.findChildViewById(rootView, id);
-      if (btnSearch == null) {
-        break missingId;
-      }
-
       id = R.id.btnSeptember;
       MaterialButton btnSeptember = ViewBindings.findChildViewById(rootView, id);
       if (btnSeptember == null) {
@@ -257,7 +246,7 @@ public final class ActivityRiwayatSetoranBinding implements ViewBinding {
 
       return new ActivityRiwayatSetoranBinding((FrameLayout) rootView, btnAgustus, btnApril,
           btnBack, btnDesember, btnFebruari, btnFilter, btnJanuari, btnJuli, btnJuni, btnMaret,
-          btnMei, btnNovember, btnOktober, btnSearch, btnSeptember, nestedScroll, progressBar,
+          btnMei, btnNovember, btnOktober, btnSeptember, nestedScroll, progressBar,
           rvRiwayatSetoran, tvKosong);
     }
     String missingId = rootView.getResources().getResourceName(id);

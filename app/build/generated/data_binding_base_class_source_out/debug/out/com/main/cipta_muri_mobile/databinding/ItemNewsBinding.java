@@ -24,20 +24,15 @@ public final class ItemNewsBinding implements ViewBinding {
   public final ImageView ivNewsImage;
 
   @NonNull
-  public final TextView tvNewsExcerpt;
-
-  @NonNull
   public final TextView tvNewsSubtitle;
 
   @NonNull
   public final TextView tvNewsTitle;
 
   private ItemNewsBinding(@NonNull CardView rootView, @NonNull ImageView ivNewsImage,
-      @NonNull TextView tvNewsExcerpt, @NonNull TextView tvNewsSubtitle,
-      @NonNull TextView tvNewsTitle) {
+      @NonNull TextView tvNewsSubtitle, @NonNull TextView tvNewsTitle) {
     this.rootView = rootView;
     this.ivNewsImage = ivNewsImage;
-    this.tvNewsExcerpt = tvNewsExcerpt;
     this.tvNewsSubtitle = tvNewsSubtitle;
     this.tvNewsTitle = tvNewsTitle;
   }
@@ -75,12 +70,6 @@ public final class ItemNewsBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.tvNewsExcerpt;
-      TextView tvNewsExcerpt = ViewBindings.findChildViewById(rootView, id);
-      if (tvNewsExcerpt == null) {
-        break missingId;
-      }
-
       id = R.id.tvNewsSubtitle;
       TextView tvNewsSubtitle = ViewBindings.findChildViewById(rootView, id);
       if (tvNewsSubtitle == null) {
@@ -93,8 +82,7 @@ public final class ItemNewsBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ItemNewsBinding((CardView) rootView, ivNewsImage, tvNewsExcerpt, tvNewsSubtitle,
-          tvNewsTitle);
+      return new ItemNewsBinding((CardView) rootView, ivNewsImage, tvNewsSubtitle, tvNewsTitle);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

@@ -141,15 +141,7 @@
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="Terakhir Disetor : 2 Kg"
-                                    android:textColor="@android:color/white"
-                                    android:textSize="16sp"
-                                    android:layout_marginTop="12dp" />
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="Total Setoran : 50 Kg"
+                                    android:text="Total Pernah disetor: 50 Kg"
                                     android:textColor="@android:color/white"
                                     android:textSize="16sp" />
                             </LinearLayout>

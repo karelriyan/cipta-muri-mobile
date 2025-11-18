@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginTop="12dp"
@@ -19,6 +20,7 @@
             android:layout_width="match_parent"
             android:layout_height="160dp"
             android:scaleType="centerCrop"
+            tools:background="@drawable/loading_bg"
             android:contentDescription="Gambar Berita" />
 
         <TextView
@@ -31,7 +33,7 @@
             android:textStyle="bold"
             android:textSize="16sp"
             android:textColor="@color/black"
-            android:text="Judul Berita" />
+            tools:text="Judul Berita" />
 
         <TextView
             android:id="@+id/tvNewsSubtitle"
@@ -39,22 +41,12 @@
             android:layout_height="wrap_content"
             android:paddingStart="16dp"
             android:paddingEnd="16dp"
-            android:paddingTop="4dp"
-            android:text="Dipublikasikan"
+            android:paddingTop="10dp"
+            android:layout_marginBottom="10dp"
+            tools:text="10 Agustus 2025"
             android:textColor="@color/black"
             android:textSize="12sp" />
 
-        <TextView
-            android:id="@+id/tvNewsExcerpt"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingStart="16dp"
-            android:paddingEnd="16dp"
-            android:paddingTop="4dp"
-            android:paddingBottom="16dp"
-            android:textColor="@color/black"
-            android:textSize="14sp"
-            android:text="Ringkasan singkat berita" />
     </LinearLayout>
 
 </androidx.cardview.widget.CardView>
