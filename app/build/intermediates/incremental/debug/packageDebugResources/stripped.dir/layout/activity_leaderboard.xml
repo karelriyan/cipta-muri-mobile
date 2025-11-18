@@ -1,0 +1,474 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_leaderboard"
+    tools:context=".ui.leaderboard.LeaderboardActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- Header Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:paddingTop="70dp">
+
+            <!-- Tombol Kembali -->
+            <ImageView
+                android:id="@+id/btnBack"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_back"
+                app:tint="@android:color/white"
+                android:contentDescription="Kembali" />
+
+            <!-- Judul di tengah -->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Leaderboard"
+                android:textColor="@android:color/white"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginStart="16dp" />
+
+            <!-- Placeholder untuk menjaga keseimbangan layout -->
+            <View
+                android:layout_width="24dp"
+                android:layout_height="24dp" />
+
+        </LinearLayout>
+
+        <!-- Tabs custom: klik dan sinkron swipe -->
+        <LinearLayout
+            android:id="@+id/tabContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:paddingTop="12dp"
+            android:paddingBottom="8dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp">
+
+            <FrameLayout
+                android:id="@+id/tabLeft"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:foregroundGravity="center"
+                android:clickable="true"
+                android:focusable="true">
+
+                <ImageView
+                    android:id="@+id/imgTabLeftBg"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/tab_kiri"
+                    android:scaleType="fitXY"
+                    android:alpha="1.0" />
+
+                <TextView
+                    android:id="@+id/txtTabLeft"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="Paling Banyak"
+                    android:textStyle="bold"
+                    android:textColor="@color/black" />
+
+            </FrameLayout>
+
+            <Space
+                android:layout_width="8dp"
+                android:layout_height="1dp" />
+
+            <FrameLayout
+                android:id="@+id/tabRight"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:foregroundGravity="center"
+                android:clickable="true"
+                android:focusable="true">
+
+                <ImageView
+                    android:id="@+id/imgTabRightBg"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/tab_kanan"
+                    android:scaleType="fitXY"
+                    android:alpha="0.4" />
+
+                <TextView
+                    android:id="@+id/txtTabRight"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="Paling Rajin Setor"
+                    android:textStyle="bold"
+                    android:textColor="@color/black" />
+
+            </FrameLayout>
+        </LinearLayout>
+
+        <!-- Filter 3 Bulan Terakhir atau Sepanjang Waktu -->
+        <LinearLayout
+            android:id="@+id/filterContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp">
+
+            <FrameLayout
+                android:id="@+id/filter3Bulan"
+                android:layout_width="0dp"
+                android:layout_height="25dp"
+                android:layout_weight="1"
+                android:foregroundGravity="center"
+                android:clickable="true"
+                android:focusable="true">
+
+                <ImageView
+                    android:id="@+id/imgFilter3bulan"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/filter_leaderboard"
+                    android:scaleType="fitXY"
+                    android:alpha="1.0" />
+
+                <TextView
+                    android:id="@+id/txtFilter3bulan"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="3 Bulan Terakhir"
+                    android:textStyle="bold"
+                    android:textColor="@color/black" />
+
+            </FrameLayout>
+
+            <Space
+                android:layout_width="8dp"
+                android:layout_height="1dp" />
+
+            <FrameLayout
+                android:id="@+id/filterSepanjangmasa"
+                android:layout_width="0dp"
+                android:layout_height="25dp"
+                android:layout_weight="1"
+                android:foregroundGravity="center"
+                android:clickable="true"
+                android:focusable="true">
+
+                <ImageView
+                    android:id="@+id/imgFiltersepanjangmasa"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/filter_leaderboard"
+                    android:scaleType="fitXY"
+                    android:alpha="0.4" />
+
+                <TextView
+                    android:id="@+id/txtFiltersepanjangmasa"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="Sepanjang Masa"
+                    android:textStyle="bold"
+                    android:textColor="@color/black" />
+
+            </FrameLayout>
+        </LinearLayout>
+
+        <!-- Konten di bawah tab: Podium + Daftar -->
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/scrollContent"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:fillViewport="false"
+            android:clipToPadding="false"
+            android:paddingBottom="0dp"
+            android:overScrollMode="never">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- Podium Section (disalin dari leaderboard_lama.xml) -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="bottom|center_horizontal"
+                    android:paddingTop="12dp"
+                    android:paddingBottom="32dp"
+                    android:layout_marginTop="-5dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp">
+
+                    <!-- Podium Peringkat 2 (Kiri) -->
+                    <LinearLayout
+                        android:id="@+id/podium_2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="0dp"
+                        android:layout_marginEnd="-2dp">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            app:civ_border_color="#FFFFFF"
+                            app:civ_border_width="2dp"
+                            android:elevation="9dp"
+                            android:layout_marginEnd="-10dp"
+                            android:src="@drawable/avatar" />
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_marginTop="-25dp"
+                            android:contentDescription="Juara 2 Badge"
+                            android:elevation="10dp"
+                            android:layout_marginEnd="-10dp"
+                            android:src="@drawable/ic_2" />
+
+                        <!-- Podium block -->
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:gravity="center"
+                            android:background="@drawable/bg_podium_side_left"
+                            android:paddingStart="12dp"
+                            android:paddingEnd="12dp"
+                            android:paddingTop="0dp"
+                            android:paddingBottom="0dp"
+                            android:layout_marginEnd="-10dp"
+                            android:layout_marginTop="-40dp">
+
+                            <TextView
+                                android:id="@+id/tvSecondName"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@android:color/black"
+                                android:textStyle="bold"
+                                android:text="-"/>
+
+                            <TextView
+                                android:id="@+id/tvSecondPoints"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@android:color/black"
+                                android:textSize="18sp"
+                                android:textStyle="bold"
+                                android:text="-" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <!-- Podium Peringkat 1 (Tengah) -->
+                    <LinearLayout
+                        android:id="@+id/podium_1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.1"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:paddingTop="12dp"
+                        android:paddingBottom="8dp"
+                        android:elevation="2dp"
+                        android:layout_marginBottom="-15dp"
+                        android:layout_marginStart="-2dp"
+                        android:layout_marginEnd="-2dp">
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_marginBottom="-10dp"
+                            android:contentDescription="Juara 1"
+                            android:elevation="10dp"
+                            android:src="@drawable/ic_crown" />
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:src="@drawable/avatar"
+                            app:civ_border_color="#FFD700"
+                            app:civ_border_width="3dp"
+                            android:elevation="10dp" />
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_marginTop="-25dp"
+                            android:contentDescription="Juara 1 Badge"
+                            android:elevation="10dp"
+                            android:src="@drawable/ic_1" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:layout_marginTop="-60dp"
+                            android:layout_marginBottom="3dp"
+                            android:layout_marginStart="-15dp"
+                            android:layout_marginEnd="-15dp"
+                            android:orientation="vertical"
+                            android:background="@drawable/bg_podium_center">
+
+                            <TextView
+                                android:id="@+id/tvFirstName"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:textColor="@android:color/black"
+                                android:textStyle="bold"
+                                android:textSize="20sp"
+                                android:textAlignment="center"
+                                android:text="-" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/tvFirstPoints"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@android:color/black"
+                                    android:textSize="20sp"
+                                    android:textStyle="bold"
+                                    android:text="-" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <!-- Podium Peringkat 3 (Kanan) -->
+                    <LinearLayout
+                        android:id="@+id/podium_3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="0dp"
+                        android:layout_marginStart="-2dp">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:src="@drawable/avatar"
+                            app:civ_border_color="#FFFFFF"
+                            app:civ_border_width="2dp"
+                            android:layout_marginStart="-10dp"
+                            android:elevation="9dp" />
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_marginTop="-25dp"
+                            android:contentDescription="Juara 3 Badge"
+                            android:elevation="10dp"
+                            android:layout_marginStart="-10dp"
+                            android:src="@drawable/ic_3" />
+
+                        <!-- Podium block -->
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:gravity="center"
+                            android:background="@drawable/bg_podium_side_right"
+                            android:paddingStart="12dp"
+                            android:paddingEnd="12dp"
+                            android:paddingTop="8dp"
+                            android:paddingBottom="8dp"
+                            android:layout_marginStart="-10dp"
+                            android:layout_marginTop="-40dp">
+
+                            <TextView
+                                android:id="@+id/tvThirdName"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@android:color/black"
+                                android:textStyle="bold"
+                                android:textAlignment="center"
+                                android:text="-" />
+
+                            <TextView
+                                android:id="@+id/tvThirdPoints"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@android:color/black"
+                                android:textSize="18sp"
+                                android:textStyle="bold"
+                                android:text="-" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!-- White container untuk daftar peringkat -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@drawable/rounded_top_white_bg_shape"
+                    android:padding="16dp">
+
+                    <!-- Judul Daftar Peringkat -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Daftar Peringkat"
+                        android:paddingTop="20dp"
+                        android:textSize="20sp"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="16dp" />
+
+                    <!-- RecyclerView untuk daftar peringkat -->
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_leaderboard"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:overScrollMode="never"
+                        android:nestedScrollingEnabled="false"
+                        tools:listitem="@layout/item_leaderboard_rank"
+                        tools:itemCount="6" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

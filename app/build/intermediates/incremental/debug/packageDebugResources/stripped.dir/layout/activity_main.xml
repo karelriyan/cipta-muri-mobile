@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.main.MainActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:clipToPadding="false"
+        android:paddingBottom="80dp">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/main_bg"
+                android:scaleType="centerCrop"
+                android:adjustViewBounds="true"
+                android:contentDescription="Main Background" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:paddingTop="70dp">
+
+                    <TextView
+                        android:id="@+id/tv_profile_initial"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:gravity="center"
+                        android:text="R"
+                        android:textStyle="bold"
+                        android:textSize="20sp"
+                        android:textColor="@android:color/white"
+                        android:background="@drawable/bg_circle_avatar"
+                        android:contentDescription="Inisial Profil" />
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginStart="16dp">
+
+                        <TextView
+                            android:id="@+id/tv_greeting"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@android:color/white"
+                            android:text="Halo" />
+
+                        <TextView
+                            android:id="@+id/tv_user_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="20sp"
+                            android:textStyle="bold"
+                            android:textColor="@android:color/white"
+                            tools:text="Sudrajat" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@android:color/white"
+                            android:text="Mau setor sampah apa hari ini?" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <FrameLayout
+                    android:id="@+id/cardSaldo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginEnd="32dp"
+                    android:background="@drawable/saldo_card">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:layout_width="125dp"
+                            android:layout_height="83.33dp"
+                            android:layout_gravity="top|end"
+                            android:scaleType="centerCrop" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="16dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textStyle="bold"
+                                android:text="Saldo Rekening"
+                                android:textSize="20sp"
+                                android:textColor="@android:color/black" />
+
+                            <TextView
+                                android:id="@+id/tv_account_number"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@android:color/black"
+                                android:text="00000000" />
+
+                            <TextView
+                                android:id="@+id/tv_balance"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@android:color/black"
+                                android:textSize="25sp"
+                                android:textStyle="bold"
+                                tools:text="Rp 110.000,00" />
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="3dp">
+
+                                <TextView
+                                    android:id="@+id/tv_total_weight"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="6dp"
+                                    android:textColor="@android:color/black"
+                                    android:textSize="12sp"
+                                    android:layout_alignParentStart="true"
+                                    tools:text="Total Berat Sampah Terjual: 0Kg" />
+
+                                <TextView
+                                    android:id="@+id/tvMutation"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="6dp"
+                                    android:textColor="@android:color/darker_gray"
+                                    android:textSize="12sp"
+                                    android:layout_alignParentEnd="true"
+                                    android:text="Cek Mutasi >" />
+                            </RelativeLayout>
+                        </LinearLayout>
+                    </FrameLayout>
+                </FrameLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="12dp"
+                    android:padding="8dp">
+
+                    <GridLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:columnCount="4"
+                        android:rowCount="2">
+
+                        <LinearLayout
+                            android:id="@+id/mnSetor"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_columnWeight="1"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="4dp">
+                            <ImageView android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/ic_recycle" />
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="Setor Sampah" android:textAlignment="center" android:textSize="12sp"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/mnRiwayatSetor"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_columnWeight="1"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="4dp">
+                            <ImageView android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/ic_riwayat_setoran" />
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="Riwayat Setoran" android:textAlignment="center" android:textSize="12sp"/>
+                        </LinearLayout>
+
+<!--                        <LinearLayout-->
+<!--                            android:id="@+id/mnTarik"-->
+<!--                            android:layout_width="0dp"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_columnWeight="1"-->
+<!--                            android:gravity="center"-->
+<!--                            android:orientation="vertical"-->
+<!--                            android:padding="4dp">-->
+<!--                            <ImageView android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/ic_tarik_saldo" />-->
+<!--                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="Tarik Saldo" android:textAlignment="center" android:textSize="12sp"/>-->
+<!--                        </LinearLayout>-->
+
+                        <LinearLayout
+                            android:id="@+id/mnRiwayatPenarikan"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_columnWeight="1"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="4dp">
+                            <ImageView android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/ic_riwayat_penarikan" />
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="Riwayat Penarikan" android:textAlignment="center" android:textSize="12sp"/>
+                        </LinearLayout>
+
+                        <!--                        <LinearLayout-->
+<!--                            android:id="@+id/mnDonasi"-->
+<!--                            android:layout_width="0dp"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_columnWeight="1"-->
+<!--                            android:gravity="center"-->
+<!--                            android:orientation="vertical"-->
+<!--                            android:padding="4dp"-->
+<!--                            android:layout_marginTop="8dp">-->
+<!--                            <ImageView android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/ic_donasi" />-->
+<!--                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="Donasi Sampah" android:textAlignment="center" android:textSize="12sp"/>-->
+<!--                        </LinearLayout>-->
+
+                        <LinearLayout
+                            android:id="@+id/mnLeaderboard"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_columnWeight="1"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="4dp"
+                            android:layout_marginTop="8dp">
+                            <ImageView android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/ic_leaderboard_menu" />
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="Leaderboard" android:textAlignment="center" android:textSize="12sp"/>
+                        </LinearLayout>
+
+                    </GridLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="6dp"
+                    android:background="@drawable/rounded_top_white_bg_shape"
+                    android:padding="0dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="0dp"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/rounded_top_white_bg" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="-25dp"
+                        android:text="Berita"
+                        android:textSize="20sp"
+                        android:textColor="@color/black"
+                        android:layout_marginStart="16dp"
+                        android:textStyle="bold" />
+
+                    <include
+                        android:id="@+id/sectionNews"
+                        layout="@layout/section_news" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </FrameLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <include layout="@layout/include_bottom_nav" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_leaderboard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="80dp"
+        android:src="@drawable/ic_leaderboard"
+        app:tint="@null"
+        app:maxImageSize="70dp"
+        android:contentDescription="Leaderboard" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -3777,7 +3777,6 @@ drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
 drawable ic_news_nav_selector
 drawable ic_notifications_black_24dp
-drawable ic_plastik
 drawable ic_point_leaderboard
 drawable ic_profile_nav_selector
 drawable ic_qr_nav
@@ -3792,6 +3791,7 @@ drawable ic_visibility
 drawable ic_visibility_off
 drawable img_ilustrasi_setor
 drawable img_map_example
+drawable loading_bg
 drawable logo_ppk_muntang
 drawable logo_unsoed
 drawable m3_avd_hide_password
