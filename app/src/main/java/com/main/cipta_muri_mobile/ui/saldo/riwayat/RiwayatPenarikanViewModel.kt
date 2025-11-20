@@ -16,6 +16,8 @@ import java.util.Locale
 class RiwayatPenarikanViewModel(application: Application) : AndroidViewModel(application) {
 
     private val repository = ApiRepository(application.applicationContext)
+    private val initialLimit = 10
+    private val loadStep = 5
 
     private val _items = MutableLiveData<List<RiwayatPenarikanItem>>(emptyList())
     val items: LiveData<List<RiwayatPenarikanItem>> = _items
@@ -25,6 +27,8 @@ class RiwayatPenarikanViewModel(application: Application) : AndroidViewModel(app
 
     private val _errorMessage = MutableLiveData<String?>(null)
     val errorMessage: LiveData<String?> = _errorMessage
+    private var allItems: List<RiwayatPenarikanItem> = emptyList()
+    private var visibleCount = 0
 
     fun loadRiwayatPenarikan() {
         _isLoading.value = true
@@ -33,13 +37,16 @@ class RiwayatPenarikanViewModel(application: Application) : AndroidViewModel(app
         viewModelScope.launch {
             repository.getRiwayatTarikSaldo()
                 .onSuccess { responses ->
-                    val mapped = responses.map { it.toUiModel() }
-                    _items.postValue(mapped)
-                    if (mapped.isEmpty()) {
+                    allItems = responses.map { it.toUiModel() }
+                    visibleCount = minOf(initialLimit, allItems.size)
+                    _items.postValue(allItems.take(visibleCount))
+                    if (allItems.isEmpty()) {
                         _errorMessage.postValue("Belum ada data penarikan.")
                     }
                 }
                 .onFailure { throwable ->
+                    allItems = emptyList()
+                    visibleCount = 0
                     _items.postValue(emptyList())
                     _errorMessage.postValue(throwable.message ?: "Gagal memuat riwayat penarikan")
                 }
@@ -47,6 +54,18 @@ class RiwayatPenarikanViewModel(application: Application) : AndroidViewModel(app
             _isLoading.postValue(false)
         }
     }
+
+    fun loadMore() {
+        if (allItems.isEmpty()) return
+        val newCount = minOf(allItems.size, visibleCount + loadStep)
+        if (newCount != visibleCount) {
+            visibleCount = newCount
+            _items.postValue(allItems.take(visibleCount))
+            _errorMessage.postValue(null)
+        }
+    }
+
+    fun hasMore(): Boolean = visibleCount < allItems.size
 
     private fun TarikSaldoResponse.toUiModel(): RiwayatPenarikanItem {
         val tanggalDisplay = Formatters.formatTanggalIndo(createdAt).ifBlank { createdAt ?: "" }

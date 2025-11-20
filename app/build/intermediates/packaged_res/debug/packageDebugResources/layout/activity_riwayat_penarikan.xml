@@ -62,7 +62,8 @@
                 <!-- Content Area with White Background -->
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
                     android:orientation="vertical"
                     android:paddingTop="20dp"
                     android:background="@drawable/rounded_top_white_bg_shape">
@@ -319,6 +320,18 @@
                         android:paddingBottom="16dp"
                         android:clipToPadding="false"
                         tools:listitem="@layout/item_tukar_poin" />
+
+                    <TextView
+                        android:id="@+id/tvLoadMore"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:paddingBottom="24dp"
+                        android:paddingVertical="16dp"
+                        android:text="Tampilkan Lebih Banyak"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
 
                 </LinearLayout>
 

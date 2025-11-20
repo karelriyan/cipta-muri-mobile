@@ -156,6 +156,8 @@ id cardRentangWaktu
 id cardRoot
 id cardSaldo
 id card_saldo
+id chatComposeView
+id contentContainer
 id etNik
 id etNominalDonasi
 id etPin
@@ -196,6 +198,7 @@ id podium_3
 id progressBar
 id progressNews
 id rvAktivitas
+id rvHargaSampah
 id rvLeaderboard
 id rvMutasiSaldo
 id rvNews
@@ -221,6 +224,7 @@ id tvFirstName
 id tvFirstPoints
 id tvFormatTanggal
 id tvHarga
+id tvHargaPerKg
 id tvIdPenarikan
 id tvJarak
 id tvJelantahHariIni
@@ -238,10 +242,13 @@ id tvKertasKeseluruhan
 id tvKertasTanggal
 id tvKeterangan
 id tvKosong
+id tvLastUpdate
 id tvLihatPetunjuk
+id tvLoadMore
 id tvLupaPin
 id tvMutation
 id tvNamaBank
+id tvNamaSampah
 id tvNewsMessage
 id tvNewsSubtitle
 id tvNewsTitle
@@ -269,6 +276,7 @@ id tvThirdPoints
 id tvTotalKgHariIni
 id tvTotalKgKeseluruhan
 id tvTotalKgTanggal
+id tvTotalSetoran
 id tvTotalTransaksi
 id tvViewMore
 id tvWaktu
@@ -320,6 +328,7 @@ layout fragment_leaderboard_weight
 layout fragment_notifications
 layout include_bottom_nav
 layout item_aktivitas
+layout item_harga_sampah
 layout item_leaderboard_rank
 layout item_mutasi_saldo
 layout item_news

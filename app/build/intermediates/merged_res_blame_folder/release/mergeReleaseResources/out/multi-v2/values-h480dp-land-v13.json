@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.main.cipta_muri_mobile.app-mergeReleaseResources-59:/values-h480dp-land-v13/values-h480dp-land-v13.xml",
+            "outputFile": "com.main.cipta_muri_mobile.app-mergeReleaseResources-82:/values-h480dp-land-v13/values-h480dp-land-v13.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\HP\\.gradle\\caches\\8.13\\transforms\\093a0065225ded3e8b16dd27ba614f74\\transformed\\material-1.13.0\\res\\values-h480dp-land-v13\\values-h480dp-land-v13.xml",
+                    "source": "C:\\Users\\HP\\.gradle\\caches\\8.13\\transforms\\298c5edf5caf0134101dd4f5a5d6a6d7\\transformed\\material-1.13.0\\res\\values-h480dp-land-v13\\values-h480dp-land-v13.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10",
                         "startColumns": "4,4,4,4,4,4,4,4,4",

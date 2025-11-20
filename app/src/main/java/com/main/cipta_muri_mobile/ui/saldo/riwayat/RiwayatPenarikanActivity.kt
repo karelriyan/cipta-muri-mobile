@@ -21,6 +21,10 @@ class RiwayatPenarikanActivity : AppCompatActivity() {
         setupNavigation()
         setupRecyclerView()
         observeViewModel()
+
+        binding.tvLoadMore.setOnClickListener {
+            viewModel.loadMore()
+        }
     }
 
     override fun onResume() {
@@ -47,6 +51,12 @@ class RiwayatPenarikanActivity : AppCompatActivity() {
             binding.tvKosong.isVisible = showEmpty
             if (showEmpty) {
                 binding.tvKosong.text = "Belum ada data penarikan."
+            }
+            binding.tvLoadMore.isVisible = viewModel.hasMore()
+            if (!viewModel.hasMore()) {
+                binding.tvLoadMore.text = "Tidak ada data lagi"
+            } else {
+                binding.tvLoadMore.text = "Tampilkan Lebih Banyak"
             }
         }
 

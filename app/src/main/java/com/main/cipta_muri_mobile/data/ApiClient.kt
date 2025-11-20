@@ -35,4 +35,27 @@ object ApiClient {
 
         return retrofit.create(ApiServiceV2::class.java)
     }
+
+    fun createPublic(): ApiServiceV2 {
+        val client = OkHttpClient.Builder()
+            .addInterceptor { chain ->
+                val req = chain.request()
+                android.util.Log.d("API", "${req.method} ${req.url}")
+                chain.proceed(req)
+            }
+            .addInterceptor(HttpLoggingInterceptor().apply {
+                level = HttpLoggingInterceptor.Level.BODY
+            })
+            .connectTimeout(15, TimeUnit.SECONDS)
+            .readTimeout(15, TimeUnit.SECONDS)
+            .build()
+
+        val retrofit = Retrofit.Builder()
+            .baseUrl(BASE_URL)
+            .addConverterFactory(GsonConverterFactory.create())
+            .client(client)
+            .build()
+
+        return retrofit.create(ApiServiceV2::class.java)
+    }
 }

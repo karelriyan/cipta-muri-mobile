@@ -6,8 +6,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.ProgressBar;
+import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.main.cipta_muri_mobile.R;
@@ -22,9 +26,36 @@ public final class ActivityHargaSampahBinding implements ViewBinding {
   @NonNull
   public final ImageView btnBack;
 
-  private ActivityHargaSampahBinding(@NonNull FrameLayout rootView, @NonNull ImageView btnBack) {
+  @NonNull
+  public final LinearLayout contentContainer;
+
+  @NonNull
+  public final ProgressBar progressBar;
+
+  @NonNull
+  public final RecyclerView rvHargaSampah;
+
+  @NonNull
+  public final TextView tvKosong;
+
+  @NonNull
+  public final TextView tvLastUpdate;
+
+  @NonNull
+  public final TextView tvLoadMore;
+
+  private ActivityHargaSampahBinding(@NonNull FrameLayout rootView, @NonNull ImageView btnBack,
+      @NonNull LinearLayout contentContainer, @NonNull ProgressBar progressBar,
+      @NonNull RecyclerView rvHargaSampah, @NonNull TextView tvKosong,
+      @NonNull TextView tvLastUpdate, @NonNull TextView tvLoadMore) {
     this.rootView = rootView;
     this.btnBack = btnBack;
+    this.contentContainer = contentContainer;
+    this.progressBar = progressBar;
+    this.rvHargaSampah = rvHargaSampah;
+    this.tvKosong = tvKosong;
+    this.tvLastUpdate = tvLastUpdate;
+    this.tvLoadMore = tvLoadMore;
   }
 
   @Override
@@ -60,7 +91,44 @@ public final class ActivityHargaSampahBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityHargaSampahBinding((FrameLayout) rootView, btnBack);
+      id = R.id.contentContainer;
+      LinearLayout contentContainer = ViewBindings.findChildViewById(rootView, id);
+      if (contentContainer == null) {
+        break missingId;
+      }
+
+      id = R.id.progressBar;
+      ProgressBar progressBar = ViewBindings.findChildViewById(rootView, id);
+      if (progressBar == null) {
+        break missingId;
+      }
+
+      id = R.id.rvHargaSampah;
+      RecyclerView rvHargaSampah = ViewBindings.findChildViewById(rootView, id);
+      if (rvHargaSampah == null) {
+        break missingId;
+      }
+
+      id = R.id.tvKosong;
+      TextView tvKosong = ViewBindings.findChildViewById(rootView, id);
+      if (tvKosong == null) {
+        break missingId;
+      }
+
+      id = R.id.tvLastUpdate;
+      TextView tvLastUpdate = ViewBindings.findChildViewById(rootView, id);
+      if (tvLastUpdate == null) {
+        break missingId;
+      }
+
+      id = R.id.tvLoadMore;
+      TextView tvLoadMore = ViewBindings.findChildViewById(rootView, id);
+      if (tvLoadMore == null) {
+        break missingId;
+      }
+
+      return new ActivityHargaSampahBinding((FrameLayout) rootView, btnBack, contentContainer,
+          progressBar, rvHargaSampah, tvKosong, tvLastUpdate, tvLoadMore);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

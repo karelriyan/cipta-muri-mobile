@@ -42,7 +42,7 @@
         android:layout_marginBottom="12dp"
         android:layout_gravity="end"
         android:textAlignment="center"
-        android:text="Lihat Lebih Banyak"
+        android:text="Tampilkan Lebih Banyak"
         android:textColor="@color/black"
         android:textStyle="bold"
         android:visibility="gone" />

@@ -8,6 +8,7 @@ import java.math.BigDecimal
 
 class ApiRepository(private val ctx: Context) {
     private val api by lazy { ApiClient.create(ctx) }
+    private val apiPublic by lazy { ApiClient.createPublic() }
 
     suspend fun login(nik: String, tanggal: String) = runCatching {
         try {
@@ -68,13 +69,33 @@ class ApiRepository(private val ctx: Context) {
     suspend fun getSaldoTransactions(type: String? = null) =
         runCatching { api.saldoTransactions(type).data.orEmpty() }
 
+    suspend fun getHargaSampah() = runCatching {
+        // Coba pakai auth dulu; jika gagal (misal token kedaluwarsa/401) fallback ke public.
+        val primary = runCatching {
+            val res = api.sampah()
+            if (!res.success) error(res.message ?: "Gagal memuat harga sampah")
+            res.data.orEmpty()
+        }
+        primary.getOrElse {
+            val res = apiPublic.sampah()
+            if (!res.success) error(res.message ?: "Gagal memuat harga sampah (guest)")
+            res.data.orEmpty()
+        }
+    }
+
     suspend fun createTarikSaldo(amount: Int, desc: String?) =
         runCatching { api.tarikSaldo(TarikSaldoRequest(amount, desc)).data }
 
     suspend fun getRiwayatSetoran() = runCatching {
         val res = api.setorSampah()
-        if (!res.success) error(res.message ?: "Gagal memuat riwayat setoran")
-        res.data.orEmpty()
+        if (!res.success) {
+            // Coba fallback public jika token bermasalah
+            val pubRes = apiPublic.setorSampah()
+            if (!pubRes.success) error(pubRes.message ?: "Gagal memuat riwayat setoran")
+            pubRes.data.orEmpty()
+        } else {
+            res.data.orEmpty()
+        }
     }
 
     suspend fun getRiwayatTarikSaldo() = runCatching {

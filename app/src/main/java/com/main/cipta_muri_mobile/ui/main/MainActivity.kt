@@ -5,6 +5,7 @@ import android.os.Build
 import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
+import androidx.compose.ui.platform.ViewCompositionStrategy
 import androidx.core.view.isVisible
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.android.material.bottomnavigation.BottomNavigationView
@@ -14,6 +15,9 @@ import com.main.cipta_muri_mobile.data.User
 import com.main.cipta_muri_mobile.databinding.ActivityMainBinding
 import com.main.cipta_muri_mobile.databinding.SectionNewsBinding
 import com.main.cipta_muri_mobile.ui.aktivitas.RiwayatAktivitasActivity
+import com.main.cipta_muri_mobile.ui.chat.ChatViewModel
+import com.main.cipta_muri_mobile.ui.chat.ChatViewModelFactory
+import com.main.cipta_muri_mobile.ui.chat.CiptaMuriChatHost
 import com.main.cipta_muri_mobile.ui.donasi.DonasiSampahActivity
 import com.main.cipta_muri_mobile.ui.leaderboard.LeaderboardActivity
 import com.main.cipta_muri_mobile.ui.mutasi.MutasiSaldoActivity
@@ -22,7 +26,6 @@ import com.main.cipta_muri_mobile.ui.news.NewsAdapter
 import com.main.cipta_muri_mobile.ui.profile.ProfileActivity
 import com.main.cipta_muri_mobile.ui.saldo.tarik.TarikSaldoActivity
 import com.main.cipta_muri_mobile.ui.saldo.riwayat.RiwayatPenarikanActivity
-
 import com.main.cipta_muri_mobile.ui.setor.SetorSampahActivity
 import com.main.cipta_muri_mobile.ui.setor.riwayat.RiwayatSetoranActivity
 
@@ -30,6 +33,9 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
     private val viewModel: MainViewModel by viewModels()
+    private val chatViewModel: ChatViewModel by viewModels {
+        ChatViewModelFactory()
+    }
     private lateinit var sessionManager: SessionManager
     private lateinit var newsAdapter: NewsAdapter
     private lateinit var sectionNewsBinding: SectionNewsBinding
@@ -63,6 +69,9 @@ class MainActivity : AppCompatActivity() {
 
         // ✅ 6. News list di halaman utama
         setupNewsSection()
+
+        // ✅ 7. Chatbot Compose overlay
+        setupChatbotOverlay()
     }
 
     private fun setUserDataFromSession() {
@@ -210,6 +219,17 @@ class MainActivity : AppCompatActivity() {
         }
 
         viewModel.fetchLatestNews(limit = 3)
+    }
+
+    private fun setupChatbotOverlay() {
+        binding.chatComposeView.apply {
+            setViewCompositionStrategy(
+                ViewCompositionStrategy.DisposeOnLifecycleDestroyed(this@MainActivity)
+            )
+            setContent {
+                CiptaMuriChatHost(viewModel = chatViewModel)
+            }
+        }
     }
 
     // ✅ Fungsi untuk navigasi dengan efek fade

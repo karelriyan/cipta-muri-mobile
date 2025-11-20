@@ -9,6 +9,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.compose.ui.platform.ComposeView;
 import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
@@ -24,6 +25,9 @@ public final class ActivityMainBinding implements ViewBinding {
 
   @NonNull
   public final FrameLayout cardSaldo;
+
+  @NonNull
+  public final ComposeView chatComposeView;
 
   @NonNull
   public final FloatingActionButton fabLeaderboard;
@@ -65,14 +69,16 @@ public final class ActivityMainBinding implements ViewBinding {
   public final TextView tvUserName;
 
   private ActivityMainBinding(@NonNull CoordinatorLayout rootView, @NonNull FrameLayout cardSaldo,
-      @NonNull FloatingActionButton fabLeaderboard, @NonNull LinearLayout mnLeaderboard,
-      @NonNull LinearLayout mnRiwayatPenarikan, @NonNull LinearLayout mnRiwayatSetor,
-      @NonNull LinearLayout mnSetor, @NonNull SectionNewsBinding sectionNews,
-      @NonNull TextView tvAccountNumber, @NonNull TextView tvBalance, @NonNull TextView tvGreeting,
-      @NonNull TextView tvMutation, @NonNull TextView tvProfileInitial,
-      @NonNull TextView tvTotalWeight, @NonNull TextView tvUserName) {
+      @NonNull ComposeView chatComposeView, @NonNull FloatingActionButton fabLeaderboard,
+      @NonNull LinearLayout mnLeaderboard, @NonNull LinearLayout mnRiwayatPenarikan,
+      @NonNull LinearLayout mnRiwayatSetor, @NonNull LinearLayout mnSetor,
+      @NonNull SectionNewsBinding sectionNews, @NonNull TextView tvAccountNumber,
+      @NonNull TextView tvBalance, @NonNull TextView tvGreeting, @NonNull TextView tvMutation,
+      @NonNull TextView tvProfileInitial, @NonNull TextView tvTotalWeight,
+      @NonNull TextView tvUserName) {
     this.rootView = rootView;
     this.cardSaldo = cardSaldo;
+    this.chatComposeView = chatComposeView;
     this.fabLeaderboard = fabLeaderboard;
     this.mnLeaderboard = mnLeaderboard;
     this.mnRiwayatPenarikan = mnRiwayatPenarikan;
@@ -118,6 +124,12 @@ public final class ActivityMainBinding implements ViewBinding {
       id = R.id.cardSaldo;
       FrameLayout cardSaldo = ViewBindings.findChildViewById(rootView, id);
       if (cardSaldo == null) {
+        break missingId;
+      }
+
+      id = R.id.chatComposeView;
+      ComposeView chatComposeView = ViewBindings.findChildViewById(rootView, id);
+      if (chatComposeView == null) {
         break missingId;
       }
 
@@ -200,10 +212,10 @@ public final class ActivityMainBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityMainBinding((CoordinatorLayout) rootView, cardSaldo, fabLeaderboard,
-          mnLeaderboard, mnRiwayatPenarikan, mnRiwayatSetor, mnSetor, binding_sectionNews,
-          tvAccountNumber, tvBalance, tvGreeting, tvMutation, tvProfileInitial, tvTotalWeight,
-          tvUserName);
+      return new ActivityMainBinding((CoordinatorLayout) rootView, cardSaldo, chatComposeView,
+          fabLeaderboard, mnLeaderboard, mnRiwayatPenarikan, mnRiwayatSetor, mnSetor,
+          binding_sectionNews, tvAccountNumber, tvBalance, tvGreeting, tvMutation, tvProfileInitial,
+          tvTotalWeight, tvUserName);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

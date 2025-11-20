@@ -3,19 +3,21 @@ package com.main.cipta_muri_mobile.ui.aktivitas
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.isVisible
 import androidx.lifecycle.lifecycleScope
+import androidx.recyclerview.widget.LinearLayoutManager
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.main.cipta_muri_mobile.R
+import com.main.cipta_muri_mobile.data.Aktivitas
+import com.main.cipta_muri_mobile.data.ApiRepository
 import com.main.cipta_muri_mobile.databinding.ActivityRiwayatAktivitasBinding
 import com.main.cipta_muri_mobile.ui.main.MainActivity
 import com.main.cipta_muri_mobile.ui.news.NewsActivity
-import com.main.cipta_muri_mobile.ui.setor.SetorSampahActivity
 import com.main.cipta_muri_mobile.ui.profile.ProfileActivity
-
-import androidx.recyclerview.widget.LinearLayoutManager
-import com.main.cipta_muri_mobile.data.Aktivitas
-import com.main.cipta_muri_mobile.data.ApiRepository
-import kotlinx.coroutines.launch
+import com.main.cipta_muri_mobile.ui.setor.SetorSampahActivity
 import com.main.cipta_muri_mobile.util.Formatters
+import kotlinx.coroutines.launch
+import kotlin.math.min
 
 class RiwayatAktivitasActivity : AppCompatActivity() {
 
@@ -23,17 +25,38 @@ class RiwayatAktivitasActivity : AppCompatActivity() {
     private lateinit var adapter: AktivitasAdapter
     private var isBottomRefreshing: Boolean = false
     private var isLoading: Boolean = false
+    private val initialLimit = 10
+    private val loadStep = 5
+    private var allItems: List<Aktivitas> = emptyList()
+    private var visibleCount = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityRiwayatAktivitasBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val navView = findViewById<com.google.android.material.bottomnavigation.BottomNavigationView>(R.id.bottom_navigation_view)
+        setupBottomNav(findViewById(R.id.bottom_navigation_view))
+
+        binding.rvAktivitas.layoutManager = LinearLayoutManager(this)
+        adapter = AktivitasAdapter(emptyList())
+        binding.rvAktivitas.adapter = adapter
+
+        setupScrollListener()
+
+        binding.tvLoadMore.setOnClickListener { loadMore() }
+
+        refreshData()
+    }
+
+    override fun onResume() {
+        super.onResume()
+        refreshData()
+    }
+
+    private fun setupBottomNav(navView: BottomNavigationView) {
         navView.itemIconTintList = null
         navView.selectedItemId = R.id.navigation_history
 
-        // FAB QR from included bottom nav
         findViewById<com.google.android.material.floatingactionbutton.FloatingActionButton>(R.id.fab_qr)
             ?.setOnClickListener {
                 startActivityWithFade(Intent(this, SetorSampahActivity::class.java))
@@ -60,22 +83,6 @@ class RiwayatAktivitasActivity : AppCompatActivity() {
                 else -> false
             }
         }
-
-        // ✅ Setup RecyclerView + Adapter
-        binding.rvAktivitas.layoutManager = LinearLayoutManager(this)
-        adapter = AktivitasAdapter(emptyList())
-        binding.rvAktivitas.adapter = adapter
-
-        // ✅ Listener scroll untuk refresh saat mentok bawah
-        setupScrollListener()
-
-        // ✅ Muat awal / refresh saat halaman dibuka
-        refreshData()
-    }
-
-    override fun onResume() {
-        super.onResume()
-        refreshData()
     }
 
     private fun setupScrollListener() {
@@ -84,7 +91,12 @@ class RiwayatAktivitasActivity : AppCompatActivity() {
                 super.onScrolled(recyclerView, dx, dy)
                 if (dy > 0 && !recyclerView.canScrollVertically(1) && !isBottomRefreshing && !isLoading) {
                     isBottomRefreshing = true
-                    refreshData()
+                    if (allItems.size > visibleCount) {
+                        loadMore()
+                        isBottomRefreshing = false
+                    } else {
+                        refreshData()
+                    }
                 }
             }
         })
@@ -109,15 +121,38 @@ class RiwayatAktivitasActivity : AppCompatActivity() {
                             waktu = Formatters.formatWaktu(tx.createdAt)
                         )
                     }
-                    adapter.updateData(mapped)
+                    applyData(mapped)
                 }.onFailure {
-                    // fallback: keep current data or clear
+                    // keep existing data on failure
                 }
             } finally {
                 isLoading = false
                 isBottomRefreshing = false
             }
         }
+    }
+
+    private fun applyData(items: List<Aktivitas>) {
+        allItems = items
+        visibleCount = min(initialLimit, allItems.size)
+        renderVisible()
+    }
+
+    private fun loadMore() {
+        if (allItems.isEmpty()) return
+        val newCount = min(allItems.size, visibleCount + loadStep)
+        if (newCount != visibleCount) {
+            visibleCount = newCount
+            renderVisible()
+        }
+    }
+
+    private fun renderVisible() {
+        val visible = allItems.take(visibleCount)
+        adapter.updateData(visible)
+        val hasMore = allItems.size > visibleCount
+        binding.tvLoadMore.isVisible = allItems.isNotEmpty()
+        binding.tvLoadMore.text = if (hasMore) "Tampilkan Lebih Banyak" else if (allItems.isEmpty()) "Belum ada data" else "Tidak ada data lagi"
     }
 
     private fun startActivityWithFade(intent: Intent) {

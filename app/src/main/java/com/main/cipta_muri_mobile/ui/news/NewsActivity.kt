@@ -96,7 +96,9 @@ class NewsActivity : AppCompatActivity() {
                 val isAtBottom = scrollY >= (contentHeight - containerHeight)
                 if (isAtBottom && !isBottomRefreshing) {
                     isBottomRefreshing = true
-                    refreshData()
+                    if (viewModel.state.value?.hasMore == true) {
+                        viewModel.loadMore()
+                    }
                     isBottomRefreshing = false
                 }
             }
@@ -114,6 +116,10 @@ class NewsActivity : AppCompatActivity() {
             adapter = newsAdapter
         }
         sectionNewsBinding.tvViewMore.isVisible = false
+        sectionNewsBinding.tvViewMore.text = "Tampilkan Lebih Banyak"
+        sectionNewsBinding.tvViewMore.setOnClickListener {
+            viewModel.loadMore()
+        }
 
         viewModel.state.observe(this) { state ->
             sectionNewsBinding.progressNews.isVisible = state.loading
@@ -123,6 +129,7 @@ class NewsActivity : AppCompatActivity() {
             sectionNewsBinding.tvNewsMessage.text = state.error ?: "Belum ada berita"
 
             sectionNewsBinding.rvNews.isVisible = state.items.isNotEmpty()
+            sectionNewsBinding.tvViewMore.isVisible = state.items.isNotEmpty() && state.hasMore
 
             newsAdapter.submitList(state.items)
         }

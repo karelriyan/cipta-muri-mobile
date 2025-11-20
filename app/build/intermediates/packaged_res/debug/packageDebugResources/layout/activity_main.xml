@@ -298,4 +298,12 @@
         app:tint="@null"
         app:maxImageSize="70dp"
         android:contentDescription="Leaderboard" />
+
+    <androidx.compose.ui.platform.ComposeView
+        android:id="@+id/chatComposeView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="bottom|end"
+        android:clickable="false"
+        android:focusable="false" />
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

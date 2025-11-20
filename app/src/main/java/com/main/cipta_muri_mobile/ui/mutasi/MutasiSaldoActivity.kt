@@ -3,14 +3,16 @@ package com.main.cipta_muri_mobile.ui.mutasi
 import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.isVisible
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.main.cipta_muri_mobile.R
+import com.main.cipta_muri_mobile.data.ApiRepository
 import com.main.cipta_muri_mobile.data.SessionManager
 import com.main.cipta_muri_mobile.databinding.ActivityMutasiSaldoBinding
-import com.main.cipta_muri_mobile.data.ApiRepository
-import kotlinx.coroutines.launch
 import com.main.cipta_muri_mobile.util.Formatters
+import kotlinx.coroutines.launch
+import kotlin.math.min
 
 class MutasiSaldoActivity : AppCompatActivity() {
 
@@ -19,25 +21,24 @@ class MutasiSaldoActivity : AppCompatActivity() {
     private lateinit var adapter: MutasiSaldoAdapter
     private var isBottomRefreshing: Boolean = false
     private var isLoading: Boolean = false
+    private val initialLimit = 10
+    private val loadStep = 5
+    private var allItems: List<MutasiSaldoItem> = emptyList()
+    private var visibleCount: Int = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMutasiSaldoBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        // Tombol kembali
         binding.btnBack.setOnClickListener { finish() }
 
-        // Setup RecyclerView
         setupRecyclerView()
-
-        // Observe LiveData dari ViewModel
         observeViewModel()
-
-        // Scroll listener untuk refresh saat mentok bawah
         setupScrollListener()
 
-        // Muat awal
+        binding.tvTampilkanLebihBanyak.setOnClickListener { loadMore() }
+
         refreshData()
         updateSaldoHeader()
     }
@@ -56,32 +57,10 @@ class MutasiSaldoActivity : AppCompatActivity() {
 
     private fun observeViewModel() {
         viewModel.mutasiList.observe(this) { list ->
-            if (list.isNotEmpty()) {
-                // 🔄 Konversi dari data model backend → UI model
-                val convertedList = list.map { data ->
-
-                    // Ubah nominal jadi string dulu (jaga-jaga kalau nilainya Int/Double)
-                    val nominalStr = data.nominal.toString()
-
-                    MutasiSaldoItem(
-                        tanggal = data.tanggal,
-                        judul = if (nominalStr.startsWith("+")) "Saldo Masuk" else "Saldo Keluar",
-                        keterangan = data.keterangan ?: "",
-                        nominal = if (nominalStr.startsWith("+") || nominalStr.startsWith("-"))
-                            "Rp ${nominalStr.replace("+", "").replace("-", "")}"
-                        else
-                            "Rp $nominalStr",
-                        warnaNominal = if (nominalStr.startsWith("+"))
-                            getColor(R.color.green)
-                        else
-                            getColor(R.color.red)
-                    )
-                }
-
-                adapter.updateData(convertedList)
-                binding.tvTampilkanLebihBanyak.text = "Tampilkan Lebih Banyak"
+            if (!list.isNullOrEmpty()) {
+                applyData(convertToItems(list))
             } else {
-                loadDummyData()
+                applyData(loadDummyData())
             }
         }
 
@@ -91,12 +70,27 @@ class MutasiSaldoActivity : AppCompatActivity() {
             }
         }
 
-        viewModel.isLoading.observe(this) { /* no-op: using local isLoading */ }
+        viewModel.isLoading.observe(this) { /* handled by local flag */ }
     }
 
+    private fun convertToItems(list: List<com.main.cipta_muri_mobile.data.MutasiSaldo>): List<MutasiSaldoItem> {
+        return list.map { data ->
+            val nominalStr = data.nominal.toString()
+            MutasiSaldoItem(
+                tanggal = data.tanggal,
+                judul = if (nominalStr.startsWith("+")) "Saldo Masuk" else "Saldo Keluar",
+                keterangan = data.keterangan ?: "",
+                nominal = if (nominalStr.startsWith("+") || nominalStr.startsWith("-"))
+                    "Rp ${nominalStr.replace("+", "").replace("-", "")}"
+                else
+                    "Rp $nominalStr",
+                warnaNominal = if (nominalStr.startsWith("+")) getColor(R.color.green) else getColor(R.color.red)
+            )
+        }
+    }
 
-    private fun loadDummyData() {
-        val dummyList = listOf(
+    private fun loadDummyData(): List<MutasiSaldoItem> {
+        return listOf(
             MutasiSaldoItem(
                 tanggal = "09 Maret 2025",
                 judul = "Saldo Masuk",
@@ -126,8 +120,6 @@ class MutasiSaldoActivity : AppCompatActivity() {
                 warnaNominal = getColor(R.color.red)
             )
         )
-
-        adapter.updateData(dummyList)
     }
 
     private fun setupScrollListener() {
@@ -139,7 +131,12 @@ class MutasiSaldoActivity : AppCompatActivity() {
                 val atBottom = scrollY >= (contentHeight - containerHeight)
                 if (atBottom && !isLoading && !isBottomRefreshing) {
                     isBottomRefreshing = true
-                    refreshData()
+                    if (allItems.size > visibleCount) {
+                        loadMore()
+                        isBottomRefreshing = false
+                    } else {
+                        refreshData()
+                    }
                 }
             }
         )
@@ -163,9 +160,9 @@ class MutasiSaldoActivity : AppCompatActivity() {
                             warnaNominal = if (isCredit) getColor(R.color.green) else getColor(R.color.red)
                         )
                     }
-                    adapter.updateData(mapped)
+                    applyData(mapped)
                 }.onFailure {
-                    loadDummyData()
+                    applyData(loadDummyData())
                 }
             } finally {
                 isLoading = false
@@ -174,14 +171,39 @@ class MutasiSaldoActivity : AppCompatActivity() {
         }
     }
 
+    private fun applyData(items: List<MutasiSaldoItem>) {
+        allItems = items
+        visibleCount = min(initialLimit, allItems.size)
+        renderVisible()
+    }
+
+    private fun loadMore() {
+        if (allItems.isEmpty()) return
+        val newCount = min(allItems.size, visibleCount + loadStep)
+        if (newCount != visibleCount) {
+            visibleCount = newCount
+            renderVisible()
+        }
+    }
+
+    private fun renderVisible() {
+        val visible = allItems.take(visibleCount)
+        adapter.updateData(visible)
+        val hasMore = allItems.size > visibleCount
+        binding.tvTampilkanLebihBanyak.isVisible = allItems.isNotEmpty()
+        binding.tvTampilkanLebihBanyak.text = when {
+            allItems.isEmpty() -> "Belum ada data"
+            hasMore -> "Tampilkan Lebih Banyak"
+            else -> "Tidak ada data lagi"
+        }
+    }
+
     private fun updateSaldoHeader() {
         lifecycleScope.launch {
             val session = SessionManager(this@MutasiSaldoActivity)
             val localBalance = session.getUserBalance()
-            // Tampilkan sementara dari session
             binding.tvSaldoTotal.text = Formatters.formatRupiah(localBalance)
 
-            // Coba ambil saldo terbaru dari API
             runCatching {
                 val repo = ApiRepository(this@MutasiSaldoActivity)
                 repo.getRekening()

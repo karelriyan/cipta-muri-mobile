@@ -4,6 +4,7 @@ package com.main.cipta_muri_mobile.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.cardview.widget.CardView;
@@ -26,11 +27,16 @@ public final class ActivityRiwayatAktivitasBinding implements ViewBinding {
   @NonNull
   public final RecyclerView rvAktivitas;
 
+  @NonNull
+  public final TextView tvLoadMore;
+
   private ActivityRiwayatAktivitasBinding(@NonNull CoordinatorLayout rootView,
-      @NonNull CardView cardRentangWaktu, @NonNull RecyclerView rvAktivitas) {
+      @NonNull CardView cardRentangWaktu, @NonNull RecyclerView rvAktivitas,
+      @NonNull TextView tvLoadMore) {
     this.rootView = rootView;
     this.cardRentangWaktu = cardRentangWaktu;
     this.rvAktivitas = rvAktivitas;
+    this.tvLoadMore = tvLoadMore;
   }
 
   @Override
@@ -72,8 +78,14 @@ public final class ActivityRiwayatAktivitasBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.tvLoadMore;
+      TextView tvLoadMore = ViewBindings.findChildViewById(rootView, id);
+      if (tvLoadMore == null) {
+        break missingId;
+      }
+
       return new ActivityRiwayatAktivitasBinding((CoordinatorLayout) rootView, cardRentangWaktu,
-          rvAktivitas);
+          rvAktivitas, tvLoadMore);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

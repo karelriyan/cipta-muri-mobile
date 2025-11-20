@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.main.cipta_muri_mobile.app-mergeReleaseResources-59:/values-h720dp-v13/values-h720dp-v13.xml",
+            "outputFile": "com.main.cipta_muri_mobile.app-mergeReleaseResources-82:/values-h720dp-v13/values-h720dp-v13.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\HP\\.gradle\\caches\\8.13\\transforms\\f42de817a6d78a353d192a79f4b76254\\transformed\\appcompat-1.7.1\\res\\values-h720dp-v13\\values-h720dp-v13.xml",
+                    "source": "C:\\Users\\HP\\.gradle\\caches\\8.13\\transforms\\9688be727917f3f24f2aa2112d297a08\\transformed\\appcompat-1.7.1\\res\\values-h720dp-v13\\values-h720dp-v13.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

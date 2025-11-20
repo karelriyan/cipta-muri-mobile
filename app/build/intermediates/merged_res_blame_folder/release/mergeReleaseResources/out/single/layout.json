@@ -1,142 +1,146 @@
 [
     {
-        "merged": "com.main.cipta_muri_mobile.app-mergeReleaseResources-60:/layout/activity_riwayat_aktivitas.xml",
-        "source": "com.main.cipta_muri_mobile.app-main-62:/layout/activity_riwayat_aktivitas.xml"
+        "merged": "com.main.cipta_muri_mobile.app-mergeReleaseResources-83:/layout/item_harga_sampah.xml",
+        "source": "com.main.cipta_muri_mobile.app-main-85:/layout/item_harga_sampah.xml"
     },
     {
-        "merged": "com.main.cipta_muri_mobile.app-mergeReleaseResources-60:/layout/section_news.xml",
-        "source": "com.main.cipta_muri_mobile.app-main-62:/layout/section_news.xml"
+        "merged": "com.main.cipta_muri_mobile.app-mergeReleaseResources-83:/layout/activity_registrasi.xml",
+        "source": "com.main.cipta_muri_mobile.app-main-85:/layout/activity_registrasi.xml"
     },
     {
-        "merged": "com.main.cipta_muri_mobile.app-mergeReleaseResources-60:/layout/item_tukar_poin.xml",
-        "source": "com.main.cipta_muri_mobile.app-main-62:/layout/item_tukar_poin.xml"
+        "merged": "com.main.cipta_muri_mobile.app-mergeReleaseResources-83:/layout/activity_lupa_pin.xml",
+        "source": "com.main.cipta_muri_mobile.app-main-85:/layout/activity_lupa_pin.xml"
     },
     {
-        "merged": "com.main.cipta_muri_mobile.app-mergeReleaseResources-60:/layout/fragment_leaderboard_weight.xml",
-        "source": "com.main.cipta_muri_mobile.app-main-62:/layout/fragment_leaderboard_weight.xml"
+        "merged": "com.main.cipta_muri_mobile.app-mergeReleaseResources-83:/layout/activity_login.xml",
+        "source": "com.main.cipta_muri_mobile.app-main-85:/layout/activity_login.xml"
     },
     {
-        "merged": "com.main.cipta_muri_mobile.app-mergeReleaseResources-60:/layout/item_leaderboard_rank.xml",
-        "source": "com.main.cipta_muri_mobile.app-main-62:/layout/item_leaderboard_rank.xml"
+        "merged": "com.main.cipta_muri_mobile.app-mergeReleaseResources-83:/layout/fragment_notifications.xml",
+        "source": "com.main.cipta_muri_mobile.app-main-85:/layout/fragment_notifications.xml"
     },
     {
-        "merged": "com.main.cipta_muri_mobile.app-mergeReleaseResources-60:/layout/fragment_home.xml",
-        "source": "com.main.cipta_muri_mobile.app-main-62:/layout/fragment_home.xml"
+        "merged": "com.main.cipta_muri_mobile.app-mergeReleaseResources-83:/layout/activity_harga_sampah.xml",
+        "source": "com.main.cipta_muri_mobile.app-main-85:/layout/activity_harga_sampah.xml"
     },
     {
-        "merged": "com.main.cipta_muri_mobile.app-mergeReleaseResources-60:/layout/activity_leaderboard.xml",
-        "source": "com.main.cipta_muri_mobile.app-main-62:/layout/activity_leaderboard.xml"
+        "merged": "com.main.cipta_muri_mobile.app-mergeReleaseResources-83:/layout/item_tukar_poin.xml",
+        "source": "com.main.cipta_muri_mobile.app-main-85:/layout/item_tukar_poin.xml"
     },
     {
-        "merged": "com.main.cipta_muri_mobile.app-mergeReleaseResources-60:/layout/activity_tarik_saldo.xml",
-        "source": "com.main.cipta_muri_mobile.app-main-62:/layout/activity_tarik_saldo.xml"
+        "merged": "com.main.cipta_muri_mobile.app-mergeReleaseResources-83:/layout/fragment_dashboard.xml",
+        "source": "com.main.cipta_muri_mobile.app-main-85:/layout/fragment_dashboard.xml"
     },
     {
-        "merged": "com.main.cipta_muri_mobile.app-mergeReleaseResources-60:/layout/fragment_dashboard.xml",
-        "source": "com.main.cipta_muri_mobile.app-main-62:/layout/fragment_dashboard.xml"
+        "merged": "com.main.cipta_muri_mobile.app-mergeReleaseResources-83:/layout/activity_main.xml",
+        "source": "com.main.cipta_muri_mobile.app-main-85:/layout/activity_main.xml"
     },
     {
-        "merged": "com.main.cipta_muri_mobile.app-mergeReleaseResources-60:/layout/activity_rincian_setoran.xml",
-        "source": "com.main.cipta_muri_mobile.app-main-62:/layout/activity_rincian_setoran.xml"
+        "merged": "com.main.cipta_muri_mobile.app-mergeReleaseResources-83:/layout/fragment_leaderboard_weight.xml",
+        "source": "com.main.cipta_muri_mobile.app-main-85:/layout/fragment_leaderboard_weight.xml"
     },
     {
-        "merged": "com.main.cipta_muri_mobile.app-mergeReleaseResources-60:/layout/activity_registrasi.xml",
-        "source": "com.main.cipta_muri_mobile.app-main-62:/layout/activity_registrasi.xml"
+        "merged": "com.main.cipta_muri_mobile.app-mergeReleaseResources-83:/layout/activity_setor_sampah.xml",
+        "source": "com.main.cipta_muri_mobile.app-main-85:/layout/activity_setor_sampah.xml"
     },
     {
-        "merged": "com.main.cipta_muri_mobile.app-mergeReleaseResources-60:/layout/activity_animasi.xml",
-        "source": "com.main.cipta_muri_mobile.app-main-62:/layout/activity_animasi.xml"
+        "merged": "com.main.cipta_muri_mobile.app-mergeReleaseResources-83:/layout/activity_rincian_setoran.xml",
+        "source": "com.main.cipta_muri_mobile.app-main-85:/layout/activity_rincian_setoran.xml"
     },
     {
-        "merged": "com.main.cipta_muri_mobile.app-mergeReleaseResources-60:/layout/activity_profile.xml",
-        "source": "com.main.cipta_muri_mobile.app-main-62:/layout/activity_profile.xml"
+        "merged": "com.main.cipta_muri_mobile.app-mergeReleaseResources-83:/layout/activity_news.xml",
+        "source": "com.main.cipta_muri_mobile.app-main-85:/layout/activity_news.xml"
     },
     {
-        "merged": "com.main.cipta_muri_mobile.app-mergeReleaseResources-60:/layout/activity_penarikan_berhasil.xml",
-        "source": "com.main.cipta_muri_mobile.app-main-62:/layout/activity_penarikan_berhasil.xml"
+        "merged": "com.main.cipta_muri_mobile.app-mergeReleaseResources-83:/layout/activity_tarik_saldo.xml",
+        "source": "com.main.cipta_muri_mobile.app-main-85:/layout/activity_tarik_saldo.xml"
     },
     {
-        "merged": "com.main.cipta_muri_mobile.app-mergeReleaseResources-60:/layout/item_mutasi_saldo.xml",
-        "source": "com.main.cipta_muri_mobile.app-main-62:/layout/item_mutasi_saldo.xml"
+        "merged": "com.main.cipta_muri_mobile.app-mergeReleaseResources-83:/layout/activity_konfirmasi_penarikan.xml",
+        "source": "com.main.cipta_muri_mobile.app-main-85:/layout/activity_konfirmasi_penarikan.xml"
     },
     {
-        "merged": "com.main.cipta_muri_mobile.app-mergeReleaseResources-60:/layout/item_news.xml",
-        "source": "com.main.cipta_muri_mobile.app-main-62:/layout/item_news.xml"
+        "merged": "com.main.cipta_muri_mobile.app-mergeReleaseResources-83:/layout/item_news.xml",
+        "source": "com.main.cipta_muri_mobile.app-main-85:/layout/item_news.xml"
     },
     {
-        "merged": "com.main.cipta_muri_mobile.app-mergeReleaseResources-60:/layout/activity_splash.xml",
-        "source": "com.main.cipta_muri_mobile.app-main-62:/layout/activity_splash.xml"
+        "merged": "com.main.cipta_muri_mobile.app-mergeReleaseResources-83:/layout/include_bottom_nav.xml",
+        "source": "com.main.cipta_muri_mobile.app-main-85:/layout/include_bottom_nav.xml"
     },
     {
-        "merged": "com.main.cipta_muri_mobile.app-mergeReleaseResources-60:/layout/include_bottom_nav.xml",
-        "source": "com.main.cipta_muri_mobile.app-main-62:/layout/include_bottom_nav.xml"
+        "merged": "com.main.cipta_muri_mobile.app-mergeReleaseResources-83:/layout/activity_petunjuk_penarikan.xml",
+        "source": "com.main.cipta_muri_mobile.app-main-85:/layout/activity_petunjuk_penarikan.xml"
     },
     {
-        "merged": "com.main.cipta_muri_mobile.app-mergeReleaseResources-60:/layout/activity_main.xml",
-        "source": "com.main.cipta_muri_mobile.app-main-62:/layout/activity_main.xml"
+        "merged": "com.main.cipta_muri_mobile.app-mergeReleaseResources-83:/layout/activity_mutasi_saldo.xml",
+        "source": "com.main.cipta_muri_mobile.app-main-85:/layout/activity_mutasi_saldo.xml"
     },
     {
-        "merged": "com.main.cipta_muri_mobile.app-mergeReleaseResources-60:/layout/activity_bank_sampah.xml",
-        "source": "com.main.cipta_muri_mobile.app-main-62:/layout/activity_bank_sampah.xml"
+        "merged": "com.main.cipta_muri_mobile.app-mergeReleaseResources-83:/layout/item_aktivitas.xml",
+        "source": "com.main.cipta_muri_mobile.app-main-85:/layout/item_aktivitas.xml"
     },
     {
-        "merged": "com.main.cipta_muri_mobile.app-mergeReleaseResources-60:/layout/activity_lupa_pin.xml",
-        "source": "com.main.cipta_muri_mobile.app-main-62:/layout/activity_lupa_pin.xml"
+        "merged": "com.main.cipta_muri_mobile.app-mergeReleaseResources-83:/layout/fragment_leaderboard_frequency.xml",
+        "source": "com.main.cipta_muri_mobile.app-main-85:/layout/fragment_leaderboard_frequency.xml"
     },
     {
-        "merged": "com.main.cipta_muri_mobile.app-mergeReleaseResources-60:/layout/activity_news.xml",
-        "source": "com.main.cipta_muri_mobile.app-main-62:/layout/activity_news.xml"
+        "merged": "com.main.cipta_muri_mobile.app-mergeReleaseResources-83:/layout/activity_splash.xml",
+        "source": "com.main.cipta_muri_mobile.app-main-85:/layout/activity_splash.xml"
     },
     {
-        "merged": "com.main.cipta_muri_mobile.app-mergeReleaseResources-60:/layout/fragment_notifications.xml",
-        "source": "com.main.cipta_muri_mobile.app-main-62:/layout/fragment_notifications.xml"
+        "merged": "com.main.cipta_muri_mobile.app-mergeReleaseResources-83:/layout/activity_penarikan_berhasil.xml",
+        "source": "com.main.cipta_muri_mobile.app-main-85:/layout/activity_penarikan_berhasil.xml"
     },
     {
-        "merged": "com.main.cipta_muri_mobile.app-mergeReleaseResources-60:/layout/activity_petunjuk_penarikan.xml",
-        "source": "com.main.cipta_muri_mobile.app-main-62:/layout/activity_petunjuk_penarikan.xml"
+        "merged": "com.main.cipta_muri_mobile.app-mergeReleaseResources-83:/layout/activity_bank_sampah.xml",
+        "source": "com.main.cipta_muri_mobile.app-main-85:/layout/activity_bank_sampah.xml"
     },
     {
-        "merged": "com.main.cipta_muri_mobile.app-mergeReleaseResources-60:/layout/activity_donasi_sampah.xml",
-        "source": "com.main.cipta_muri_mobile.app-main-62:/layout/activity_donasi_sampah.xml"
+        "merged": "com.main.cipta_muri_mobile.app-mergeReleaseResources-83:/layout/item_leaderboard_rank.xml",
+        "source": "com.main.cipta_muri_mobile.app-main-85:/layout/item_leaderboard_rank.xml"
     },
     {
-        "merged": "com.main.cipta_muri_mobile.app-mergeReleaseResources-60:/layout/activity_login.xml",
-        "source": "com.main.cipta_muri_mobile.app-main-62:/layout/activity_login.xml"
+        "merged": "com.main.cipta_muri_mobile.app-mergeReleaseResources-83:/layout/item_riwayat_setoran.xml",
+        "source": "com.main.cipta_muri_mobile.app-main-85:/layout/item_riwayat_setoran.xml"
     },
     {
-        "merged": "com.main.cipta_muri_mobile.app-mergeReleaseResources-60:/layout/activity_mutasi_saldo.xml",
-        "source": "com.main.cipta_muri_mobile.app-main-62:/layout/activity_mutasi_saldo.xml"
+        "merged": "com.main.cipta_muri_mobile.app-mergeReleaseResources-83:/layout/activity_riwayat_penarikan.xml",
+        "source": "com.main.cipta_muri_mobile.app-main-85:/layout/activity_riwayat_penarikan.xml"
     },
     {
-        "merged": "com.main.cipta_muri_mobile.app-mergeReleaseResources-60:/layout/fragment_leaderboard_frequency.xml",
-        "source": "com.main.cipta_muri_mobile.app-main-62:/layout/fragment_leaderboard_frequency.xml"
+        "merged": "com.main.cipta_muri_mobile.app-mergeReleaseResources-83:/layout/activity_riwayat_aktivitas.xml",
+        "source": "com.main.cipta_muri_mobile.app-main-85:/layout/activity_riwayat_aktivitas.xml"
     },
     {
-        "merged": "com.main.cipta_muri_mobile.app-mergeReleaseResources-60:/layout/item_aktivitas.xml",
-        "source": "com.main.cipta_muri_mobile.app-main-62:/layout/item_aktivitas.xml"
+        "merged": "com.main.cipta_muri_mobile.app-mergeReleaseResources-83:/layout/activity_profile.xml",
+        "source": "com.main.cipta_muri_mobile.app-main-85:/layout/activity_profile.xml"
     },
     {
-        "merged": "com.main.cipta_muri_mobile.app-mergeReleaseResources-60:/layout/activity_riwayat_setoran.xml",
-        "source": "com.main.cipta_muri_mobile.app-main-62:/layout/activity_riwayat_setoran.xml"
+        "merged": "com.main.cipta_muri_mobile.app-mergeReleaseResources-83:/layout/activity_donasi_sampah.xml",
+        "source": "com.main.cipta_muri_mobile.app-main-85:/layout/activity_donasi_sampah.xml"
     },
     {
-        "merged": "com.main.cipta_muri_mobile.app-mergeReleaseResources-60:/layout/activity_harga_sampah.xml",
-        "source": "com.main.cipta_muri_mobile.app-main-62:/layout/activity_harga_sampah.xml"
+        "merged": "com.main.cipta_muri_mobile.app-mergeReleaseResources-83:/layout/activity_leaderboard.xml",
+        "source": "com.main.cipta_muri_mobile.app-main-85:/layout/activity_leaderboard.xml"
     },
     {
-        "merged": "com.main.cipta_muri_mobile.app-mergeReleaseResources-60:/layout/activity_riwayat_penarikan.xml",
-        "source": "com.main.cipta_muri_mobile.app-main-62:/layout/activity_riwayat_penarikan.xml"
+        "merged": "com.main.cipta_muri_mobile.app-mergeReleaseResources-83:/layout/activity_animasi.xml",
+        "source": "com.main.cipta_muri_mobile.app-main-85:/layout/activity_animasi.xml"
     },
     {
-        "merged": "com.main.cipta_muri_mobile.app-mergeReleaseResources-60:/layout/item_riwayat_setoran.xml",
-        "source": "com.main.cipta_muri_mobile.app-main-62:/layout/item_riwayat_setoran.xml"
+        "merged": "com.main.cipta_muri_mobile.app-mergeReleaseResources-83:/layout/activity_riwayat_setoran.xml",
+        "source": "com.main.cipta_muri_mobile.app-main-85:/layout/activity_riwayat_setoran.xml"
     },
     {
-        "merged": "com.main.cipta_muri_mobile.app-mergeReleaseResources-60:/layout/activity_setor_sampah.xml",
-        "source": "com.main.cipta_muri_mobile.app-main-62:/layout/activity_setor_sampah.xml"
+        "merged": "com.main.cipta_muri_mobile.app-mergeReleaseResources-83:/layout/fragment_home.xml",
+        "source": "com.main.cipta_muri_mobile.app-main-85:/layout/fragment_home.xml"
     },
     {
-        "merged": "com.main.cipta_muri_mobile.app-mergeReleaseResources-60:/layout/activity_konfirmasi_penarikan.xml",
-        "source": "com.main.cipta_muri_mobile.app-main-62:/layout/activity_konfirmasi_penarikan.xml"
+        "merged": "com.main.cipta_muri_mobile.app-mergeReleaseResources-83:/layout/item_mutasi_saldo.xml",
+        "source": "com.main.cipta_muri_mobile.app-main-85:/layout/item_mutasi_saldo.xml"
+    },
+    {
+        "merged": "com.main.cipta_muri_mobile.app-mergeReleaseResources-83:/layout/section_news.xml",
+        "source": "com.main.cipta_muri_mobile.app-main-85:/layout/section_news.xml"
     }
 ]

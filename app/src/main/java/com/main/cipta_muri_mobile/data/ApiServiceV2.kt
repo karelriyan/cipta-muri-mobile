@@ -41,8 +41,8 @@ interface ApiServiceV2 {
     suspend fun beritaDetail(@Path("slug") slug: String): ApiResponse<Any>
 
     @GET("sampah")
-    suspend fun sampah(): ApiResponse<List<Any>>
+    suspend fun sampah(): ApiResponse<List<HargaSampahResponse>>
 
     @GET("sampah/{id}")
-    suspend fun sampahDetail(@Path("id") id: String): ApiResponse<Any>
+    suspend fun sampahDetail(@Path("id") id: String): ApiResponse<HargaSampahResponse>
 }

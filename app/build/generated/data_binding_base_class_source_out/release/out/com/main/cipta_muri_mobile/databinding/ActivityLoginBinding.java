@@ -22,6 +22,9 @@ public final class ActivityLoginBinding implements ViewBinding {
   private final LinearLayout rootView;
 
   @NonNull
+  public final MaterialButton btnAutofill;
+
+  @NonNull
   public final MaterialButton btnMasuk;
 
   @NonNull
@@ -36,10 +39,11 @@ public final class ActivityLoginBinding implements ViewBinding {
   @NonNull
   public final TextView tvLupaPin;
 
-  private ActivityLoginBinding(@NonNull LinearLayout rootView, @NonNull MaterialButton btnMasuk,
-      @NonNull EditText etNik, @NonNull EditText etPin, @NonNull TextView tvFormatTanggal,
-      @NonNull TextView tvLupaPin) {
+  private ActivityLoginBinding(@NonNull LinearLayout rootView, @NonNull MaterialButton btnAutofill,
+      @NonNull MaterialButton btnMasuk, @NonNull EditText etNik, @NonNull EditText etPin,
+      @NonNull TextView tvFormatTanggal, @NonNull TextView tvLupaPin) {
     this.rootView = rootView;
+    this.btnAutofill = btnAutofill;
     this.btnMasuk = btnMasuk;
     this.etNik = etNik;
     this.etPin = etPin;
@@ -74,6 +78,12 @@ public final class ActivityLoginBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.btnAutofill;
+      MaterialButton btnAutofill = ViewBindings.findChildViewById(rootView, id);
+      if (btnAutofill == null) {
+        break missingId;
+      }
+
       id = R.id.btnMasuk;
       MaterialButton btnMasuk = ViewBindings.findChildViewById(rootView, id);
       if (btnMasuk == null) {
@@ -104,7 +114,7 @@ public final class ActivityLoginBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityLoginBinding((LinearLayout) rootView, btnMasuk, etNik, etPin,
+      return new ActivityLoginBinding((LinearLayout) rootView, btnAutofill, btnMasuk, etNik, etPin,
           tvFormatTanggal, tvLupaPin);
     }
     String missingId = rootView.getResources().getResourceName(id);

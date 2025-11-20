@@ -74,6 +74,9 @@ public final class ActivityRiwayatPenarikanBinding implements ViewBinding {
   @NonNull
   public final TextView tvKosong;
 
+  @NonNull
+  public final TextView tvLoadMore;
+
   private ActivityRiwayatPenarikanBinding(@NonNull FrameLayout rootView,
       @NonNull MaterialButton btnAgustus, @NonNull MaterialButton btnApril,
       @NonNull ImageView btnBack, @NonNull MaterialButton btnDesember,
@@ -83,7 +86,7 @@ public final class ActivityRiwayatPenarikanBinding implements ViewBinding {
       @NonNull MaterialButton btnMei, @NonNull MaterialButton btnNovember,
       @NonNull MaterialButton btnOktober, @NonNull MaterialButton btnSeptember,
       @NonNull ProgressBar progressBar, @NonNull RecyclerView rvTukarPoin,
-      @NonNull TextView tvKosong) {
+      @NonNull TextView tvKosong, @NonNull TextView tvLoadMore) {
     this.rootView = rootView;
     this.btnAgustus = btnAgustus;
     this.btnApril = btnApril;
@@ -102,6 +105,7 @@ public final class ActivityRiwayatPenarikanBinding implements ViewBinding {
     this.progressBar = progressBar;
     this.rvTukarPoin = rvTukarPoin;
     this.tvKosong = tvKosong;
+    this.tvLoadMore = tvLoadMore;
   }
 
   @Override
@@ -233,9 +237,16 @@ public final class ActivityRiwayatPenarikanBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.tvLoadMore;
+      TextView tvLoadMore = ViewBindings.findChildViewById(rootView, id);
+      if (tvLoadMore == null) {
+        break missingId;
+      }
+
       return new ActivityRiwayatPenarikanBinding((FrameLayout) rootView, btnAgustus, btnApril,
           btnBack, btnDesember, btnFebruari, btnFilter, btnJanuari, btnJuli, btnJuni, btnMaret,
-          btnMei, btnNovember, btnOktober, btnSeptember, progressBar, rvTukarPoin, tvKosong);
+          btnMei, btnNovember, btnOktober, btnSeptember, progressBar, rvTukarPoin, tvKosong,
+          tvLoadMore);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

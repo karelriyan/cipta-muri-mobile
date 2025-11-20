@@ -7,7 +7,6 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.widget.NestedScrollView
 import androidx.lifecycle.observe
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.main.cipta_muri_mobile.R
 import com.main.cipta_muri_mobile.databinding.ActivityRiwayatSetoranBinding
 import com.main.cipta_muri_mobile.data.SessionManager
 
@@ -29,11 +28,12 @@ class RiwayatSetoranActivity : AppCompatActivity() {
         setupNavigation()
         observeData()
         setupScrollListener()
+
+        binding.tvLoadMore.setOnClickListener { viewModel.loadMore() }
     }
 
     override fun onResume() {
         super.onResume()
-        // Refresh setiap kali halaman dibuka/kembali tampil
         refreshData()
     }
 
@@ -53,20 +53,21 @@ class RiwayatSetoranActivity : AppCompatActivity() {
         viewModel.isLoading.observe(this) { isLoading ->
             binding.progressBar.visibility = if (isLoading) View.VISIBLE else View.GONE
             if (!isLoading) {
-                // Izinkan trigger refresh berikutnya dari scroll bottom
                 isBottomRefreshing = false
             }
         }
         viewModel.riwayatList.observe(this) { list ->
             if (list.isNotEmpty()) {
                 binding.tvKosong.visibility = View.GONE
-                adapter.updateData(list) // ✅ ini kuncinya
+                adapter.updateData(list)
             } else {
                 binding.tvKosong.apply {
                     visibility = View.VISIBLE
                     text = "Belum ada data penyetoran."
                 }
             }
+            binding.tvLoadMore.visibility = if (viewModel.hasMore()) View.VISIBLE else View.GONE
+            binding.tvLoadMore.text = if (viewModel.hasMore()) "Tampilkan Lebih Banyak" else "Tidak ada data lagi"
         }
 
 
@@ -105,7 +106,12 @@ class RiwayatSetoranActivity : AppCompatActivity() {
 
                 if (isAtBottom && !isLoading && !isBottomRefreshing) {
                     isBottomRefreshing = true
-                    refreshData()
+                    if (viewModel.hasMore()) {
+                        viewModel.loadMore()
+                        isBottomRefreshing = false
+                    } else {
+                        refreshData()
+                    }
                 }
             }
         )

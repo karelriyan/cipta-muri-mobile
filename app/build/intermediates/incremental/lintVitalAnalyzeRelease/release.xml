@@ -4,9 +4,9 @@
     minSdkVersion="24"
     targetSdkVersion="36.0"
     mergedManifest="build\intermediates\merged_manifest\release\processReleaseMainManifest\AndroidManifest.xml"
-    proguardFiles="build\intermediates\default_proguard_files\global\proguard-android-optimize.txt-8.13.0;proguard-rules.pro"
+    proguardFiles="build\intermediates\default_proguard_files\global\proguard-android-optimize.txt-8.13.1;proguard-rules.pro"
     partialResultsDir="build\intermediates\lint_vital_partial_results\release\lintVitalAnalyzeRelease\out"
-    desugaredMethodsFiles="C:\Users\HP\.gradle\caches\8.13\transforms\488300e266b3e779e06243d15e577341\transformed\D8BackportedDesugaredMethods.txt">
+    desugaredMethodsFiles="C:\Users\HP\.gradle\caches\8.13\transforms\9564451f44f891608826433fb76c15c2\transformed\D8BackportedDesugaredMethods.txt">
   <buildFeatures
       viewBinding="true"
       namespacing="REQUIRED"/>
@@ -27,6 +27,6 @@
       applicationId="com.main.cipta_muri_mobile"
       generatedSourceFolders="build\generated\ap_generated_sources\release\out;build\generated\source\buildConfig\release;build\generated\data_binding_base_class_source_out\release\out"
       generatedResourceFolders="build\generated\res\resValues\release"
-      desugaredMethodsFiles="C:\Users\HP\.gradle\caches\8.13\transforms\488300e266b3e779e06243d15e577341\transformed\D8BackportedDesugaredMethods.txt">
+      desugaredMethodsFiles="C:\Users\HP\.gradle\caches\8.13\transforms\9564451f44f891608826433fb76c15c2\transformed\D8BackportedDesugaredMethods.txt">
   </artifact>
 </variant>
